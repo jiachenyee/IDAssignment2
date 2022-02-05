@@ -6,70 +6,70 @@
             {
                 "name": "Coconut Cream Original [400ml]",
                 "description": "TopwiL Organic Coconut Cream is made from sustainably grown, organically certified coconut farms in Sri Lanka. Our product is delicious, natural & creamy with no nasties.",
-                "price": 5.00,
+                "price": 5,
                 "productImage": "assets/products/bake001.png",
                 "sku": "BAKE001"
             },
             {
                 "name": "Fluffy Pancake Mix [300g]",
                 "description": "A pancake mix that is made with genuinely healthy ingredients. No white flour, sugar, colours, flavours or preservatives to be seen here!\nWe’ve combined 5 ingredients to help you create a delicious grain free and gluten free fluffy pancake.\nWe use almond meal and organic coconut flour because these flours are both gluten free, but also higher in protein and fibre.\nAll you need to do is add the eggs and almond milk to create these light and fluffy pancakes.",
-                "price": 21.00,
+                "price": 21,
                 "productImage": "assets/products/bake002.png",
                 "sku": "BAKE002"
             },
             {
                 "name": "Organic Banana Bread Baking Mix [360g]",
                 "description": "The perfect addition to a healthy lunchbox. This banana bread mix is super easy to make and tastes delicious.\nThere are no refined white flours or sugars in this mix, instead we’ve added nutrient dense organic sunflower meal, organic flaxseeds, organic chia seeds, organic buckwheat flour and organic brown rice flour.\nNo nuts have been added to this mix, making it suitable for lunchboxes. All you need to do is add 3 bananas, 2 eggs and some olive oil, mix and bake!\nThis package will create 1 loaf.",
-                "price": 19.50,
+                "price": 19.5,
                 "productImage": "assets/products/bake003.png",
                 "sku": "BAKE003"
             },
             {
                 "name": "Scoop Brownie Mix [605g]",
                 "description": "A deliciously fudgy brownie that is quick and easy to make!\nA family favourite recipe that has become a huge hit in stores! Buckwheat is rich in protein, fibre and antioxidants whilst being a perfect gluten-free flour alternative.\nPaired with the benefits of a serving of cacao, these brownies give you lots of goodness while enjoying a delicious treat.",
-                "price": 24.50,
+                "price": 24.5,
                 "productImage": "assets/products/bake004.png",
                 "sku": "BAKE004"
             },
             {
                 "name": "Fudge Chocolate Muffin Mix [360g]",
                 "description": "A muffin mix that is made with genuinely healthy ingredients! No white flour, sugar, colours, flavors or preservatives to be seen here!\nWe’ve combined 6 ingredients to help you create a delicious grain free and gluten free muffin.\nWe use almond meal and organic coconut flour as a base, and sweeten our muffins with organic coconut palm sugar.\nWe use organic raw cacao powder to give it that rich chocolate taste. All you need to do is add the eggs, almond milk and olive oil and get baking!",
-                "price": 21.00,
+                "price": 21,
                 "productImage": "assets/products/bake005.png",
                 "sku": "BAKE005"
             },
             {
                 "name": "Scoop Pizza Dough Box [360g]",
                 "description": "Our easy to make gluten-free pizza bases are crispy, flavoursome and made from simple nourishing whole-food flours and ingredients that promote optimal gut health. We use nutritional yeast as a seasoning, which is a deactivated yeast with a cheese-like flavour.\nGluten-free foods are not only beneficial for those on a gluten-free diet but can be enjoyed by all. Our bodies thrive on a wide variety of foods, so why not mix things up a little?",
-                "price": 19.50,
+                "price": 19.5,
                 "productImage": "assets/products/bake006.png",
                 "sku": "BAKE006"
             },
             {
                 "name": "Protein Bread Mix [350g]",
                 "description": "This keto protein bread mix provides you with 8g of protein per slice and only 3g of carbohydrates per slice.\nWe’ve used sustainably farmed Australian grown Faba bean protein in this delicious bread mix.\nFaba bean is a high protein legume, rich in amino acids. It has a neutral taste which means this bread mix doesn’t have a strong protein flavour.\nAll you need to do is add water and 3 eggs, then mix and bake.",
-                "price": 21.00,
+                "price": 21,
                 "productImage": "assets/products/bake007.png",
                 "sku": "BAKE007"
             },
             {
                 "name": "Rose Water Syrup Organic [150ml]",
                 "description": "Rose Water Syrup is often used in dishes, especially in South East Asia and Middle Eastern desserts, teas, beverages, enhancing its rose flavour.",
-                "price": 10.50,
+                "price": 10.5,
                 "productImage": "assets/products/bake008.png",
                 "sku": "BAKE008"
             },
             {
                 "name": "Heleila Vanilla Extract [50ml]",
                 "description": "Heilala Vanilla Pure Vanilla Extract, straight from the source, applauded by renowned chefs for its creamy, complex, bourbon like flavor, perfect for your Brownies, Cupcakes, Pancakes, Waffles and Soups.",
-                "price": 24.00,
+                "price": 24,
                 "productImage": "assets/products/bake009.png",
                 "sku": "BAKE009"
             },
             {
                 "name": "Coconut Whipping Cream [400ml]",
                 "description": "Honest to Goodness Organic Whipping Cream is a delicious dairy free alternative to traditional whipping cream, that can add the finishing touch to your favorite cake or dessert. It also makes a decadent topping for a simple bowl of fruit or pancakes.\nVegan friendly, No GMO, no artificial sweeteners or preservatives.",
-                "price": 9.50,
+                "price": 9.5,
                 "productImage": "assets/products/bake010.png",
                 "sku": "BAKE010"
             }
@@ -82,70 +82,70 @@
             {
                 "name": "Almonds Dark Chocolate [370g]",
                 "description": "Roasted Australian, chemical and pesticide free, almonds coated in premium 73% dark chocolate. These are a huge hit in all stores! Everyone seems to enjoy this classic combination.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 23.60,
+                "price": 23.6,
                 "productImage": "assets/products/choc001.png",
                 "sku": "CHOC001"
             },
             {
                 "name": "Strawberries Freeze Dried Dark Chocolate [250g]",
                 "description": "Deliciously crunchy freeze-dried strawberries coated in 73% dark chocolate. Made in Byron Bay, Australia, using premium, ethically sourced ingredients. Our freeze-dried strawberries are a Scoop customer favourite especially because of their unique honeycomb style crunch!\n\nThe strawberry is kept whole during the freeze-drying process and results in the most amazing, classic combination of strawberries and chocolate!\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 24.00,
+                "price": 24,
                 "productImage": "assets/products/choc002.png",
                 "sku": "CHOC002"
             },
             {
                 "name": "Macadamia Dark Chocolate [350g]",
                 "description": "Australian macadamia nuts coated in premium quality 75% dark chocolate.",
-                "price": 25.90,
+                "price": 25.9,
                 "productImage": "assets/products/choc003.png",
                 "sku": "CHOC003"
             },
             {
                 "name": "Coffee Dark Chocolate [340g]",
                 "description": "Whole, crunchy, roasted coffee beans coated in premium 73% dark chocolate. Made in Byron Bay, Australia from ethically sourced ingredients. A classically moreish treat that will be a hit at your next dinner party!\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 17.10,
+                "price": 17.1,
                 "productImage": "assets/products/choc004.png",
                 "sku": "CHOC004"
             },
             {
                 "name": "Hazelnut Dark Chocolate [315g]",
                 "description": "A grade Turkish hazelnuts coated in 67% premium dark chocolate. Made in Sydney, Australia using high quality ethically sourced ingredients. Chocolate and hazelnuts are often a well-loved classic combination.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 23.50,
+                "price": 23.5,
                 "productImage": "assets/products/choc005.png",
                 "sku": "CHOC005"
             },
             {
                 "name": "Sultana Milk Chocolate [420g]",
                 "description": "Soft sultanas coated in premium milk chocolate. A classic chewy chocolate treat. Made in Sydney, Australia, using the finest quality, ethically sourced, ingredients. An amazing combination that always wins when eaten on their own, to decorate a cake, or tossed into your favourite trail mix.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 18.20,
+                "price": 18.2,
                 "productImage": "assets/products/choc006.png",
                 "sku": "CHOC006"
             },
             {
                 "name": "Macadamia White Chocolate [300g]",
                 "description": "Australian macadamias coated in premium white chocolate. Made in Byron Bay, Australia, using the finest, ethically sourced, ingredients. Macadamias have an amazing buttery texture which pairs well with creamy, sweet, white chocolate.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 22.50,
+                "price": 22.5,
                 "productImage": "assets/products/choc007.png",
                 "sku": "CHOC007"
             },
             {
                 "name": "Goji Berries Dark Chocolate [370g]",
                 "description": "Goji berries coated in premium 73% dark chocolate. Made in Byron Bay, Australia from high quality, ethically sourced ingredients. The combination of goji berries and chocolate makes for an antioxidant powerhouse! We find the little treats to be incredibly moreish and our hint would be to add them to your perfect travel trail mix.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 23.60,
+                "price": 23.6,
                 "productImage": "assets/products/choc008.png",
                 "sku": "CHOC008"
             },
             {
                 "name": "Hazelnut Milk Chocolate [315g]",
                 "description": "Roasted Turkish hazelnuts covered in premium, creamy milk chocolate, always a winning combo! Made in Sydney, Australia, using premium quality, ethically sourced ingredients.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 23.50,
+                "price": 23.5,
                 "productImage": "assets/products/choc009.png",
                 "sku": "CHOC009"
             },
             {
                 "name": "Almonds Milk Chocolate [370g]",
                 "description": "Roasted Australian almonds coated in premium milk chocolate. Made in Sydney, Australia, using the finest quality, ethically sourced ingredients. The almonds are locally grown and are chemical and pesticide free.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 23.60,
+                "price": 23.6,
                 "productImage": "assets/products/choc010.png",
                 "sku": "CHOC010"
             }
@@ -158,70 +158,70 @@
             {
                 "name": "Coconut Water Organic [1L]",
                 "description": "Chef’s Choice Certified Organic 100% Pure Coconut Water is made from the fresh juice of coconuts and is a healthy, refreshing and all natural drink.\nIt makes a delicious, thirst-quenching sports and exercise drink and can be use in smoothies, protein shakes or as a juice base for drinks when mixed with other fruits.",
-                "price": 7.50,
+                "price": 7.5,
                 "productImage": "assets/products/bvge001.png",
                 "sku": "BVGE001"
             },
             {
                 "name": "Organic Pomegranate Juice [750ml]",
                 "description": "Chef’s Choice Certified Organic 100% Pomegranate Juice is pure pomegranate juice freshly cold pressed from whole ripe pomegranates.\nOur pomegranates are grown organically and harvested at peak ripeness for full flavour and nutrients.\nNaturally rich in antioxidants that aids in longevity, this vibrant drink delivers a unique taste of sweet and tart with a whole lot of nutrition. Enjoy it as a chilled refresher drink.",
-                "price": 9.50,
+                "price": 9.5,
                 "productImage": "assets/products/bvge002.png",
                 "sku": "BVGE002"
             },
             {
                 "name": "Old Fashioned Lemonade Cordial [500ml]",
                 "description": "Finally, the way lemonade used to be made, with pride and passion.\nOur Old Fashioned Lemonade syrup delivers a truly thirst quenching symphony of citric notes with a dash of blackcurrant and cranberry extract.\nJust add sparkling water from your SodaStream to our Old Fashioned Lemonade Syrup, and enjoy!",
-                "price": 16.50,
+                "price": 16.5,
                 "productImage": "assets/products/bvge003.png",
                 "sku": "BVGE003"
             },
             {
                 "name": "Ginger Ale Cordial [500ml]",
                 "description": "Our Classic Ginger Ale syrup is just as it used to be; clean and crisp with subtle citrus and ginger notes, leaving the palate fresh without the furry feeling of sugar-laden ginger beer.\nJust add sparkling water from your SodaStream machine to our Ginger Ale Syrup and enjoy! Our syrup also pairs well with whisky over ice.",
-                "price": 16.50,
+                "price": 16.5,
                 "productImage": "assets/products/bvge004.png",
                 "sku": "BVGE004"
             },
             {
                 "name": "Organic Orange/Mango/Apple Juice [330ml]",
                 "description": "We use Australian-grown organic oranges to bring you a fantastic juice, with all the vitamin C and antioxidants of fresh oranges.",
-                "price": 6.50,
+                "price": 6.5,
                 "productImage": "assets/products/bvge005.png",
                 "sku": "BVGE005"
             },
             {
                 "name": "Pink Grapefruit Cordial [500ml]",
                 "description": "Our Pink Grapefruit syrup is a perfect balance between tart, tang and sweet.\nThis alluring and refreshing drink is perfect from summer to winter as a mixer, cocktails and everyday refreshment.\nJust add sparkling water from your SodaStream machine to our Pink Grapefruit syrup and enjoy!",
-                "price": 16.50,
+                "price": 16.5,
                 "productImage": "assets/products/bvge006.png",
                 "sku": "BVGE006"
             },
             {
                 "name": "Raspberry Mint Cordial [500ml]",
                 "description": "Our Raspberry & Mint syrup is the ultimate summer drink, uplifting with delicate raspberry tones rounded off with refreshing yet subtle mint notes.\nDivine as a drink or in cocktails. Just add sparkling water from your SodaStream to our Raspberry & Mint syrup and enjoy!",
-                "price": 16.50,
+                "price": 16.5,
                 "productImage": "assets/products/bvge007.png",
                 "sku": "BVGE007"
             },
             {
                 "name": "Sour Cherry [1L]",
                 "description": "100% natural cold pressed juice. Made of the premium sorts of fresh sunripe cherries to preserve the fine aroma and taste.\nThe juice is a tasty and nutritious product, containing considerable amount of easily assimilable reducible sugars, (glucose and fructose), organic acids (predominantly malic and lemon acids), water-soluble polyphenols, amino acids, micro and macro elements, vitamins: C, B1, B2, PP, folic acid.\nEnjoy drinking two cups (per serving 200ml) a day of this 100% pure juice and immerse in its packed natural goodness.",
-                "price": 15.50,
+                "price": 15.5,
                 "productImage": "assets/products/bvge008.png",
                 "sku": "BVGE008"
             },
             {
                 "name": "Parker’s Organic Apple Juice [330ml]",
                 "description": "Our apple juice is made with 100% organic apple juice. Apple juice is a great source of vitamin C and protective polyphenols.\nThe apple juice is cloudy rather than clear, so it retains a big supply of dietary fibre too.",
-                "price": 6.50,
+                "price": 6.5,
                 "productImage": "assets/products/bvge009.png",
                 "sku": "BVGE009"
             },
             {
                 "name": "Parker’s Organic Orange Juice [330ml]",
                 "description": "Our orange juice contains 100% Australian organic oranges, squeezed at our factory each day. We reckon it’s the best orange juice you can buy.\nOranges are really high in vitamin C – a 330ml bottle of our orange juice contains all your daily vitamin C requirements, not to mention the antioxidants it contains to help fight free radicals.",
-                "price": 6.50,
+                "price": 6.5,
                 "productImage": "assets/products/bvge010.png",
                 "sku": "BVGE010"
             }
@@ -234,70 +234,70 @@
             {
                 "name": "Turmeric And Curcumin Powder [130g]",
                 "description": "A spice that can be used in an unlimited amount of recipes.\nTurmeric is a natural anti inflammatory and contains an antioxidant called curcumin which is good for healthy brain function and joint health. Curcumin also stimulates the activity of the body's own antioxidants. It is also said to have anti cancer properties.",
-                "price": 13.50,
+                "price": 13.5,
                 "productImage": "assets/products/herb001.png",
                 "sku": "HERB001"
             },
             {
                 "name": "Cajun Spice Blend [60g]",
                 "description": "A rustic seasoning blend that has origins in Louisiana. It is the perfect addition to chicken, seafood, vegetables and roasted potatoes.\n\nA great versatile spice blend to add to your pantry.",
-                "price": 5.80,
+                "price": 5.8,
                 "productImage": "assets/products/herb002.png",
                 "sku": "HERB002"
             },
             {
                 "name": "Smoked Paprika Powder [75g]",
                 "description": "Smoked paprika or smoked Spanish paprika is made from peppers that are smoked and dried giving it a rich, smoky flavour.\nIt is great to add smoky undertones to your dishes without adding any heat.",
-                "price": 6.20,
+                "price": 6.2,
                 "productImage": "assets/products/herb003.png",
                 "sku": "HERB003"
             },
             {
                 "name": "Original cinnamon Powder [100g]",
                 "description": "A spice that is used all over the world! Our cinnamon is true Sri Lankan cinnamon.\nThere are two kinds of cinnamon, Ceylon/ true and cassia/fake cinnamon. True cinnamon not only has a better, more unique flavour but it also holds all the nutritional benefits that cassia doesn't. True cinnamon is extremely high in antioxidants and is a powerful anti inflammatory.\nIt is also said to lower cholesterol, supports healthy levels of blood sugars, and has anti cancer antibacterial and anti fungal properties.",
-                "price": 9.50,
+                "price": 9.5,
                 "productImage": "assets/products/herb004.png",
                 "sku": "HERB004"
             },
             {
                 "name": "Rosnay Organic Olives [500ml]",
                 "description": "Firm, crunchy, and fruity kalamata olives. Grown on Rosnay using certified organic and biodynamic methods, these olives are picked at early to medium maturity before they are black, in order to get firmer, nuttier olives.\nImmediately after picking they are immersed in water to prevent oxidation or blackening of the fruit, after which the leaves and damaged olives are removed by hand and washed, before being transferred to salt brine containing natural Murray River Salt from the Australian desert.\nThe olives cure through lacto-fermentation over 8 to 18 months before they are again hand graded them to remove all of the over-ripe olives, washed again, and immediately bottled with minimal oxidation, into a brine containing fresh Murray River salt and organic apple cider vinegar.",
-                "price": 19.50,
+                "price": 19.5,
                 "productImage": "assets/products/herb005.png",
                 "sku": "HERB005"
             },
             {
                 "name": "Tikka Masala Powder [100g]",
                 "description": "Tikka Masala is a fine motley of aromatic and strong spices that end up granting the quintessential flavour to any delicacy for which it is used!\nPrepared using the fine mix of coriander seeds, cumin seeds, amchoor powder, turmeric powder, cloves, cinnamon stick, green cardamom, dry red chillis, black pepper, Tikka Masala Powder creates a royal treat of flavours for your palate without a doubt!\nUse this spice mix while you are preparing starters or sabzi and indulge yourselves with a plethora of spell bounding dishes whenever you feel like.",
-                "price": 6.00,
+                "price": 6,
                 "productImage": "assets/products/herb006.png",
                 "sku": "HERB006"
             },
             {
                 "name": "Nutmeg Powder [130g]",
                 "description": "Nutmeg is a popular spice made from seeds of the Myristica fragrans tree. It has a warm, slightly nutty flavour and is used in desserts like mulled wine and chai as well as in curries.\nAlso contains high levels of antioxidants and is anti inflammatory and antibacterial.",
-                "price": 11.70,
+                "price": 11.7,
                 "productImage": "assets/products/herb007.png",
                 "sku": "HERB007"
             },
             {
                 "name": "Ground Black Pepper [150g]",
                 "description": "The King of Spices! The most commonly used pepper is actually harvested green before ripening, then dried where the skin darkens in colour.\nBlack pepper has a full bodied, woody flavour with a spicy heat. When ground, the peppercorns form a grey powder as the seed inside the peppercorn is white.",
-                "price": 9.80,
+                "price": 9.8,
                 "productImage": "assets/products/herb008.png",
                 "sku": "HERB008"
             },
             {
                 "name": "Chinese Five Spice Powder [60g]",
                 "description": "Traditionally used in Chinese cooking for sour, bitter, sweet, pungent and salty flavours.",
-                "price": 6.40,
+                "price": 6.4,
                 "productImage": "assets/products/herb009.png",
                 "sku": "HERB009"
             },
             {
                 "name": "Organic Curry Powder [100g]",
                 "description": "Curry powder is a blend of herbs and spices used in traditional Indian cooking. It is a versatile spice blend that can be used in hearty curries, stir fries or on roasted vegetables.\nCurry powder adds a warm, robust and aromatic flavour to your savoury dishes.",
-                "price": 4.00,
+                "price": 4,
                 "productImage": "assets/products/herb010.png",
                 "sku": "HERB010"
             }
@@ -310,70 +310,70 @@
             {
                 "name": "Organic Veggie Fusilli [328g]",
                 "description": "A tricolour organic pasta with nutrient rich quinoa, rice, spinach, and beetroot. Grown organically without any pesticides, chemicals or GMO's it is gluten free, cholesterol free and Australian made.\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the penne sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
-                "price": 16.30,
+                "price": 16.3,
                 "productImage": "assets/products/past001.png",
                 "sku": "PAST001"
             },
             {
                 "name": "Organic Amaranth Rice Fusilli [340g]",
                 "description": "Gluten free, cholesterol free, high in protein and minerals with no added starches.",
-                "price": 16.80,
+                "price": 16.8,
                 "productImage": "assets/products/past002.png",
                 "sku": "PAST002"
             },
             {
                 "name": "Organic Zoo Pasta With Tomato Spinach [260g]",
                 "description": "Organic Zoo Pasta is a tasty artisanal Italian pasta perfect for kids and adults alike! It is made using high quality organic durum wheat, tomato and spinach cut into fun zoo animal shapes. Animals include turtles, elephants, lions, giraffes and hippos.\nThis pasta has a delicious natural flavour and is easy to cook with no added starch, vegetable gum or preservatives. Suitable for vegan diets.\nAdd pasta to plenty of boiling water with a little salt, cook uncovered for about 5 7 min or until pasta is ‘al dente’.\nPerfect for all your favourite pasta dishes, as well as in delicious soups and salads.",
-                "price": 9.40,
+                "price": 9.4,
                 "productImage": "assets/products/past003.png",
                 "sku": "PAST003"
             },
             {
                 "name": "Organic Quinoa Rice Penne [470g]",
                 "description": "Gluten free, cholesterol free, high in protein and minerals with no added starches.",
-                "price": 19.30,
+                "price": 19.3,
                 "productImage": "assets/products/past004.png",
                 "sku": "PAST004"
             },
             {
                 "name": "Organic Wholewheat Penne [338g]",
                 "description": "Artisanally crafted Italian penne made from the highest quality wholewheat grain ensuring that this pasta is higher in fibre.",
-                "price": 8.10,
+                "price": 8.1,
                 "productImage": "assets/products/past005.png",
                 "sku": "PAST005"
             },
             {
                 "name": "Organic Wholewheat Fusilli [274g]",
                 "description": "Artisanally crafted Italian fusilli made from the highest quality wholewheat grain ensuring that this pasta is higher in fibre.",
-                "price": 7.20,
+                "price": 7.2,
                 "productImage": "assets/products/past006.png",
                 "sku": "PAST006"
             },
             {
                 "name": "Organic Veggie Penne [476g]",
                 "description": "Gluten free, cholesterol free, Australian made pasta that is high in protein and minerals with no added starches. Made with nutrient rich quinoa, rice, spinach, and beetroot. Grown organically without any pesticides, chemicals or GMO's.\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the penne sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
-                "price": 22.10,
+                "price": 22.1,
                 "productImage": "assets/products/past007.png",
                 "sku": "PAST007"
             },
             {
                 "name": "Organic Tomato Spinach Fusilli [322g]",
                 "description": "A tricolour organic pasta made from durum wheat semolina, with tomato and spinach for natural colour.",
-                "price": 10.80,
+                "price": 10.8,
                 "productImage": "assets/products/past008.png",
                 "sku": "PAST008"
             },
             {
                 "name": "Organic Brown Rice Pasta Elbows [490g]",
                 "description": "Made from organic brown rice and water. Brown rice is rich in fibre and helps to lower cholesterol and improve digestion. This simple to cook pasta holds its shape and will stick to sauces.\n\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the pasta sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\n\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
-                "price": 17.80,
+                "price": 17.8,
                 "productImage": "assets/products/past009.png",
                 "sku": "PAST009"
             },
             {
                 "name": "Organic Amaranth Rice Penne [474g]",
                 "description": "Gluten free, cholesterol free, Australian made pasta that is high in protein and minerals with no added starches. Made with nutrient rich amaranth and rice and grown organically without any pesticides, chemicals or GMO's.\n\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the penne sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\n\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
-                "price": 19.40,
+                "price": 19.4,
                 "productImage": "assets/products/past010.png",
                 "sku": "PAST010"
             }
@@ -386,70 +386,70 @@
             {
                 "name": "Apple Flower Tea [25g]",
                 "description": "Apple flowers are high in antioxidants, helps with glowing skin and complexion, improves digestion, improve blood circulation and relieves menstruation cramps.\nWhen brewed, apple flower tea has a delicate and pleasant taste but can be slightly bitter. It is therefore best brewed with honey, or blend with pink rose and orange blossoms.",
-                "price": 5.80,
+                "price": 5.8,
                 "productImage": "assets/products/tea_001.png",
                 "sku": "TEA_001"
             },
             {
                 "name": "Earl Grey Rose And Lavender Tea [50g]",
                 "description": "The perfect combination of organic earl grey with rose and organic lavender petals. A floral twist to your favourite tea. Early grey tea has a distinctive flavour and aroma that comes from the addition of oil extracted from the rind of the bergamot orange.\n\nIt is rich in powerful antioxidants that will help boost immunity and helps to reduce blood sugar levels.\n\nTo brew, use 1-2 tsp in hot water (90C-95C) and let steep for 2-3 minutes. It is optional as to whether you would like it black or with a drop of milk.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 6.80,
+                "price": 6.8,
                 "productImage": "assets/products/tea_002.png",
                 "sku": "TEA_002"
             },
             {
                 "name": "Blue Pea Flower [20g]",
                 "description": "Butterfly-pea flower is well known for its strong blue pigment.\nIt is said to reduce stress, aid sleep, enhance memory and improve skin and hair due to high levels of bioflavonoids.\nIt also help to stimulates collagen production which further improves the appearance of our skin.",
-                "price": 5.00,
+                "price": 5,
                 "productImage": "assets/products/tea_003.png",
                 "sku": "TEA_003"
             },
             {
                 "name": "Peppermint Tea [30g]",
                 "description": "A calming tea, rich in antioxidants, that supports digestion and is a natural antiseptic and breath freshener. It is also said to improve headaches, gas and bloating. The relaxing effect of this tea is also said to help sleep. It is beautiful on its own but also pairs well with lots of herb and floral teas allowing you to pick and choose your perfect blend.\n\nTo brew, use 1-3 tsp and let steep in hot water (90C-95C) for 2-5 minutes.\n\nStore in an airtight container and keep in a cool and dry place.",
-                "price": 5.60,
+                "price": 5.6,
                 "productImage": "assets/products/tea_004.png",
                 "sku": "TEA_004"
             },
             {
                 "name": "Korean Ginger And Lemon Tea [70g]",
                 "description": "Green tea never tasted so fresh! A beautiful organic blend of green tea, ginger and lemon for a lovely morning blend. Also especially good for cold and flu as it is rich in immune boosting antioxidants.\nAllergen Notice: May Contain Traces of Sulfur Dioxide",
-                "price": 9.70,
+                "price": 9.7,
                 "productImage": "assets/products/tea_005.png",
                 "sku": "TEA_005"
             },
             {
                 "name": "Blackberry Leaf Tea [20g]",
                 "description": "Blackberry leaf tea makes a staple herbal home remedy. It is naturally high in vitamin C and therefore said to be good for a sore throat, mouth and stomach ulcers and building a good immunity overall.\nIt is also high in Tannins which helps to relieve acute stomach upsets. Also high in antioxidants, vitamins and flavonoids.",
-                "price": 4.00,
+                "price": 4,
                 "productImage": "assets/products/tea_006.png",
                 "sku": "TEA_006"
             },
             {
                 "name": "Chrysanthemum Tea [20g]",
                 "description": "Used in Chinese medicine to reduce inflammation and decrease blood pressure and cholesterol.\nVery high in vitamins A and C. Said to be very good during illness or after a heavy meal to re-balance the body.",
-                "price": 5.40,
+                "price": 5.4,
                 "productImage": "assets/products/tea_007.png",
                 "sku": "TEA_007"
             },
             {
                 "name": "Lemongrass Tea [30g]",
                 "description": "Adds a citrusy, fresh flavour to teas, stir-fries, salad dressings, and marinades. Lemongrass helps support a healthy digestive system and can soothe coughs and symptoms of the common cold through its antibacterial properties. Blends very well with ginger and peppermint teas.\n\nTo brew, use 1-2 tsp and steep in hot water (90C) for 3-5 minutes.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 3.50,
+                "price": 3.5,
                 "productImage": "assets/products/tea_008.png",
                 "sku": "TEA_008"
             },
             {
                 "name": "Organic English Breakfast Tea [50g]",
                 "description": "English breakfast tea is astringent, antioxidant-rich and antibacterial. It is a blend of black tea from Assam and Ceylon that helps to balance the strength of black tea and produces and soft, smooth and slightly bitter tea that is ideal to help you wake up with a mild caffeine kick.\n\nTo brew, use 1-2 tsp and steep in hot water (90C-95C) for 2-3 minutes. Can be served black or with a drop of milk.\n\nStore in an airtight container and keep in a cool, dry place.",
-                "price": 5.50,
+                "price": 5.5,
                 "productImage": "assets/products/tea_009.png",
                 "sku": "TEA_009"
             },
             {
                 "name": "Hojicha Tea [30g]",
                 "description": "Hojicha is made from the same tea leaves as Japanese green tea, however, for hojicha is roasted after the leaves are steamed. This makes it smooth and less bitter but it still retains that classic beautiful matcha flavour.\nMuch like matcha, hojicha is packed with powerful antioxidants!",
-                "price": 4.90,
+                "price": 4.9,
                 "productImage": "assets/products/tea_010.png",
                 "sku": "TEA_010"
             }
