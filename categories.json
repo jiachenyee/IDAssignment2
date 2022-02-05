@@ -231,7 +231,76 @@
         "categoryName": "Herbs & Spices",
         "heroImage": "assets/categories/herbsspices.png",
         "products": [
-            
+            {
+                "name": "Turmeric And Curcumin Powder [130g]",
+                "description": "A spice that can be used in an unlimited amount of recipes.\nTurmeric is a natural anti inflammatory and contains an antioxidant called curcumin which is good for healthy brain function and joint health. Curcumin also stimulates the activity of the body's own antioxidants. It is also said to have anti cancer properties.",
+                "price": 13.50,
+                "productImage": "assets/products/herb001.png",
+                "sku": "HERB001"
+            },
+            {
+                "name": "Cajun Spice Blend [60g]",
+                "description": "A rustic seasoning blend that has origins in Louisiana. It is the perfect addition to chicken, seafood, vegetables and roasted potatoes.\n\nA great versatile spice blend to add to your pantry.",
+                "price": 5.80,
+                "productImage": "assets/products/herb002.png",
+                "sku": "HERB002"
+            },
+            {
+                "name": "Smoked Paprika Powder [75g]",
+                "description": "Smoked paprika or smoked Spanish paprika is made from peppers that are smoked and dried giving it a rich, smoky flavour.\nIt is great to add smoky undertones to your dishes without adding any heat.",
+                "price": 6.20,
+                "productImage": "assets/products/herb003.png",
+                "sku": "HERB003"
+            },
+            {
+                "name": "Original cinnamon Powder [100g]",
+                "description": "A spice that is used all over the world! Our cinnamon is true Sri Lankan cinnamon.\nThere are two kinds of cinnamon, Ceylon/ true and cassia/fake cinnamon. True cinnamon not only has a better, more unique flavour but it also holds all the nutritional benefits that cassia doesn't. True cinnamon is extremely high in antioxidants and is a powerful anti inflammatory.\nIt is also said to lower cholesterol, supports healthy levels of blood sugars, and has anti cancer antibacterial and anti fungal properties.",
+                "price": 9.50,
+                "productImage": "assets/products/herb004.png",
+                "sku": "HERB004"
+            },
+            {
+                "name": "Rosnay Organic Olives [500ml]",
+                "description": "Firm, crunchy, and fruity kalamata olives. Grown on Rosnay using certified organic and biodynamic methods, these olives are picked at early to medium maturity before they are black, in order to get firmer, nuttier olives.\nImmediately after picking they are immersed in water to prevent oxidation or blackening of the fruit, after which the leaves and damaged olives are removed by hand and washed, before being transferred to salt brine containing natural Murray River Salt from the Australian desert.\nThe olives cure through lacto-fermentation over 8 to 18 months before they are again hand graded them to remove all of the over-ripe olives, washed again, and immediately bottled with minimal oxidation, into a brine containing fresh Murray River salt and organic apple cider vinegar.",
+                "price": 19.50,
+                "productImage": "assets/products/herb005.png",
+                "sku": "HERB005"
+            },
+            {
+                "name": "Tikka Masala Powder [100g]",
+                "description": "Tikka Masala is a fine motley of aromatic and strong spices that end up granting the quintessential flavour to any delicacy for which it is used!\nPrepared using the fine mix of coriander seeds, cumin seeds, amchoor powder, turmeric powder, cloves, cinnamon stick, green cardamom, dry red chillis, black pepper, Tikka Masala Powder creates a royal treat of flavours for your palate without a doubt!\nUse this spice mix while you are preparing starters or sabzi and indulge yourselves with a plethora of spell bounding dishes whenever you feel like.",
+                "price": 6.00,
+                "productImage": "assets/products/herb006.png",
+                "sku": "HERB006"
+            },
+            {
+                "name": "Nutmeg Powder [130g]",
+                "description": "Nutmeg is a popular spice made from seeds of the Myristica fragrans tree. It has a warm, slightly nutty flavour and is used in desserts like mulled wine and chai as well as in curries.\nAlso contains high levels of antioxidants and is anti inflammatory and antibacterial.",
+                "price": 11.70,
+                "productImage": "assets/products/herb007.png",
+                "sku": "HERB007"
+            },
+            {
+                "name": "Ground Black Pepper [150g]",
+                "description": "The King of Spices! The most commonly used pepper is actually harvested green before ripening, then dried where the skin darkens in colour.\nBlack pepper has a full bodied, woody flavour with a spicy heat. When ground, the peppercorns form a grey powder as the seed inside the peppercorn is white.",
+                "price": 9.80,
+                "productImage": "assets/products/herb008.png",
+                "sku": "HERB008"
+            },
+            {
+                "name": "Chinese Five Spice Powder [60g]",
+                "description": "Traditionally used in Chinese cooking for sour, bitter, sweet, pungent and salty flavours.",
+                "price": 6.40,
+                "productImage": "assets/products/herb009.png",
+                "sku": "HERB009"
+            },
+            {
+                "name": "Organic Curry Powder [100g]",
+                "description": "Curry powder is a blend of herbs and spices used in traditional Indian cooking. It is a versatile spice blend that can be used in hearty curries, stir fries or on roasted vegetables.\nCurry powder adds a warm, robust and aromatic flavour to your savoury dishes.",
+                "price": 4.00,
+                "productImage": "assets/products/herb010.png",
+                "sku": "HERB010"
+            }
         ]
     },
     {
