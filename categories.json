@@ -307,14 +307,152 @@
         "categoryName": "Pasta & Noodle",
         "heroImage": "assets/categories/pastanoodle.png",
         "products": [
-            
+            {
+                "name": "Organic Veggie Fusilli [328g]",
+                "description": "A tricolour organic pasta with nutrient rich quinoa, rice, spinach, and beetroot. Grown organically without any pesticides, chemicals or GMO's it is gluten free, cholesterol free and Australian made.\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the penne sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
+                "price": 16.30,
+                "productImage": "assets/products/past001.png",
+                "sku": "PAST001"
+            },
+            {
+                "name": "Organic Amaranth Rice Fusilli [340g]",
+                "description": "Gluten free, cholesterol free, high in protein and minerals with no added starches.",
+                "price": 16.80,
+                "productImage": "assets/products/past002.png",
+                "sku": "PAST002"
+            },
+            {
+                "name": "Organic Zoo Pasta With Tomato Spinach [260g]",
+                "description": "Organic Zoo Pasta is a tasty artisanal Italian pasta perfect for kids and adults alike! It is made using high quality organic durum wheat, tomato and spinach cut into fun zoo animal shapes. Animals include turtles, elephants, lions, giraffes and hippos.\nThis pasta has a delicious natural flavour and is easy to cook with no added starch, vegetable gum or preservatives. Suitable for vegan diets.\nAdd pasta to plenty of boiling water with a little salt, cook uncovered for about 5 7 min or until pasta is ‘al dente’.\nPerfect for all your favourite pasta dishes, as well as in delicious soups and salads.",
+                "price": 9.40,
+                "productImage": "assets/products/past003.png",
+                "sku": "PAST003"
+            },
+            {
+                "name": "Organic Quinoa Rice Penne [470g]",
+                "description": "Gluten free, cholesterol free, high in protein and minerals with no added starches.",
+                "price": 19.30,
+                "productImage": "assets/products/past004.png",
+                "sku": "PAST004"
+            },
+            {
+                "name": "Organic Wholewheat Penne [338g]",
+                "description": "Artisanally crafted Italian penne made from the highest quality wholewheat grain ensuring that this pasta is higher in fibre.",
+                "price": 8.10,
+                "productImage": "assets/products/past005.png",
+                "sku": "PAST005"
+            },
+            {
+                "name": "Organic Wholewheat Fusilli [274g]",
+                "description": "Artisanally crafted Italian fusilli made from the highest quality wholewheat grain ensuring that this pasta is higher in fibre.",
+                "price": 7.20,
+                "productImage": "assets/products/past006.png",
+                "sku": "PAST006"
+            },
+            {
+                "name": "Organic Veggie Penne [476g]",
+                "description": "Gluten free, cholesterol free, Australian made pasta that is high in protein and minerals with no added starches. Made with nutrient rich quinoa, rice, spinach, and beetroot. Grown organically without any pesticides, chemicals or GMO's.\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the penne sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
+                "price": 22.10,
+                "productImage": "assets/products/past007.png",
+                "sku": "PAST007"
+            },
+            {
+                "name": "Organic Tomato Spinach Fusilli [322g]",
+                "description": "A tricolour organic pasta made from durum wheat semolina, with tomato and spinach for natural colour.",
+                "price": 10.80,
+                "productImage": "assets/products/past008.png",
+                "sku": "PAST008"
+            },
+            {
+                "name": "Organic Brown Rice Pasta Elbows [490g]",
+                "description": "Made from organic brown rice and water. Brown rice is rich in fibre and helps to lower cholesterol and improve digestion. This simple to cook pasta holds its shape and will stick to sauces.\n\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the pasta sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\n\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
+                "price": 17.80,
+                "productImage": "assets/products/past009.png",
+                "sku": "PAST009"
+            },
+            {
+                "name": "Organic Amaranth Rice Penne [474g]",
+                "description": "Gluten free, cholesterol free, Australian made pasta that is high in protein and minerals with no added starches. Made with nutrient rich amaranth and rice and grown organically without any pesticides, chemicals or GMO's.\n\nTo cook the pasta, boil a large pot of water with a big pinch of salt. Once the water is boiling, add the desired amount of pasta, be sure to keep occasionally stirring to avoid the penne sticking together. Once cooked al dente (cooked, but still a little firm to the bite), drain the pasta of the water. Then return the pasta to the pot and stir in your sauce... maybe even try out Scoop's organic Napoletana tomato sauce!\n\nKindly remember to store all pantry items in a cool, dry place, in an airtight container.",
+                "price": 19.40,
+                "productImage": "assets/products/past010.png",
+                "sku": "PAST010"
+            }
         ]
     },
     {
         "categoryName": "Tea",
         "heroImage": "assets/categories/tea.png",
         "products": [
-            
+            {
+                "name": "Apple Flower Tea [25g]",
+                "description": "Apple flowers are high in antioxidants, helps with glowing skin and complexion, improves digestion, improve blood circulation and relieves menstruation cramps.\nWhen brewed, apple flower tea has a delicate and pleasant taste but can be slightly bitter. It is therefore best brewed with honey, or blend with pink rose and orange blossoms.",
+                "price": 5.80,
+                "productImage": "assets/products/tea_001.png",
+                "sku": "TEA_001"
+            },
+            {
+                "name": "Earl Grey Rose And Lavender Tea [50g]",
+                "description": "The perfect combination of organic earl grey with rose and organic lavender petals. A floral twist to your favourite tea. Early grey tea has a distinctive flavour and aroma that comes from the addition of oil extracted from the rind of the bergamot orange.\n\nIt is rich in powerful antioxidants that will help boost immunity and helps to reduce blood sugar levels.\n\nTo brew, use 1-2 tsp in hot water (90C-95C) and let steep for 2-3 minutes. It is optional as to whether you would like it black or with a drop of milk.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 6.80,
+                "productImage": "assets/products/tea_002.png",
+                "sku": "TEA_002"
+            },
+            {
+                "name": "Blue Pea Flower [20g]",
+                "description": "Butterfly-pea flower is well known for its strong blue pigment.\nIt is said to reduce stress, aid sleep, enhance memory and improve skin and hair due to high levels of bioflavonoids.\nIt also help to stimulates collagen production which further improves the appearance of our skin.",
+                "price": 5.00,
+                "productImage": "assets/products/tea_003.png",
+                "sku": "TEA_003"
+            },
+            {
+                "name": "Peppermint Tea [30g]",
+                "description": "A calming tea, rich in antioxidants, that supports digestion and is a natural antiseptic and breath freshener. It is also said to improve headaches, gas and bloating. The relaxing effect of this tea is also said to help sleep. It is beautiful on its own but also pairs well with lots of herb and floral teas allowing you to pick and choose your perfect blend.\n\nTo brew, use 1-3 tsp and let steep in hot water (90C-95C) for 2-5 minutes.\n\nStore in an airtight container and keep in a cool and dry place.",
+                "price": 5.60,
+                "productImage": "assets/products/tea_004.png",
+                "sku": "TEA_004"
+            },
+            {
+                "name": "Korean Ginger And Lemon Tea [70g]",
+                "description": "Green tea never tasted so fresh! A beautiful organic blend of green tea, ginger and lemon for a lovely morning blend. Also especially good for cold and flu as it is rich in immune boosting antioxidants.\nAllergen Notice: May Contain Traces of Sulfur Dioxide",
+                "price": 9.70,
+                "productImage": "assets/products/tea_005.png",
+                "sku": "TEA_005"
+            },
+            {
+                "name": "Blackberry Leaf Tea [20g]",
+                "description": "Blackberry leaf tea makes a staple herbal home remedy. It is naturally high in vitamin C and therefore said to be good for a sore throat, mouth and stomach ulcers and building a good immunity overall.\nIt is also high in Tannins which helps to relieve acute stomach upsets. Also high in antioxidants, vitamins and flavonoids.",
+                "price": 4.00,
+                "productImage": "assets/products/tea_006.png",
+                "sku": "TEA_006"
+            },
+            {
+                "name": "Chrysanthemum Tea [20g]",
+                "description": "Used in Chinese medicine to reduce inflammation and decrease blood pressure and cholesterol.\nVery high in vitamins A and C. Said to be very good during illness or after a heavy meal to re-balance the body.",
+                "price": 5.40,
+                "productImage": "assets/products/tea_007.png",
+                "sku": "TEA_007"
+            },
+            {
+                "name": "Lemongrass Tea [30g]",
+                "description": "Adds a citrusy, fresh flavour to teas, stir-fries, salad dressings, and marinades. Lemongrass helps support a healthy digestive system and can soothe coughs and symptoms of the common cold through its antibacterial properties. Blends very well with ginger and peppermint teas.\n\nTo brew, use 1-2 tsp and steep in hot water (90C) for 3-5 minutes.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 3.50,
+                "productImage": "assets/products/tea_008.png",
+                "sku": "TEA_008"
+            },
+            {
+                "name": "Organic English Breakfast Tea [50g]",
+                "description": "English breakfast tea is astringent, antioxidant-rich and antibacterial. It is a blend of black tea from Assam and Ceylon that helps to balance the strength of black tea and produces and soft, smooth and slightly bitter tea that is ideal to help you wake up with a mild caffeine kick.\n\nTo brew, use 1-2 tsp and steep in hot water (90C-95C) for 2-3 minutes. Can be served black or with a drop of milk.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 5.50,
+                "productImage": "assets/products/tea_009.png",
+                "sku": "TEA_009"
+            },
+            {
+                "name": "Hojicha Tea [30g]",
+                "description": "Hojicha is made from the same tea leaves as Japanese green tea, however, for hojicha is roasted after the leaves are steamed. This makes it smooth and less bitter but it still retains that classic beautiful matcha flavour.\nMuch like matcha, hojicha is packed with powerful antioxidants!",
+                "price": 4.90,
+                "productImage": "assets/products/tea_010.png",
+                "sku": "TEA_010"
+            }
         ]
     }
 ]
