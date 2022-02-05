@@ -1,8 +1,30 @@
-var productData = []
 
+console.log("what1");
 // Load product data
-await fetch('./categories.json').then(response => productData = response.json());
+async function loadCategories() {
 
-function loadCategories() {
+    var productData = []
 
+    await fetch("./categories.json")
+        .then(response => {
+            return response.json();
+        })
+        .then(data => productData = data);
+
+    let parent = document.getElementById("categories");
+
+    console.log(productData.toString())
+
+    for (let i = 0; i < productData.length; i++) { 
+        const productCategory = productData[i];
+
+        var div = document.createElement("DIV");
+        div.className = "categoryItem";
+        div.innerHTML = `
+            <img src="${productCategory["heroImage"]}" alt="${productCategory["categoryName"]}"/>
+            <h4>${productCategory["categoryName"]}</h4>
+        `;
+        
+        parent.appendChild(div);
+    }
 }
