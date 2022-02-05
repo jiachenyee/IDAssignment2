@@ -1,0 +1,251 @@
+[
+    {
+        "categoryName": "Baking",
+        "heroImage": "assets/categories/baking.png",
+        "products": [
+            {
+                "name": "Coconut Cream Original [400ml]",
+                "description": "TopwiL Organic Coconut Cream is made from sustainably grown, organically certified coconut farms in Sri Lanka. Our product is delicious, natural & creamy with no nasties.",
+                "price": 5.00,
+                "productImage": "assets/products/bake001.png",
+                "sku": "BAKE001"
+            },
+            {
+                "name": "Fluffy Pancake Mix [300g]",
+                "description": "A pancake mix that is made with genuinely healthy ingredients. No white flour, sugar, colours, flavours or preservatives to be seen here!\nWe’ve combined 5 ingredients to help you create a delicious grain free and gluten free fluffy pancake.\nWe use almond meal and organic coconut flour because these flours are both gluten free, but also higher in protein and fibre.\nAll you need to do is add the eggs and almond milk to create these light and fluffy pancakes.",
+                "price": 21.00,
+                "productImage": "assets/products/bake002.png",
+                "sku": "BAKE002"
+            },
+            {
+                "name": "Organic Banana Bread Baking Mix [360g]",
+                "description": "The perfect addition to a healthy lunchbox. This banana bread mix is super easy to make and tastes delicious.\nThere are no refined white flours or sugars in this mix, instead we’ve added nutrient dense organic sunflower meal, organic flaxseeds, organic chia seeds, organic buckwheat flour and organic brown rice flour.\nNo nuts have been added to this mix, making it suitable for lunchboxes. All you need to do is add 3 bananas, 2 eggs and some olive oil, mix and bake!\nThis package will create 1 loaf.",
+                "price": 19.50,
+                "productImage": "assets/products/bake003.png",
+                "sku": "BAKE003"
+            },
+            {
+                "name": "Scoop Brownie Mix [605g]",
+                "description": "A deliciously fudgy brownie that is quick and easy to make!\nA family favourite recipe that has become a huge hit in stores! Buckwheat is rich in protein, fibre and antioxidants whilst being a perfect gluten-free flour alternative.\nPaired with the benefits of a serving of cacao, these brownies give you lots of goodness while enjoying a delicious treat.",
+                "price": 24.50,
+                "productImage": "assets/products/bake004.png",
+                "sku": "BAKE004"
+            },
+            {
+                "name": "Fudge Chocolate Muffin Mix [360g]",
+                "description": "A muffin mix that is made with genuinely healthy ingredients! No white flour, sugar, colours, flavors or preservatives to be seen here!\nWe’ve combined 6 ingredients to help you create a delicious grain free and gluten free muffin.\nWe use almond meal and organic coconut flour as a base, and sweeten our muffins with organic coconut palm sugar.\nWe use organic raw cacao powder to give it that rich chocolate taste. All you need to do is add the eggs, almond milk and olive oil and get baking!",
+                "price": 21.00,
+                "productImage": "assets/products/bake005.png",
+                "sku": "BAKE005"
+            },
+            {
+                "name": "Scoop Pizza Dough Box [360g]",
+                "description": "Our easy to make gluten-free pizza bases are crispy, flavoursome and made from simple nourishing whole-food flours and ingredients that promote optimal gut health. We use nutritional yeast as a seasoning, which is a deactivated yeast with a cheese-like flavour.\nGluten-free foods are not only beneficial for those on a gluten-free diet but can be enjoyed by all. Our bodies thrive on a wide variety of foods, so why not mix things up a little?",
+                "price": 19.50,
+                "productImage": "assets/products/bake006.png",
+                "sku": "BAKE006"
+            },
+            {
+                "name": "Protein Bread Mix [350g]",
+                "description": "This keto protein bread mix provides you with 8g of protein per slice and only 3g of carbohydrates per slice.\nWe’ve used sustainably farmed Australian grown Faba bean protein in this delicious bread mix.\nFaba bean is a high protein legume, rich in amino acids. It has a neutral taste which means this bread mix doesn’t have a strong protein flavour.\nAll you need to do is add water and 3 eggs, then mix and bake.",
+                "price": 21.00,
+                "productImage": "assets/products/bake007.png",
+                "sku": "BAKE007"
+            },
+            {
+                "name": "Rose Water Syrup Organic [150ml]",
+                "description": "Rose Water Syrup is often used in dishes, especially in South East Asia and Middle Eastern desserts, teas, beverages, enhancing its rose flavour.",
+                "price": 10.50,
+                "productImage": "assets/products/bake008.png",
+                "sku": "BAKE008"
+            },
+            {
+                "name": "Heleila Vanilla Extract [50ml]",
+                "description": "Heilala Vanilla Pure Vanilla Extract, straight from the source, applauded by renowned chefs for its creamy, complex, bourbon like flavor, perfect for your Brownies, Cupcakes, Pancakes, Waffles and Soups.",
+                "price": 24.00,
+                "productImage": "assets/products/bake009.png",
+                "sku": "BAKE009"
+            },
+            {
+                "name": "Coconut Whipping Cream [400ml]",
+                "description": "Honest to Goodness Organic Whipping Cream is a delicious dairy free alternative to traditional whipping cream, that can add the finishing touch to your favorite cake or dessert. It also makes a decadent topping for a simple bowl of fruit or pancakes.\nVegan friendly, No GMO, no artificial sweeteners or preservatives.",
+                "price": 9.50,
+                "productImage": "assets/products/bake010.png",
+                "sku": "BAKE010"
+            }
+        ]
+    },
+    {
+        "categoryName": "Chocolate",
+        "heroImage": "assets/categories/chocolate.png",
+        "products": [
+            {
+                "name": "Almonds Dark Chocolate [370g]",
+                "description": "Roasted Australian, chemical and pesticide free, almonds coated in premium 73% dark chocolate. These are a huge hit in all stores! Everyone seems to enjoy this classic combination.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 23.60,
+                "productImage": "assets/products/choc001.png",
+                "sku": "CHOC001"
+            },
+            {
+                "name": "Strawberries Freeze Dried Dark Chocolate [250g]",
+                "description": "Deliciously crunchy freeze-dried strawberries coated in 73% dark chocolate. Made in Byron Bay, Australia, using premium, ethically sourced ingredients. Our freeze-dried strawberries are a Scoop customer favourite especially because of their unique honeycomb style crunch!\n\nThe strawberry is kept whole during the freeze-drying process and results in the most amazing, classic combination of strawberries and chocolate!\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 24.00,
+                "productImage": "assets/products/choc002.png",
+                "sku": "CHOC002"
+            },
+            {
+                "name": "Macadamia Dark Chocolate [350g]",
+                "description": "Australian macadamia nuts coated in premium quality 75% dark chocolate.",
+                "price": 25.90,
+                "productImage": "assets/products/choc003.png",
+                "sku": "CHOC003"
+            },
+            {
+                "name": "Coffee Dark Chocolate [340g]",
+                "description": "Whole, crunchy, roasted coffee beans coated in premium 73% dark chocolate. Made in Byron Bay, Australia from ethically sourced ingredients. A classically moreish treat that will be a hit at your next dinner party!\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 17.10,
+                "productImage": "assets/products/choc004.png",
+                "sku": "CHOC004"
+            },
+            {
+                "name": "Hazelnut Dark Chocolate [315g]",
+                "description": "A grade Turkish hazelnuts coated in 67% premium dark chocolate. Made in Sydney, Australia using high quality ethically sourced ingredients. Chocolate and hazelnuts are often a well-loved classic combination.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 23.50,
+                "productImage": "assets/products/choc005.png",
+                "sku": "CHOC005"
+            },
+            {
+                "name": "Sultana Milk Chocolate [420g]",
+                "description": "Soft sultanas coated in premium milk chocolate. A classic chewy chocolate treat. Made in Sydney, Australia, using the finest quality, ethically sourced, ingredients. An amazing combination that always wins when eaten on their own, to decorate a cake, or tossed into your favourite trail mix.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 18.20,
+                "productImage": "assets/products/choc006.png",
+                "sku": "CHOC006"
+            },
+            {
+                "name": "Macadamia White Chocolate [300g]",
+                "description": "Australian macadamias coated in premium white chocolate. Made in Byron Bay, Australia, using the finest, ethically sourced, ingredients. Macadamias have an amazing buttery texture which pairs well with creamy, sweet, white chocolate.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 22.50,
+                "productImage": "assets/products/choc007.png",
+                "sku": "CHOC007"
+            },
+            {
+                "name": "Goji Berries Dark Chocolate [370g]",
+                "description": "Goji berries coated in premium 73% dark chocolate. Made in Byron Bay, Australia from high quality, ethically sourced ingredients. The combination of goji berries and chocolate makes for an antioxidant powerhouse! We find the little treats to be incredibly moreish and our hint would be to add them to your perfect travel trail mix.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 23.60,
+                "productImage": "assets/products/choc008.png",
+                "sku": "CHOC008"
+            },
+            {
+                "name": "Hazelnut Milk Chocolate [315g]",
+                "description": "Roasted Turkish hazelnuts covered in premium, creamy milk chocolate, always a winning combo! Made in Sydney, Australia, using premium quality, ethically sourced ingredients.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 23.50,
+                "productImage": "assets/products/choc009.png",
+                "sku": "CHOC009"
+            },
+            {
+                "name": "Almonds Milk Chocolate [370g]",
+                "description": "Roasted Australian almonds coated in premium milk chocolate. Made in Sydney, Australia, using the finest quality, ethically sourced ingredients. The almonds are locally grown and are chemical and pesticide free.\n\nStore in an airtight container and keep in a cool, dry place.",
+                "price": 23.60,
+                "productImage": "assets/products/choc010.png",
+                "sku": "CHOC010"
+            }
+        ]
+    },
+    {
+        "categoryName": "Beverage",
+        "heroImage": "assets/categories/beverage.png",
+        "products": [
+            {
+                "name": "Coconut Water Organic [1L]",
+                "description": "Chef’s Choice Certified Organic 100% Pure Coconut Water is made from the fresh juice of coconuts and is a healthy, refreshing and all natural drink.\nIt makes a delicious, thirst-quenching sports and exercise drink and can be use in smoothies, protein shakes or as a juice base for drinks when mixed with other fruits.",
+                "price": 7.50,
+                "productImage": "assets/products/bvge001.png",
+                "sku": "BVGE001"
+            },
+            {
+                "name": "Organic Pomegranate Juice [750ml]",
+                "description": "Chef’s Choice Certified Organic 100% Pomegranate Juice is pure pomegranate juice freshly cold pressed from whole ripe pomegranates.\nOur pomegranates are grown organically and harvested at peak ripeness for full flavour and nutrients.\nNaturally rich in antioxidants that aids in longevity, this vibrant drink delivers a unique taste of sweet and tart with a whole lot of nutrition. Enjoy it as a chilled refresher drink.",
+                "price": 9.50,
+                "productImage": "assets/products/bvge002.png",
+                "sku": "BVGE002"
+            },
+            {
+                "name": "Old Fashioned Lemonade Cordial [500ml]",
+                "description": "Finally, the way lemonade used to be made, with pride and passion.\nOur Old Fashioned Lemonade syrup delivers a truly thirst quenching symphony of citric notes with a dash of blackcurrant and cranberry extract.\nJust add sparkling water from your SodaStream to our Old Fashioned Lemonade Syrup, and enjoy!",
+                "price": 16.50,
+                "productImage": "assets/products/bvge003.png",
+                "sku": "BVGE003"
+            },
+            {
+                "name": "Ginger Ale Cordial [500ml]",
+                "description": "Our Classic Ginger Ale syrup is just as it used to be; clean and crisp with subtle citrus and ginger notes, leaving the palate fresh without the furry feeling of sugar-laden ginger beer.\nJust add sparkling water from your SodaStream machine to our Ginger Ale Syrup and enjoy! Our syrup also pairs well with whisky over ice.",
+                "price": 16.50,
+                "productImage": "assets/products/bvge004.png",
+                "sku": "BVGE004"
+            },
+            {
+                "name": "Organic Orange/Mango/Apple Juice [330ml]",
+                "description": "We use Australian-grown organic oranges to bring you a fantastic juice, with all the vitamin C and antioxidants of fresh oranges.",
+                "price": 6.50,
+                "productImage": "assets/products/bvge005.png",
+                "sku": "BVGE005"
+            },
+            {
+                "name": "Pink Grapefruit Cordial [500ml]",
+                "description": "Our Pink Grapefruit syrup is a perfect balance between tart, tang and sweet.\nThis alluring and refreshing drink is perfect from summer to winter as a mixer, cocktails and everyday refreshment.\nJust add sparkling water from your SodaStream machine to our Pink Grapefruit syrup and enjoy!",
+                "price": 16.50,
+                "productImage": "assets/products/bvge006.png",
+                "sku": "BVGE006"
+            },
+            {
+                "name": "Raspberry Mint Cordial [500ml]",
+                "description": "Our Raspberry & Mint syrup is the ultimate summer drink, uplifting with delicate raspberry tones rounded off with refreshing yet subtle mint notes.\nDivine as a drink or in cocktails. Just add sparkling water from your SodaStream to our Raspberry & Mint syrup and enjoy!",
+                "price": 16.50,
+                "productImage": "assets/products/bvge007.png",
+                "sku": "BVGE007"
+            },
+            {
+                "name": "Sour Cherry [1L]",
+                "description": "100% natural cold pressed juice. Made of the premium sorts of fresh sunripe cherries to preserve the fine aroma and taste.\nThe juice is a tasty and nutritious product, containing considerable amount of easily assimilable reducible sugars, (glucose and fructose), organic acids (predominantly malic and lemon acids), water-soluble polyphenols, amino acids, micro and macro elements, vitamins: C, B1, B2, PP, folic acid.\nEnjoy drinking two cups (per serving 200ml) a day of this 100% pure juice and immerse in its packed natural goodness.",
+                "price": 15.50,
+                "productImage": "assets/products/bvge008.png",
+                "sku": "BVGE008"
+            },
+            {
+                "name": "Parker’s Organic Apple Juice [330ml]",
+                "description": "Our apple juice is made with 100% organic apple juice. Apple juice is a great source of vitamin C and protective polyphenols.\nThe apple juice is cloudy rather than clear, so it retains a big supply of dietary fibre too.",
+                "price": 6.50,
+                "productImage": "assets/products/bvge009.png",
+                "sku": "BVGE009"
+            },
+            {
+                "name": "Parker’s Organic Orange Juice [330ml]",
+                "description": "Our orange juice contains 100% Australian organic oranges, squeezed at our factory each day. We reckon it’s the best orange juice you can buy.\nOranges are really high in vitamin C – a 330ml bottle of our orange juice contains all your daily vitamin C requirements, not to mention the antioxidants it contains to help fight free radicals.",
+                "price": 6.50,
+                "productImage": "assets/products/bvge010.png",
+                "sku": "BVGE010"
+            }
+        ]
+    },
+    {
+        "categoryName": "Herbs & Spices",
+        "heroImage": "assets/categories/herbsspices.png",
+        "products": [
+            
+        ]
+    },
+    {
+        "categoryName": "Pasta & Noodle",
+        "heroImage": "assets/categories/pastanoodle.png",
+        "products": [
+            
+        ]
+    },
+    {
+        "categoryName": "Tea",
+        "heroImage": "assets/categories/tea.png",
+        "products": [
+            
+        ]
+    }
+]
