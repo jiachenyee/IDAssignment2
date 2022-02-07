@@ -51,9 +51,9 @@ body{
     margin-bottom: 2rem;
 }
 
-.form-message{
+.form__message{
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .form__message-error{
@@ -83,8 +83,6 @@ body{
 }
 
 .form__input-error{
-    border-color: var(--color-error);
-    background: var(--color-primary);
     color: var(--color-error);
 }
 
