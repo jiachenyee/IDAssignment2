@@ -65,7 +65,7 @@ body{
 .form__input{
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1.2rem;
     border: none;
     box-sizing: border-box;
     border-radius: var(--border-radius);
