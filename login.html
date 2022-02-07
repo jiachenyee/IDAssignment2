@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <!--Sign In Form-->
-        <form action="" class="form" id="signin"> <!--edit action of form-->
+        <form action="" class="form form--hidden" id="signin"> <!--edit action of form--> <!--remove hidden-->
             <!--Title of Sign In Form-->
             <h1 class="form__title-main">Hello again!</h1>
             <h1 class="form__title-sub">Welcome back! We've missed you!</h1>
@@ -43,9 +43,13 @@
             </p>
         </form>
 
+
+
+
+
         <!--Sign Up Form Part 1-->
         <form action="" class="form form--hidden" id="signup1"> <!--edit action of form-->
-            <!--Title of Sign In Form-->
+            <!--Title of Sign Up Form Part 1-->
             <h1 class="form__title-main">Welcome</h1>
             <h1 class="form__title-sub">Join our Scoop family</h1>
 
@@ -84,6 +88,48 @@
             <p class="form__text">
                 <a href="" id="linkLogin" class="form__link">Already have an account? Sign In!</a>
             </p>
+        </form>
+
+
+
+
+
+        <!--Sign Up Form Part 2-->
+        <form action="" class="form" id="signup2"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 2-->
+            <h1 class="form__title-main">Where do you stay?</h1>
+            <h1 class="form__title-sub">We'll need this to deliver to your doorstep.</h1>
+
+            <!--First Address section of the form-->
+            <div class="form__input-group">
+                <label for="addrLine1">Address Line 1</label><br>
+                <input type="text" class="form__input" id="addrLine1" autofocus required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Second Address section of the form-->
+            <div class="form__input-group">
+                <label for="addrLine2">Address Line 2(optional)</label><br>
+                <input type="text" class="form__input" id="addrLine2">
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Unit Number section of the form-->
+            <div class="form__input-group">
+                <label for="unitNo">Unit Number (optional)</label><br>
+                <input type="number" class="form__input" id="unitNo">
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Postal/Zip Code section of the form-->
+            <div class="form__input-group">
+                <label for="postalCode">Postal/Zip Code</label><br>
+                <input type="number" class="form__input" id="postalCode" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Button for continuation of sign up-->
+            <button class="form__button" type="submit">Let's Go</button>
         </form>
     </div>
 
