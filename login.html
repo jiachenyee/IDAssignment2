@@ -95,7 +95,7 @@
 
 
         <!--Sign Up Form Part 2-->
-        <form action="" class="form" id="signup2"> <!--edit action of form-->
+        <form action="" class="form form--hidden" id="signup2"> <!--edit action of form-->
             <!--Title of Sign Up Form Part 2-->
             <h1 class="form__title-main">Where do you stay?</h1>
             <h1 class="form__title-sub">We'll need this to deliver to your doorstep.</h1>
@@ -125,6 +125,33 @@
             <div class="form__input-group">
                 <label for="postalCode">Postal/Zip Code</label><br>
                 <input type="number" class="form__input" id="postalCode" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Button for continuation of sign up-->
+            <button class="form__button" type="submit">Let's Go</button>
+        </form>
+
+
+
+
+        <!--Sign Up Form Part 3-->
+        <form action="" class="form" id="signup3"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 2-->
+            <h1 class="form__title-main">Almost there...</h1>
+            <h1 class="form__title-sub">A little more information and you'll be on your way!</h1>
+
+            <!--Payment Method section of the form-->
+            <div class="form__input-group">
+                <p class="payment__text-main">Payment Method</p>
+                <p class="payment__text-sub">There are no payment methods, click on + to add a new one!</p>
+                <!--icon-->
+            </div>
+
+            <!--Contact No section of the form-->
+            <div class="form__input-group">
+                <label for="contactNo">Contact No.</label><br>
+                <input type="number" class="form__input" id="contactNo">
                 <div class="form__input-message-error"></div>
             </div>
 
