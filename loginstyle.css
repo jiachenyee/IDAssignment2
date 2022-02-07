@@ -129,3 +129,15 @@ body{
 .form__link:hover{
     text-decoration: underline;
 }
+.row{
+    box-sizing: border-box;
+}
+
+.column{
+    float: left;
+    width: 45%;
+}
+
+.col1{
+    margin-right: 50px;
+}

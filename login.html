@@ -136,27 +136,74 @@
 
 
         <!--Sign Up Form Part 3-->
-        <form action="" class="form" id="signup3"> <!--edit action of form-->
+        <form action="" class="form form--hidden" id="signup3"> <!--edit action of form-->
             <!--Title of Sign Up Form Part 2-->
             <h1 class="form__title-main">Almost there...</h1>
             <h1 class="form__title-sub">A little more information and you'll be on your way!</h1>
 
             <!--Payment Method section of the form-->
             <div class="form__input-group">
-                <p class="payment__text-main">Payment Method</p>
-                <p class="payment__text-sub">There are no payment methods, click on + to add a new one!</p>
+                <p class="payment__text-main">Payment Method</p><!--do css for this-->
+                <p class="payment__text-sub">There are no payment methods, click on + to add a new one!</p><!--do css for this-->
                 <!--icon-->
             </div>
 
             <!--Contact No section of the form-->
             <div class="form__input-group">
                 <label for="contactNo">Contact No.</label><br>
-                <input type="number" class="form__input" id="contactNo">
+                <input type="number" class="form__input" id="contactNo" required>
                 <div class="form__input-message-error"></div>
             </div>
 
             <!--Button for continuation of sign up-->
             <button class="form__button" type="submit">Let's Go</button>
+        </form>
+
+
+
+
+        <!--Add Payment Method-->
+        <form action="" class="form" id="addpayment"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 2-->
+            <h1 class="payMethod__title-main">Add Payment Method</h1><!--do css for this-->
+
+            <!--Card Number section of the form-->
+            <div class="form__input-group">
+                <label for="cardNumber">Card Number</label><br>
+                <input type="number" class="form__input" id="cardNumber" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Name section of the form-->
+            <div class="form__input-group">
+                <label for="name">Name</label><br>
+                <input type="text" class="form__input" id="name" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <div class="row">
+                <div class="column col1">
+                    <!--Expiry Date section of the form-->
+                    <div class="form__input-group">
+                        <label for="expiryDate">Expiry Date</label><br>
+                        <input type="date" class="form__input" id="expiryDate" required>
+                        <div class="form__input-message-error"></div>
+                    </div>
+                </div>
+
+                <div class="column col2">
+                    <!--CVC section of the form-->
+                    <div class="form__input-group">
+                        <label for="cvc">CVC</label><br>
+                        <input type="number" class="form__input" id="cvc" required>
+                        <div class="form__input-message-error"></div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--Button for submission of payment details-->
+            <button class="form__button" type="submit">Add Card</button>
         </form>
     </div>
 
