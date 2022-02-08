@@ -23,3 +23,12 @@
     display: flex;
     gap: 16px;
 }
+
+#productInformation {
+    display: flex;
+}
+
+.productImage {
+    border-radius: 32px;
+    background-color: #0d21a117;
+}

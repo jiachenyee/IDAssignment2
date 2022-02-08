@@ -26,6 +26,14 @@ async function load() {
         
         tagCollectionDiv.appendChild(div);
     }
+
+    var productInformationDiv = document.getElementById("productInformation");
+    
+    var productImage = document.createElement("img");
+    productImage.className = "productImage";
+    productImage.src = product["productImage"];
+
+    productInformationDiv.appendChild(productImage);
 }
 
 async function loadProductData() {
