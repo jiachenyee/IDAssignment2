@@ -46,6 +46,11 @@
     background-color: #0d21a10b;
 }
 
+#tag > img {
+    width: 24px;
+    height: 24px;
+}
+
 #tag > h3 {
     margin-left: 8px;
     margin-top: 0px;
