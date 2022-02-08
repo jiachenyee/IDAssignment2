@@ -2,7 +2,7 @@
 async function loadProductData() {
     var productData = [];
 
-    await fetch("./categories.json")
+    await fetch("./resources/categories.json")
         .then(response => {
             return response.json();
         })
