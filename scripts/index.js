@@ -22,6 +22,20 @@ function showGreeting() {
     }
 }
 
+showRewards()
+
+function showRewards() {
+    let parent = document.getElementById("rewards");
+
+    parent.innerHTML = `
+    <h2>Get a more personalized experience!</h2>
+    <div style="display:flex;justify-content:flex-end;align-items:flex-end;">
+        <h3>Hello</h3>
+        <h3>Hello</h3>
+    </div>
+    `;
+}
+
 async function loadCategories() {
 
     var productData = await loadProductData();

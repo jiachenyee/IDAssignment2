@@ -2,6 +2,13 @@
     margin: 48px
 }
 
+#rewards {
+    background-color: #0D21A1;
+    padding: 21px;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
 .categoryItem {
     display: flex;
     flex-direction: column;
