@@ -3,11 +3,21 @@ const categoryName = params.get('name');
 
 async function load() {
     console.log(categoryName);
+    showGreeting()
     await getCurrentCategory();
 }
 
 async function loadCategoryData() {
-    
+
+}
+
+function showGreeting() {
+    var user = localStorage.getItem("username");
+    if (user == null) {
+        document.getElementById("greeting").innerHTML = "Hello!";
+    } else {
+        document.getElementById("greeting").innerHTML = `Hello ${user}!`;
+    }
 }
 
 async function getCurrentCategory() {
