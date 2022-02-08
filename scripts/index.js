@@ -11,6 +11,17 @@ async function loadProductData() {
     return productData;
 }
 
+showGreeting()
+
+function showGreeting() {
+    var user = localStorage.getItem("username")
+    if (user == null) {
+        document.getElementById("greeting").innerHTML = "Hello ";
+    } else {
+        document.getElementById("greeting").innerHTML = `Hello ${user}`;
+    }
+}
+
 async function loadCategories() {
 
     var productData = await loadProductData();
