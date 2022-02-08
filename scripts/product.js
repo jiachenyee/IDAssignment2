@@ -7,7 +7,25 @@ async function load() {
 
     document.getElementById("productName").innerText = product["name"];
 
-    console.log(product);
+    var tagsDataset = await loadTagData()
+
+    var productTags = product["tags"].map(tag => tagsDataset.filter((item) => item["identifier"] == tag)[0])
+
+    var tagCollectionDiv = document.getElementById("tags");
+
+    for (let i = 0; i < productTags.length; i++) { 
+        var tag = productTags[i];
+        
+        var div = document.createElement("DIV");
+        
+        div.className = "tag";
+        div.innerHTML = `
+        <img src="${tag["icon"]}" alt="${tag["displayName"]}"/>
+        <h3>${tag["displayName"]}</h3>
+        `
+        
+        tagCollectionDiv.appendChild(div);
+    }
 }
 
 async function loadProductData() {
