@@ -2,7 +2,10 @@ const params = new URLSearchParams(window.location.search);
 const categoryName = params.get('name');
 
 async function load() {
-    console.log(categoryName);
+    if (categoryName == undefined || categoryName == "") {
+        window.location.href = "/";
+    }
+
     showGreeting()
     await loadCategoryData();
 }
