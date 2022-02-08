@@ -24,6 +24,10 @@ p {
     margin: 0px;
 }
 
+nav {
+    display: flex;
+}
+
 .container {
     margin: 48px
 }
