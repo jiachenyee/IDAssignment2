@@ -4,11 +4,27 @@ const categoryName = params.get('name');
 async function load() {
     console.log(categoryName);
     showGreeting()
-    await getCurrentCategory();
+    await loadCategoryData();
 }
 
 async function loadCategoryData() {
+    const category = await getCurrentCategory();
+    const products = category["products"]
 
+    var parent = document.getElementById("products");
+    
+    for (let i = 0; i < products.length; i++) { 
+        var product = products[i];
+        
+        var div = document.createElement("DIV");
+        div.className = "productDisplay";
+        div.innerHTML = `
+        <img src="${product["productImage"]}" alt="${product["name"]} image">
+        <h3>${product["name"]}<br/><span style="color:#707070; font-weight:500;">$${product["price"].toFixed(2)}</span></h3>
+        `;
+        
+        parent.appendChild(div);
+    }
 }
 
 function showGreeting() {

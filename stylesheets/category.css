@@ -1,3 +1,37 @@
 .container {
     margin: 48px
 }
+
+.productDisplay {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    flex-grow: 1;
+
+    height: 300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.productDisplay > img {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productDisplay > h3 {
+    color: #011638;
+    margin: 12px;
+    margin-right: auto;
+}
+
+#products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}

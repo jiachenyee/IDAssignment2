@@ -67,7 +67,6 @@
 .productDisplay {
     background-color: #EEF0F2;
     border-radius: 10px;
-    /* width: 200px; */
     flex-grow: 1;
 
     height: 300px;
