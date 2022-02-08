@@ -1,0 +1,67 @@
+[
+    {
+        "displayName": "Tea",
+        "identifier": "tea",
+        "icon": "assets/tags/tea.png"
+    },
+    {
+        "displayName": "Pasta and Noodles",
+        "identifier": "pasta and noodles",
+        "icon": "assets/tags/pastaandnoodles.png"
+    },
+    {
+        "displayName": "Wholewheat",
+        "identifier": "wholewheat",
+        "icon": "assets/tags/wholewheat.png"
+    },
+    {
+        "displayName": "Herbs and Spices",
+        "identifier": "herbs and spices",
+        "icon": "assets/tags/herbsandspices.png"
+    },
+    {
+        "displayName": "Beverage",
+        "identifier": "beverage",
+        "icon": "assets/tags/beverage.png"
+    },
+    {
+        "displayName": "Chocolate",
+        "identifier": "chocolate",
+        "icon": "assets/tags/chocolate.png"
+    },
+    {
+        "displayName": "Keto",
+        "identifier": "keto",
+        "icon": "assets/tags/keto.png"
+    },
+    {
+        "displayName": "Vegan",
+        "identifier": "vegan",
+        "icon": "assets/tags/vegan.png"
+    },
+    {
+        "displayName": "Organic",
+        "identifier": "organic",
+        "icon": "assets/tags/organic.png"
+    },
+    {
+        "displayName": "Natural",
+        "identifier": "natural",
+        "icon": "assets/tags/natural.png"
+    },
+    {
+        "displayName": "Baking",
+        "identifier": "baking",
+        "icon": "assets/tags/baking.png"
+    },
+    {
+        "displayName": "New",
+        "identifier": "new",
+        "icon": "assets/tags/new.png"
+    },
+    {
+        "displayName": "Gluten-Free",
+        "identifier": "gluten free",
+        "icon": "assets/tags/gluten free.png"
+    },
+]
