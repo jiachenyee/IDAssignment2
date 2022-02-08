@@ -5,6 +5,8 @@ async function load() {
     var productData = await loadProductData();
     var product = productData.flatMap(category => category["products"]).filter(product => product["sku"] == sku)[0];
 
+    document.getElementById("productName").innerText = product["name"];
+
     console.log(product);
 }
 
