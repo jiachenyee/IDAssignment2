@@ -55,7 +55,7 @@ async function loadCategories() {
         div.className = "categoryItem";
 
         var categoryName = productCategory["categoryName"];
-        var categoryPath = `categories/${categoryName.toLowerCase().replace(/[^a-z]+/gi, '')}`
+        var categoryPath = `category?name=${categoryName.toLowerCase().replace(/[^a-z]+/gi, '')}`
 
         div.innerHTML = `
         <a href="${categoryPath}">
