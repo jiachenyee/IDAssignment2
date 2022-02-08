@@ -26,11 +26,13 @@
 
 #productInformation {
     display: flex;
+    gap: 32px;
 }
 
 .productDescriptionContainer {
     border-radius: 32px;
     background-color: #ffffff;
+    padding: 32px;
 }
 
 .productImage {
