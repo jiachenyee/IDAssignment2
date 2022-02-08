@@ -142,7 +142,14 @@
     margin-left: 16px;
 }
 
+.cartContainer:hover {
+    background-color: #0D21A1;
+}
+
+.cartContainer:hover > img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(104%) contrast(104%);
+}
+
 .cartButton {
     padding: 16px;
-    
 }
