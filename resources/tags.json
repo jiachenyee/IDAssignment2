@@ -2,66 +2,66 @@
     {
         "displayName": "Tea",
         "identifier": "tea",
-        "icon": "assets/tags/tea.png"
+        "icon": "assets/tags/tea.svg"
     },
     {
         "displayName": "Pasta and Noodles",
         "identifier": "pasta and noodles",
-        "icon": "assets/tags/pastaandnoodles.png"
+        "icon": "assets/tags/pastaandnoodles.svg"
     },
     {
         "displayName": "Wholewheat",
         "identifier": "wholewheat",
-        "icon": "assets/tags/wholewheat.png"
+        "icon": "assets/tags/wholewheat.svg"
     },
     {
         "displayName": "Herbs and Spices",
         "identifier": "herbs and spices",
-        "icon": "assets/tags/herbsandspices.png"
+        "icon": "assets/tags/herbsandspices.svg"
     },
     {
         "displayName": "Beverage",
         "identifier": "beverage",
-        "icon": "assets/tags/beverage.png"
+        "icon": "assets/tags/beverage.svg"
     },
     {
         "displayName": "Chocolate",
         "identifier": "chocolate",
-        "icon": "assets/tags/chocolate.png"
+        "icon": "assets/tags/chocolate.svg"
     },
     {
         "displayName": "Keto",
         "identifier": "keto",
-        "icon": "assets/tags/keto.png"
+        "icon": "assets/tags/keto.svg"
     },
     {
         "displayName": "Vegan",
         "identifier": "vegan",
-        "icon": "assets/tags/vegan.png"
+        "icon": "assets/tags/vegan.svg"
     },
     {
         "displayName": "Organic",
         "identifier": "organic",
-        "icon": "assets/tags/organic.png"
+        "icon": "assets/tags/organic.svg"
     },
     {
         "displayName": "Natural",
         "identifier": "natural",
-        "icon": "assets/tags/natural.png"
+        "icon": "assets/tags/natural.svg"
     },
     {
         "displayName": "Baking",
         "identifier": "baking",
-        "icon": "assets/tags/baking.png"
+        "icon": "assets/tags/baking.svg"
     },
     {
         "displayName": "New",
         "identifier": "new",
-        "icon": "assets/tags/new.png"
+        "icon": "assets/tags/new.svg"
     },
     {
         "displayName": "Gluten-Free",
         "identifier": "gluten free",
-        "icon": "assets/tags/gluten free.png"
+        "icon": "assets/tags/glutenfree.svg"
     },
 ]
