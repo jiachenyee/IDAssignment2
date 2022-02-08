@@ -69,11 +69,40 @@ async function loadCategories() {
 }
 
 async function loadPopularItems() {
+
+    var loggedIn = localStorage.getItem("username") != null;
+
     var productData = await loadProductData();
 
-    let parent = document.getElementById("featuredProducts");
+    var parent = document.getElementById("featuredProducts");
 
     var products = productData.flatMap(category => category["products"])
 
-    console.log(products);
+    parent.innerHTML = loggedIn ? "<h2>For You</h2>" : "<h2>Popular</h2>"
+    
+    var productList = document.createElement("DIV");
+    productList.id = "productsList";
+
+    parent.appendChild(productList);
+
+    // Get random sample of products
+    var randomSample = products.sort(() => Math.random() - 0.5).slice(0, 10);
+
+    for (let i = 0; i < randomSample.length; i++) { 
+        var product = randomSample[i];
+        
+        var div = document.createElement("DIV");
+        div.className = "productDisplay";
+        div.innerHTML = `
+        <img src="${product["productImage"]}" alt="${product["name"]} image">
+        <h3>${product["name"]}<br/>$${product["price"].toFixed(2)}</h3>
+        `;
+        
+        productList.appendChild(div);
+    }
+}
+
+async function load() {
+    await loadCategories();
+    await loadPopularItems();
 }
