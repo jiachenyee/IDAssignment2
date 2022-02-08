@@ -91,7 +91,8 @@ async function loadPopularItems() {
     for (let i = 0; i < randomSample.length; i++) { 
         var product = randomSample[i];
         
-        var div = document.createElement("DIV");
+        var div = document.createElement("A");
+        div.href = `/product?sku=${product["sku"]}`;
         div.className = "productDisplay";
         div.innerHTML = `
         <img src="${product["productImage"]}" alt="${product["name"]} image">

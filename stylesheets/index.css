@@ -75,6 +75,8 @@
     align-items:center;
     flex-direction: column;
     margin-bottom: 16px;
+
+    text-decoration: none;
 }
 
 .productDisplay > img {
