@@ -1,3 +1,7 @@
+.container {
+    margin: 48px
+}
+
 .categoryItem {
     display: flex;
     flex-direction: column;

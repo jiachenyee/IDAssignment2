@@ -16,9 +16,9 @@ showGreeting()
 function showGreeting() {
     var user = localStorage.getItem("username")
     if (user == null) {
-        document.getElementById("greeting").innerHTML = "Hello ";
+        document.getElementById("greeting").innerHTML = "Hello!";
     } else {
-        document.getElementById("greeting").innerHTML = `Hello ${user}`;
+        document.getElementById("greeting").innerHTML = `Hello ${user}!`;
     }
 }
 
