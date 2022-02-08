@@ -107,3 +107,14 @@
     justify-content: center;
     align-items: center;
 }
+
+.searchContainer {
+    background-color: #ffffff;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    border: none;
+}
