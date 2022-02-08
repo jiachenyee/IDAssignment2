@@ -95,7 +95,7 @@ async function loadPopularItems() {
         div.className = "productDisplay";
         div.innerHTML = `
         <img src="${product["productImage"]}" alt="${product["name"]} image">
-        <h3>${product["name"]}<br/>$${product["price"].toFixed(2)}</h3>
+        <h3>${product["name"]}<br/><span style="color:#707070; font-weight:500;">$${product["price"].toFixed(2)}</span></h3>
         `;
         
         productList.appendChild(div);
