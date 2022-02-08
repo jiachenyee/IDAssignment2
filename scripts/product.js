@@ -34,6 +34,12 @@ async function load() {
     productImage.src = product["productImage"];
 
     productInformationDiv.appendChild(productImage);
+
+    var productDescription = document.createElement("p");
+    
+    productDescription.innerText = product["description"];
+
+    productInformationDiv.appendChild(productDescription);
 }
 
 async function loadProductData() {
