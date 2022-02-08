@@ -29,9 +29,9 @@ function showRewards() {
 
     parent.innerHTML = `
     <h2>Get a more personalized experience!</h2>
-    <div style="display:flex;justify-content:flex-end;align-items:flex-end;">
-        <h3>Hello</h3>
-        <h3>Hello</h3>
+    <div class="bannerCTAStack">
+        <a class="bannerCTA" href="/signup">Sign Up</a>
+        <a class="bannerCTA" href="/login">Sign In</a>
     </div>
     `;
 }
