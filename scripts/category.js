@@ -9,6 +9,17 @@ async function load() {
 
 async function loadCategoryData() {
     const category = await getCurrentCategory();
+
+    var tagDiv = document.getElementById("tag");
+    
+    var tags = await loadTagData()
+    var tag = tags.filter((tag) => tag["identifier"] == category["categoryName"].toLowerCase().replace(/[^a-z]+/gi, ''))[0]
+
+    tagDiv.innerHTML = `
+    <img src="${tag["icon"]}" alt="${tag["displayName"]}"/>
+    <h3>${tag["displayName"]}</h3>
+    `
+
     const products = category["products"]
 
     var parent = document.getElementById("products");
@@ -53,4 +64,16 @@ async function loadProductData() {
         .then(data => productData = data);
 
     return productData;
+}
+
+async function loadTagData() {
+    var tags = []
+
+    await fetch("./resources/tags.json")
+        .then(response => {
+            return response.json();
+        })
+        .then(data => tags = data);
+
+    return tags;
 }

@@ -23,7 +23,7 @@
                 "price": 21,
                 "productImage": "assets/products/bake002.png",
                 "tags": [
-                    "gluten free",
+                    "glutenfree",
                     "organic",
                     "baking"
                 ],
@@ -47,7 +47,7 @@
                 "productImage": "assets/products/bake004.png",
                 "tags": [
                     "baking",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "BAKE004"
             },
@@ -60,7 +60,7 @@
                     "organic",
                     "baking",
                     "new",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "BAKE005"
             },
@@ -71,7 +71,7 @@
                 "productImage": "assets/products/bake006.png",
                 "tags": [
                     "baking",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "BAKE006"
             },
@@ -83,7 +83,7 @@
                 "tags": [
                     "keto",
                     "baking",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "BAKE007"
             },
@@ -97,7 +97,7 @@
                     "organic",
                     "natural",
                     "baking",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "BAKE008"
             },
@@ -393,7 +393,7 @@
                 "price": 13.5,
                 "productImage": "assets/products/herb001.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural",
                     "new"
@@ -406,7 +406,7 @@
                 "price": 5.8,
                 "productImage": "assets/products/herb002.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -418,7 +418,7 @@
                 "price": 6.2,
                 "productImage": "assets/products/herb003.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural",
                     "new"
@@ -431,7 +431,7 @@
                 "price": 9.5,
                 "productImage": "assets/products/herb004.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -443,7 +443,7 @@
                 "price": 19.5,
                 "productImage": "assets/products/herb005.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -455,7 +455,7 @@
                 "price": 6,
                 "productImage": "assets/products/herb006.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -467,7 +467,7 @@
                 "price": 11.7,
                 "productImage": "assets/products/herb007.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -479,7 +479,7 @@
                 "price": 9.8,
                 "productImage": "assets/products/herb008.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -491,7 +491,7 @@
                 "price": 6.4,
                 "productImage": "assets/products/herb009.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -503,7 +503,7 @@
                 "price": 4,
                 "productImage": "assets/products/herb010.png",
                 "tags": [
-                    "herbs and spices",
+                    "herbsspices",
                     "organic",
                     "natural"
                 ],
@@ -521,10 +521,10 @@
                 "price": 16.3,
                 "productImage": "assets/products/past001.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free",
+                    "glutenfree",
                     "new"
                 ],
                 "sku": "PAST001"
@@ -535,10 +535,10 @@
                 "price": 16.8,
                 "productImage": "assets/products/past002.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST002"
             },
@@ -548,11 +548,11 @@
                 "price": 9.4,
                 "productImage": "assets/products/past003.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "vegan",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST003"
             },
@@ -562,10 +562,10 @@
                 "price": 19.3,
                 "productImage": "assets/products/past004.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST004"
             },
@@ -575,11 +575,11 @@
                 "price": 8.1,
                 "productImage": "assets/products/past005.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "wholewheat",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST005"
             },
@@ -589,11 +589,11 @@
                 "price": 7.2,
                 "productImage": "assets/products/past006.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "wholewheat",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST006"
             },
@@ -603,10 +603,10 @@
                 "price": 22.1,
                 "productImage": "assets/products/past007.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST007"
             },
@@ -616,10 +616,10 @@
                 "price": 10.8,
                 "productImage": "assets/products/past008.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST008"
             },
@@ -629,10 +629,10 @@
                 "price": 17.8,
                 "productImage": "assets/products/past009.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free"
+                    "glutenfree"
                 ],
                 "sku": "PAST009"
             },
@@ -642,10 +642,10 @@
                 "price": 19.4,
                 "productImage": "assets/products/past010.png",
                 "tags": [
-                    "pasta and noodles",
+                    "pastanoodle",
                     "organic",
                     "natural",
-                    "gluten free",
+                    "glutenfree",
                     "new"
                 ],
                 "sku": "PAST010"

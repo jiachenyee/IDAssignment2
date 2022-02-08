@@ -6,7 +6,7 @@
     },
     {
         "displayName": "Pasta and Noodles",
-        "identifier": "pasta and noodles",
+        "identifier": "pastanoodle",
         "icon": "assets/tags/pastaandnoodles.svg"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "displayName": "Herbs and Spices",
-        "identifier": "herbs and spices",
+        "identifier": "herbsspices",
         "icon": "assets/tags/herbsandspices.svg"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
         "displayName": "Gluten-Free",
-        "identifier": "gluten free",
+        "identifier": "glutenfree",
         "icon": "assets/tags/glutenfree.svg"
-    },
+    }
 ]
