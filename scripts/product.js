@@ -1,8 +1,11 @@
 const params = new URLSearchParams(window.location.search);
-const categoryName = params.get('sku');
+const sku = params.get('sku');
 
 async function load() {
-    
+    var productData = await loadProductData();
+    var product = productData.flatMap(category => category["products"]).filter(product => product["sku"] == sku)[0];
+
+    console.log(product);
 }
 
 async function loadProductData() {
