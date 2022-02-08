@@ -35,11 +35,16 @@ async function load() {
 
     productInformationDiv.appendChild(productImage);
 
+    var productDescriptionContainer = document.createElement("div");
+    productDescriptionContainer.className = "productDescriptionContainer";
+
     var productDescription = document.createElement("p");
     
     productDescription.innerText = product["description"];
 
-    productInformationDiv.appendChild(productDescription);
+    productDescriptionContainer.appendChild(productDescription);
+    
+    productInformationDiv.appendChild(productDescriptionContainer);
 }
 
 async function loadProductData() {

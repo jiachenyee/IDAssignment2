@@ -28,6 +28,11 @@
     display: flex;
 }
 
+.productDescriptionContainer {
+    border-radius: 32px;
+    background-color: #ffffff;
+}
+
 .productImage {
     border-radius: 32px;
     background-color: #0d21a117;
