@@ -44,3 +44,23 @@
 .cartButton {
     padding: 16px;
 }
+
+.searchResult {
+    background-color: #ffffff;
+    display: flex;
+    padding: 32px;
+    border-radius: 32px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: #0D21A1;
+    gap: 32px;
+}
+
+.searchResult:hover {
+    background-color: #0d21a10c;
+}
+
+.searchResult > img {
+    border-radius: 32px;
+    background-color: #0d21a109;
+}

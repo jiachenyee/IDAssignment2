@@ -41,10 +41,16 @@ function displayResults(query, productList) {
 
         var searchResultDiv = document.createElement('a')
         searchResultDiv.href = `product?sku=${searchResult["sku"]}`;
+        searchResultDiv.className = "searchResult";
         searchResultDiv.innerHTML = `
-        ${searchResult["name"]}
-        ${searchResult["description"]}
-        ${searchResult["price"]}
+        <img src="${searchResult["productImage"]}">
+        
+        <div>
+            <h2>${searchResult["name"]}</h2>
+            <p>${searchResult["description"]}</p>
+        </div>
+        
+        <h2 style="color:#707070; font-weight:500; margin-left:auto;">$${searchResult["price"].toFixed(2)}</h2>
         `
 
         searchResultsDiv.appendChild(searchResultDiv);
