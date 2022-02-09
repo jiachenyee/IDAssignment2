@@ -12,6 +12,8 @@ const cardScore = document.getElementById("score");
 //<--------------------------------- global functions --------------------------------->
 //declaring of variabes
 
+let player = null;
+let arrayBlocks = [];
 //used for 'setInterval'
 let presetTime = 1000;
 //speed of block
@@ -23,12 +25,34 @@ let scoreIncrement = 0;
 //ball doesnt score more than one point at a time 
 let canScore = true;
 
-//1. randomizing number to calculate time intervals
+
+//start game
+function startGame(){
+    player = new Player(70,344,5);
+    arrayBlocks = [];
+    score = 0;
+    scoreIncrement = 0
+    enemySpeed = 5;
+    canScore = true;
+    presetTime = 1000;
+}
+  
+
+//restart game --> function called in html
+function restartGame(button){
+    card.style.display = "none";
+    button.blur();
+    startGame();
+    requestAnimationFrame(animate);
+}
+
+
+//randomizing number to calculate time intervals
 function getRandomNumber (min, max){
     return Math.floor(Math.random() * (max-min + 1)) + min;
 }
 
-function randomNumberInterval(timeInterval){
+function randomInterval(timeInterval){
     let returnTime = timeInterval;
     if(Math.random() < 0.5){
         returnTime += getRandomNumber(presetTime / 3, presetTime * 1.5);
@@ -39,14 +63,14 @@ function randomNumberInterval(timeInterval){
 }
 
 
-//2. collision of blocks --> return true if collide
+//collision of blocks --> return true if collide
 function collision(player, block){
     let s1 = Object.assign(Object.create(Object.getPrototypeOf(player)), player);
     let s2 = Object.assign(Object.create(Object.getPrototypeOf(block)), block);
     //dont need pixel perfect collision detection 
-    s2.length = s2.length - 5;
-    s2.x = s2.x + 5;
-    s2.y = s2.y + 5;
+    //s2.length = s2.length - 5;
+    //s2.x = s2.x + 5;
+    //s2.y = s2.y + 5;
     return !(
         s1.x > s2.x + s2.length ||      //R1 is to the right of R2
         s1.x + s1.size < s2.x ||        //R1 to the left of R2
@@ -76,6 +100,7 @@ class Player{
         this.jumpHeight = 10; 
         this.shouldJump = false;
         this.jumpCounter = 0;
+        this.jumpUp = true;
     }
   
     //jumping effect of player
@@ -109,7 +134,6 @@ class Player{
     }
 }
   
-let player = new Player(70,344,5);
 
 
 //Block Class [obstacles] - draw and slide functions
@@ -153,18 +177,14 @@ class AvoidBlock {
     }
 }
 
-let arrayBlocks = [];
 
 //auto generate blocks
 function generateBlocks(){
-    let timeDelay = randomNumberInterval(presetTime);
+    let timeDelay = randomInterval(presetTime);
     arrayBlocks.push(new AvoidBlock(40, 60, 5, enemySpeed));
 
     setTimeout(generateBlocks, timeDelay);
 }
-
-
-
 
 
 //drawing the ground
@@ -186,19 +206,19 @@ function drawScore() {
     ctx.fillText(scoreString, 400 - xOffset, 100);
 }
 
-//increase difficulty of the game when user score more points
+//increase difficulty of the game when user score more points --> speed increases
 function shouldIncreaseSpeed(){
     if(scoreIncrement + 10 === score){
         scoreIncrement = score;
         enemySpeed++;
         presetTime >= 100 ? presetTime -= 100 : presetTime = presetTime / 2; 
+
+        //update speed of existing blocks
+        arrayBlocks.forEach(block => {
+            block.slideSpeed = enemySpeed;
+        });
+        console.log("speed increased");
     }
-  
-    //update speed of existing blocks
-    arrayBlocks.forEach(block => {
-        block.slideSpeed = enemySpeed;
-    });
-    console.log("speed increased");
 }
 
 
@@ -237,13 +257,14 @@ function animate(){
                 arrayBlocks.splice(index, 1);
             }, 0)
         }
-    })
+    });
 }
   
+startGame();
 animate();
 setTimeout(() => {
     generateBlocks();
-}, randomNumberInterval(presetTime));
+}, randomInterval(presetTime));
 
 
 //event listeners --> jump when space key is pressed
