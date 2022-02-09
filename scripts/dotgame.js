@@ -2,7 +2,11 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-//global variables
+//variables of game over screen --> overlay card
+const card = document.getElementById("card");
+const cardScore = document.getElementById("score");
+
+
 
 
 //<--------------------------------- global functions --------------------------------->

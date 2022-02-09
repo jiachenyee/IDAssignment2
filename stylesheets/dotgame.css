@@ -61,6 +61,11 @@
     font-size: 18px;
     cursor: pointer;
   }
+
+  #overlay #card > button:hover{
+    color: #0D21A1;
+    background-color: #FFFFFF;
+  }
   
   @keyframes cardIn{
     0%{
