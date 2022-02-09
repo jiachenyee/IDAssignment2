@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: grey;
+  }
+  
+  .container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .container:after{
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url('arrow-left.png') no-repeat;
+    background-size: 32px;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slice{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    border: 10px solid blue;
+    position: relative;
+    transition: all ease 5s;
+    overflow: hidden;
+  }
+  
+  span{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    clip-path: polygon(50% 100%, 92% 0%, 8% 0%);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 121px;
+  }
+  
+  .one{
+    background-color: blue;
+    left: 50%;
+  }
+  .two{
+    background-color: white;
+    transform: rotate(45deg);
+  }
+  .three{
+    background-color: blue;
+    transform: rotate(90deg);
+  }
+  .four{
+    background-color: white;
+    transform: rotate(135deg);
+  }
+  .five{
+    background-color: blue;
+    transform: rotate(180deg);
+  }
+  .six{
+    background-color: white;
+    transform: rotate(225deg);
+  }
+  .seven{
+    background-color: blue;
+    transform: rotate(270deg);
+  }
+  .eight{
+    background-color: white;
+    transform: rotate(315deg);
+  }
+  
+  span b{
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    background: orange;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: blue;
+    color: white;
+    box-shadow: 0 5px 20px black;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .spin:active{
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+  
+  .container.animate:after{
+    animation: animateArrow 0.7s ease infinite;
+  }
+  
+  @keyframes animateArrow{
+    50%{
+      right: -40px;
+    }
+  }
+  
+  
