@@ -4,9 +4,32 @@ const ctx = canvas.getContext("2d");
 
 //global variables
 
-//global functions
+
+//<--------------------------------- global functions --------------------------------->
+//declaring of variabes
+
+//used for 'setInterval'
+let presetTime = 1000;
+//speed of block
+let enemySpeed = 5;
+
+//1. randomizing number to calculate time intervals
+function getRandomNumber (min, max){
+    return Math.floor(Math.random() * (max-min + 1)) + min;
+}
+
+function randomNumberInterval(timeInterval){
+    let returnTime = timeInterval;
+    if(Math.random() < 0.5){
+        returnTime += getRandomNumber(presetTime / 3, presetTime * 1.5);
+    } else {
+        returnTime -= getRandomNumber(presetTime / 5, presetTime / 2);
+    }
+    return returnTime;
+}
 
 
+//<----------------------------- classes and its functions ----------------------------->
 //Player Class - with jump and draw functions
 class Player{
     constructor(x,y,size){
@@ -95,6 +118,16 @@ class AvoidBlock {
     }
 }
 
+let arrayBlocks = [];
+
+//auto generate blocks
+function generateBlocks(){
+    let timeDelay = randomNumberInterval(presetTime);
+    arrayBlocks.push(new AvoidBlock(40, 60, 5, enemySpeed));
+
+    setTimeout(generateBlocks, timeDelay);
+}
+
 
 
 
@@ -109,7 +142,7 @@ function drawBackgroundLine(){
     ctx.stroke();
 }
 
-  //movement animation
+//movement animation
 function animate(){
     requestAnimationFrame(animate);
     ctx.clearRect(0,0, canvas.width, canvas.height);
@@ -122,6 +155,9 @@ function animate(){
 }
   
 animate();
+setTimeout(() => {
+    generateBlocks();
+}, randomNumberInterval(presetTime));
 
 
 //event listeners --> jump when space key is pressed
