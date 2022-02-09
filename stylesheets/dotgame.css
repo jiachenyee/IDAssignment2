@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  
+  body{
+    background-color: #EEF0F2;
+    color: #0D21A1;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  #canvas{
+    border-radius: 10px;
+    background-color: #FFFFFF;
+  }
+  
