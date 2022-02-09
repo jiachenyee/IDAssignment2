@@ -20,4 +20,56 @@
     border-radius: 10px;
     background-color: #FFFFFF;
   }
+
+  #overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: black;
+    text-align: center;
+  }
+  
+  #overlay #card{
+    background-color: #EEF0F2;
+    width: 500px;
+    height: 190px;
+    border-radius: 5px;
+    animation: cardIn 1s forwards;
+    display: none;
+  }
+  
+  #overlay #card > p{
+    font-size: 50px;
+    margin-top: 10px;
+    user-select: none;
+  }
+  
+  #overlay #card > button{
+    outline: none;
+    color: #FFFFFF;
+    border: none;
+    background-color: #0D21A1;
+    padding: 1rem;
+    width: auto;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  @keyframes cardIn{
+    0%{
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100%{
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+  }
   
