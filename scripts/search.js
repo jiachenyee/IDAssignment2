@@ -33,5 +33,23 @@ function checkEnter(event) {
 
 function displayResults(query, productList) {
     var searchResults = productList.filter(product => query.includes(product["name"].toLowerCase()) || product["name"].toLowerCase().includes(query))
+
+    var searchResultsDiv = document.getElementById("searchResult");
+    
+    for (let i = 0; i < searchResults.length; i++) { 
+        var searchResult = searchResults[i];
+
+        var searchResultDiv = document.createElement('a')
+        searchResultDiv.href = `product?sku=${searchResult["sku"]}`;
+        searchResultDiv.innerHTML = `
+        ${searchResult["name"]}
+        ${searchResult["description"]}
+        ${searchResult["price"]}
+        `
+
+        searchResultsDiv.appendChild(searchResultDiv);
+    }
+    
+
     console.log(searchResults);
 }
