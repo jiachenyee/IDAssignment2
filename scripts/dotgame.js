@@ -2,6 +2,9 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+//global variables
+
+//global functions
 
 
 //Player Class - with jump and draw functions
@@ -89,4 +92,18 @@ class Player{
       this.draw();
       this.x -= this.slideSpeed;
     }
+  }
+
+
+
+
+
+  //drawing the ground
+  function drawBackgroundLine(){
+    ctx.beginPath();
+    ctx.moveTo(0,350);
+    ctx.lineTo(800,350);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "black";
+    ctx.stroke();
   }
