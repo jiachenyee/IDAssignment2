@@ -29,6 +29,31 @@ function randomNumberInterval(timeInterval){
 }
 
 
+//2. collision of blocks --> return true if collide
+function collision(player, block){
+    let s1 = Object.assign(Object.create(Object.getPrototypeOf(player)), player);
+    let s2 = Object.assign(Object.create(Object.getPrototypeOf(block)), block);
+    //dont need pixel perfect collision detection 
+    s2.length = s2.length - 5;
+    s2.x = s2.x + 5;
+    s2.y = s2.y + 5;
+    return !(
+        s1.x > s2.x + s2.length ||      //R1 is to the right of R2
+        s1.x + s1.size < s2.x ||        //R1 to the left of R2
+        s1.y > s2.y + s2.length ||      //R1 is below R2
+        s1.y + s1.size < s2.y           //R1 is above R2
+    )
+}
+  
+  //return true if the player is past the block
+  function isPastBlock(player, block){
+    return(
+      player.x + (player.size / 2) > block.x + (block.length / 4) &&
+      player.x + (player.size / 2) < block.x + (block.length / 4) * 3
+    )
+  }
+
+
 //<----------------------------- classes and its functions ----------------------------->
 //Player Class - with jump and draw functions
 class Player{
@@ -143,8 +168,9 @@ function drawBackgroundLine(){
 }
 
 //movement animation
+let animationId = null;
 function animate(){
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
     ctx.clearRect(0,0, canvas.width, canvas.height);
   
     //canvas logic
@@ -152,6 +178,24 @@ function animate(){
     drawScore();
     //foreground
     player.draw();
+
+
+    arrayBlocks.forEach((arrayBlock, index) => {
+        arrayBlock.slide();
+        //end game when collision
+        if (collision(player, arrayBlock)){
+            cardScore.textContent = score;
+            card.style.display = "block";
+            cancelAnimationFrame(animationId);
+        }
+
+        //delete block that has left the screen
+        if((arrayBlock.x + arrayBlock.size) <= 0){
+            setTimeout(() => {
+                arrayBlocks.splice(index, 1);
+            }, 0)
+        }
+    })
 }
   
 animate();
