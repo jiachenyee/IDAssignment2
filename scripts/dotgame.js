@@ -10,7 +10,7 @@ class Player{
       this.x = x;
       this.y = y;
       this.size = size;
-      this.color = "black";
+      this.color = "#EEC643";
       // jump configuration
       this.jumpHeight = 10; 
       this.shouldJump = false;
@@ -49,3 +49,44 @@ class Player{
   }
   
   let player = new Player(70,344,5);
+
+
+  //Block Class [obstacles] - draw and slide functions
+  class AvoidBlock {
+    constructor(length, breath, radius, speed){
+      this.x = canvas.width + length;
+      this.y = 350 - breath;
+      this.length = length;
+      this.breath = breath;
+      this.radius = radius;
+      this.color = "blue";
+      this.slideSpeed = speed;
+    }
+  
+    //display of block objects
+    draw(){ 
+      var x = this.x;
+      var y = this.y;
+      var h = this.breath;
+      var rad = this.radius;
+      var r = x + this.length;
+      var b = y + this.breath;
+      ctx.fillStyle = this.color;
+      ctx.moveTo(x+rad, y);
+      ctx.lineTo(r-rad, y);
+      ctx.quadraticCurveTo(r, y, r, y+rad);
+      ctx.lineTo(r, y+h-rad);
+      ctx.quadraticCurveTo(r, b, r-rad, b);
+      ctx.lineTo(x+rad, b);
+      ctx.quadraticCurveTo(x, b, x, b-rad);
+      ctx.lineTo(x, y+rad);
+      ctx.quadraticCurveTo(x, y, x+rad, y);
+      ctx.fill();
+    }
+  
+    //animation of block object
+    slide(){
+      this.draw();
+      this.x -= this.slideSpeed;
+    }
+  }
