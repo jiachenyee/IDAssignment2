@@ -12,6 +12,12 @@ const ctx = canvas.getContext("2d");
 let presetTime = 1000;
 //speed of block
 let enemySpeed = 5;
+//player score
+let score = 0; 
+//used to see if user has scored another 10 points or not
+let scoreIncrement = 0; 
+//ball doesnt score more than one point at a time 
+let canScore = true;
 
 //1. randomizing number to calculate time intervals
 function getRandomNumber (min, max){
@@ -167,6 +173,31 @@ function drawBackgroundLine(){
     ctx.stroke();
 }
 
+//displaying the score 
+function drawScore() {
+    ctx.font = "60px Arial";
+    ctx.fillStyle = "black";
+    let scoreString = score.toString();
+    let xOffset = ((scoreString.length - 1) * 20);
+    ctx.fillText(scoreString, 400 - xOffset, 100);
+}
+
+//increase difficulty of the game when user score more points
+function shouldIncreaseSpeed(){
+    if(scoreIncrement + 10 === score){
+        scoreIncrement = score;
+        enemySpeed++;
+        presetTime >= 100 ? presetTime -= 100 : presetTime = presetTime / 2; 
+    }
+  
+    //update speed of existing blocks
+    arrayBlocks.forEach(block => {
+        block.slideSpeed = enemySpeed;
+    });
+    console.log("speed increased");
+}
+
+
 //movement animation
 let animationId = null;
 function animate(){
@@ -179,6 +210,9 @@ function animate(){
     //foreground
     player.draw();
 
+    //check to see if game speed should be should be increased
+    shouldIncreaseSpeed();
+
 
     arrayBlocks.forEach((arrayBlock, index) => {
         arrayBlock.slide();
@@ -188,7 +222,11 @@ function animate(){
             card.style.display = "block";
             cancelAnimationFrame(animationId);
         }
-
+        //user should score a point if this is the case
+        if (isPastBlock(player, arrayBlock) && canScore){
+            canScore = false;
+            score++;
+        }
         //delete block that has left the screen
         if((arrayBlock.x + arrayBlock.size) <= 0){
             setTimeout(() => {
