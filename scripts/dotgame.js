@@ -1,4 +1,4 @@
-//declaring of variables
+//extract contaxt of canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -75,6 +75,7 @@ class Player{
       var r = x + this.length;
       var b = y + this.breath;
       ctx.fillStyle = this.color;
+      //adding border radius
       ctx.moveTo(x+rad, y);
       ctx.lineTo(r-rad, y);
       ctx.quadraticCurveTo(r, y, r, y+rad);
@@ -107,3 +108,15 @@ class Player{
     ctx.strokeStyle = "black";
     ctx.stroke();
   }
+
+  //movement animation
+  function animate(){
+    requestAnimationFrame(animate);
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+  
+    //canvas logic
+    drawBackgroundLine();
+    drawScore();
+  }
+  
+  animate();
