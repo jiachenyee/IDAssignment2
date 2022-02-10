@@ -69,13 +69,13 @@ function collision(player, block){
     let s2 = Object.assign(Object.create(Object.getPrototypeOf(block)), block);
     //dont need pixel perfect collision detection 
     //s2.length = s2.length - 5;
-    //s2.x = s2.x + 5;
-    //s2.y = s2.y + 5;
+    s2.x = s2.x + 5;
+    s2.y = s2.y + 5;
     return !(
-        s1.x > s2.x + s2.length ||      //R1 is to the right of R2
-        s1.x + s1.size < s2.x ||        //R1 to the left of R2
-        s1.y > s2.y + s2.length ||      //R1 is below R2
-        s1.y + s1.size < s2.y           //R1 is above R2
+        (s1.x > (s2.x + s2.length)) ||      //R1 is to the right of R2
+        ((s1.x + s1.size) < s2.x) ||        //R1 to the left of R2
+        (s1.y > (s2.y + s2.breath)) ||      //R1 is below R2
+        ((s1.y + s1.size) < (s2.y))           //R1 is above R2
     )
 }
   
