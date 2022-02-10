@@ -130,6 +130,7 @@ body{
 .form__link:hover{
     text-decoration: underline;
 }
+
 .row{
     box-sizing: border-box;
 }
@@ -140,10 +141,12 @@ body{
 }
 
 .col1{
-    margin-right: 50px;
+    margin-right: 10%;
 }
 
-
+#expiryDate{
+    padding: 0.9rem 1.2rem;
+}
 
 
 
@@ -208,13 +211,14 @@ body{
         box-sizing: border-box;
     }
     
-    .column{
+    .col1{
         float: left;
-        width: 45%;
+        width: 55%;
+        margin-right: 5%;
     }
     
     .col2{
-        float: right;
+        width: 40%;
     }
     
 }
