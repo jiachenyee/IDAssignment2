@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <!--Sign In Form-->
-        <form action="" class="form" id="signin"> <!--edit action of form--> <!--remove hidden-->
+        <form action="" class="form form--hidden" id="signin"> <!--edit action of form--> <!--remove hidden-->
             <!--Title of Sign In Form-->
             <h1 class="form__title-main">Hello again!</h1>
             <h1 class="form__title-sub">Welcome back! We've missed you!</h1>
@@ -137,8 +137,11 @@
                 <div class="form__input-message-error"></div>
             </div>
 
-            <!--Button for continuation of sign up-->
-            <button class="form__button" type="submit">Let's Go</button>
+            <!--for storing the sign in button in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for continuation of sign up-->
+                <button class="form__button" type="submit">Let's Go</button>
+            </div>
         </form>
 
 
@@ -164,15 +167,18 @@
                 <div class="form__input-message-error"></div>
             </div>
 
-            <!--Button for continuation of sign up-->
-            <button class="form__button" type="submit">Let's Go</button>
+            <!--for storing the sign in button in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for continuation of sign up-->
+                <button class="form__button" type="submit">Let's Go</button>
+            </div>
         </form>
 
 
 
 
         <!--Add Payment Method-->
-        <form action="" class="form form--hidden" id="addpayment"> <!--edit action of form-->
+        <form action="" class="form" id="addpayment"> <!--edit action of form-->
             <!--Title of Sign Up Form Part 2-->
             <h1 class="payMethod__title-main">Add Payment Method</h1><!--do css for this-->
 
@@ -210,9 +216,11 @@
                 </div>
             </div>
             
-
-            <!--Button for submission of payment details-->
-            <button class="form__button" type="submit">Add Card</button>
+            <!--for storing the sign in button and hyperlink in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for submission of payment details-->
+                <button class="form__button" type="submit">Add Card</button>
+            </div>
         </form>
     </div>
 
