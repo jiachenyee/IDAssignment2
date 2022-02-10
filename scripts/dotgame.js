@@ -28,7 +28,7 @@ let canScore = true;
 
 //start game
 function startGame(){
-    player = new Player(70,344,5);
+    player = new Player(70,344,5, "#EEC643");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0
@@ -91,11 +91,11 @@ function collision(player, block){
 //<----------------------------- classes and its functions ----------------------------->
 //Player Class - with jump and draw functions
 class Player{
-    constructor(x,y,size){
+    constructor(x,y,size,color){
         this.x = x;
         this.y = y;
         this.size = size;
-        this.color = "#EEC643";
+        this.color = color;
         // jump configuration
         this.jumpHeight = 10; 
         this.shouldJump = false;
@@ -129,7 +129,7 @@ class Player{
         this.jump();
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = "#EEC643";
         ctx.fill();
     }
 }
@@ -144,7 +144,7 @@ class AvoidBlock {
         this.length = length;
         this.breath = breath;
         this.radius = radius;
-        this.color = "blue";
+        this.color = "#0D21A1";
         this.slideSpeed = speed;
     }
   
@@ -181,7 +181,7 @@ class AvoidBlock {
 //auto generate blocks
 function generateBlocks(){
     let timeDelay = randomInterval(presetTime);
-    arrayBlocks.push(new AvoidBlock(40, 60, 5, enemySpeed));
+    arrayBlocks.push(new AvoidBlock(45, 65, 5, enemySpeed));
 
     setTimeout(generateBlocks, timeDelay);
 }
@@ -260,6 +260,10 @@ function animate(){
     });
 }
   
+
+
+
+
 startGame();
 animate();
 setTimeout(() => {
