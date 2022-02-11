@@ -31,7 +31,7 @@ async function loadCategoryData() {
         var product = products[i];
         
         var div = document.createElement("A");
-        div.href = `/product?sku=${product["sku"]}`;
+        div.href = `product?sku=${product["sku"]}`;
         div.className = "productDisplay";
         div.innerHTML = `
         <img src="${product["productImage"]}" alt="${product["name"]} image">
