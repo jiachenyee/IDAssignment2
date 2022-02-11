@@ -17,10 +17,13 @@
           <p>Rewards: <span id="score">0</span></p>
           <button onclick="restartGame(this)">Continue</button>
         </div>
-      </section>
-      <!--Game canvas used to play the dot game-->
-      <h1>Rewards</h1>
-      <canvas width="800" height="500" id="canvas"></canvas>
+    </section>
+    <!--Game canvas used to play the dot game-->
+    <h1 id="title">Rewards<span id="points">$2.00</span></h1>
+    <canvas width="1200" height="300" id="canvas"></canvas>
+    <!--Game instructions-->
+    <span id="how">Click on the space bar to jump, avoid hitting the walls!</span> 
+
       
       <script src="scripts/dotgame.js"></script>
 </body>

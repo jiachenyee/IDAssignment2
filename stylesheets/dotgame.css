@@ -11,17 +11,30 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center; 
     margin: 0;
     font-size: 30px;
     font-weight: bold;
   }
 
+  #title{
+    margin: 2rem auto;
+  }
+
+  #points{
+    margin-left: 70%;
+    font-size: 30px;
+  }
   
   #canvas{
     border-radius: 10px;
     background-color: #FFFFFF;
+  }
+
+  #how{
+    text-align: center;
+    font-size: 23px;
+    margin: 3rem auto;
   }
 
   #overlay{
@@ -81,4 +94,6 @@
       transform: translateY(0px);
     }
   }
+
+  
   

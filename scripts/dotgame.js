@@ -6,6 +6,8 @@ const ctx = canvas.getContext("2d");
 const card = document.getElementById("card");
 const cardScore = document.getElementById("score");
 
+const points = document.getElementById("points");
+
 
 
 
@@ -28,7 +30,7 @@ let canScore = true;
 
 //start game
 function startGame(){
-    player = new Player(70,344,5, "#EEC643");
+    player = new Player(70,244,5, "#EEC643");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0
@@ -140,7 +142,7 @@ class Player{
 class AvoidBlock {
     constructor(length, breath, radius, speed){
         this.x = canvas.width + length;
-        this.y = 350 - breath;
+        this.y = 250 - breath;
         this.length = length;
         this.breath = breath;
         this.radius = radius;
@@ -190,8 +192,8 @@ function generateBlocks(){
 //drawing the ground
 function drawBackgroundLine(){
     ctx.beginPath();
-    ctx.moveTo(0,350);
-    ctx.lineTo(800,350);
+    ctx.moveTo(0,250);
+    ctx.lineTo(1200,250);
     ctx.lineWidth = 2;
     ctx.strokeStyle = "black";
     ctx.stroke();
@@ -199,11 +201,14 @@ function drawBackgroundLine(){
 
 //displaying the score 
 function drawScore() {
-    ctx.font = "60px Arial";
-    ctx.fillStyle = "black";
-    let scoreString = score.toString();
-    let xOffset = ((scoreString.length - 1) * 20);
-    ctx.fillText(scoreString, 400 - xOffset, 100);
+    //ctx.font = "60px Arial";
+    //ctx.fillStyle = "black";
+    //let scoreString = score.toString();
+    //let xOffset = ((scoreString.length - 1) * 20);
+    //ctx.fillText(scoreString, 400 - xOffset, 100);
+    let price = score/20;
+    let num = price + 2;
+    points.innerHTML = "$" + (Math.round(num * 100) / 100).toFixed(2);
 }
 
 //increase difficulty of the game when user score more points --> speed increases
