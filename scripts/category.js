@@ -3,7 +3,7 @@ const categoryName = params.get('name');
 
 async function load() {
     if (categoryName == undefined || categoryName == "") {
-        window.location.href = "/";
+        window.location.href = "index.html";
     }
 
     showGreeting()
@@ -80,4 +80,12 @@ async function loadTagData() {
         .then(data => tags = data);
 
     return tags;
+}
+function checkEnter(event) {
+    if (event.keyCode == 13) {
+        var text = document.getElementById('search').value;
+
+        window.open(`search?query=${text}`,"_self")
+        return false;
+    }
 }

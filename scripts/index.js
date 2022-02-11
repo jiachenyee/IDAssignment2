@@ -33,8 +33,8 @@ function showRewards() {
         parent.innerHTML = `
         <h2>Get a more personalized experience!</h2>
         <div class="bannerCTAStack">
-            <a class="bannerCTA" href="/signup">Sign Up</a>
-            <a class="bannerCTA" href="/login">Sign In</a>
+            <a class="bannerCTA" href="signup">Sign Up</a>
+            <a class="bannerCTA" href="login">Sign In</a>
         </div>
         `;
     } else {
