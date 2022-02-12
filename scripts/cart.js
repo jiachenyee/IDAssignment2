@@ -17,6 +17,8 @@ async function load() {
 
     removeChilds(parent);
 
+    var totalPrice = 0;
+
     for (let i = 0; i < cartContents.length; i++) {
         var cartProduct = cartContents[i];
         var product = products.find(prod => prod["sku"] == cartProduct["sku"]);
@@ -43,7 +45,27 @@ async function load() {
         }
 
         parent.appendChild(cartContentDiv);
+
+        totalPrice += cartProduct["price"] * cartProduct["qty"];
     }
+
+    var tax = totalPrice * 0.07
+
+    var cartInformationDiv = document.getElementById("cartInformation");
+    cartInformationDiv.innerHTML = `
+    <div style="display:flex;">
+        <h3>Subtotal</h3>
+        <h3 style="margin-left: auto; color: #0D21A1;">$${totalPrice.toFixed(2)}</h3>
+    </div>
+    <div style="display:flex;">
+        <h3>Delivery</h3>
+        <h3 style="margin-left: auto; color: #0D21A1;">$${(totalPrice >= 50 ? 0 : 10).toFixed(2)}</h3>
+    </div>
+    <div style="display:flex;">
+        <h3>Tax</h3>
+        <h3 style="margin-left: auto; color: #0D21A1;">$${tax.toFixed(2)}</h3>
+    </div>
+    `
 }
 
 function increment(index) {
