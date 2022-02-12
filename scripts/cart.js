@@ -52,6 +52,7 @@ function increment(index) {
     }
 
     load();
+    localStorage.setItem("cart", JSON.stringify(cartContents));
 }
 
 function decrement(index) {
@@ -61,6 +62,7 @@ function decrement(index) {
     }
 
     load();
+    localStorage.setItem("cart", JSON.stringify(cartContents));
 }
 
 async function loadProductData() {
