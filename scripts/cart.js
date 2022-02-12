@@ -33,11 +33,17 @@ async function load() {
 
     for (let i = 0; i < cartContents.length; i++) {
         var cartContentDiv = document.createElement("section");
-        var product = cartContents[i];
+        cartContentDiv.className = "product";
+
+        var cartProduct = cartContents[i];
+        var product = products.find(prod => prod["sku"] == cartProduct["sku"]);
 
         cartContentDiv.innerHTML = `
-        <h3>${product["sku"]}</h3>
-        <h4>${product["sku"]}</h4>
+        <img src=${product["productImage"]}/>
+        <div>
+            <h3>${product["name"]}</h3>
+            <h4>$${cartProduct["price"].toFixed(2)}</h4>
+        </div>
         `
 
         parent.appendChild(cartContentDiv);
