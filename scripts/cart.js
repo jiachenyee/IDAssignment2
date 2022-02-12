@@ -1,20 +1,4 @@
-var cartContents = localStorage.getItem("cart");
-
-// Add placeholder cart contents
-cartContents = [
-    {
-        "sku": "PAST009",
-        "price": 0,
-        "qty": 1,
-        "editableQty": false
-    },
-    {
-        "sku": "PAST010",
-        "price": 10,
-        "qty": 1,
-        "editableQty": true
-    }
-]
+var cartContents = JSON.parse(localStorage.getItem("cart"));
 
 function checkEnter(event) {
     if (event.keyCode == 13) {

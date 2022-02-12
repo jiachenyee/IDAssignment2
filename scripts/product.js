@@ -65,6 +65,7 @@ async function load() {
 
     var addToCartButton = document.createElement("button");
     addToCartButton.id = "addToCart";
+    addToCartButton.onclick = onAddToCartButtonClick;
     addToCartButton.innerHTML = `
     <div style="display:flex; width:100%">
         <h3>Add to Cart</h3>
@@ -73,6 +74,29 @@ async function load() {
     `
     
     sidebarContainer.appendChild(addToCartButton);
+}
+
+async function onAddToCartButtonClick() {
+    var productData = await loadProductData();
+    var product = productData.flatMap(category => category["products"]).filter(product => product["sku"] == sku)[0];
+
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    if (cart == undefined) {
+        cart = [];
+        console.log("test");
+    }
+
+    console.log(product);
+
+    cart.push({
+        "sku": product["sku"],
+        "price": product["price"],
+        "qty": itemQty,
+        "editableQty": true
+    });
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.open(`cart`,"_self")
 }
 
 function increment() {
