@@ -33,30 +33,3 @@ h4, h3 {
     margin-top: 0%;
     margin-bottom: 0%;
 }
-
-.stepper {
-    background-color: #EEF0F2;
-    margin-left: auto;
-    border-radius: 8px;
-    display: flex;
-    padding: 8px;
-    height: min-content;
-    align-items:center;
-}
-
-.stepper > h3 {
-    margin-left: 16px;
-    margin-right: 16px;
-}
-
-.stepper > button {
-    color: #0D21A1;
-    font-weight: 700;
-    font-size: 30px;
-    border: none;
-    padding: 8px;
-}
-
-.stepper > button:hover {
-    color: #838dc9;
-}

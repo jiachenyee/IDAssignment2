@@ -63,12 +63,19 @@ async function load() {
 }
 
 function increment(index) {
-    cartContents[index]["qty"]++;
+    if (cartContents[index]["qty"] < 10) {
+        cartContents[index]["qty"]++;
+    }
+
     load();
 }
 
 function decrement(index) {
     cartContents[index]["qty"]--;
+    if (cartContents[index]["qty"] == 0) {
+        cartContents.pop(index);
+    }
+
     load();
 }
 
