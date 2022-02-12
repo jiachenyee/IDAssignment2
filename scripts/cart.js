@@ -45,7 +45,7 @@ async function load() {
             <img src=${product["productImage"]}/>
             <div>
                 <h3>${product["name"]}</h3>
-                <h4>$${cartProduct["price"].toFixed(2)}</h4>
+                <h4>$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}</h4>
             </div>
         </a>
         `
