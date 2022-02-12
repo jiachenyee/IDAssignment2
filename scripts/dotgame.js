@@ -7,8 +7,15 @@ const card = document.getElementById("card");
 const cardScore = document.getElementById("score");
 
 const points = document.getElementById("points");
-
 const date = document.getElementById("date");
+
+var sf = window.devicePixelRatio;
+const elWidth = canvas.clientWidth;
+const elHeight = canvas.clientHeight;
+canvas.width = Math.round(elWidth * sf);
+canvas.height = Math.round(elHeight * sf);
+canvas.style.width = '${elWidth}px';
+canvas.style.height = '${elHeight}px';
 
 
 
@@ -36,9 +43,10 @@ console.log(dateObj);
 console.log(expDate);
 
 
+
 //start game
 function startGame(){
-    player = new Player(70,244,5, "#EEC643");
+    player = new Player((canvas.width*0.1),(canvas.height - 106),5, "#EEC643");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0
@@ -150,7 +158,7 @@ class Player{
 class AvoidBlock {
     constructor(length, breath, radius, speed){
         this.x = canvas.width + length;
-        this.y = 250 - breath;
+        this.y = (canvas.height-100) - breath;
         this.length = length;
         this.breath = breath;
         this.radius = radius;
@@ -200,8 +208,8 @@ function generateBlocks(){
 //drawing the ground
 function drawBackgroundLine(){
     ctx.beginPath();
-    ctx.moveTo(0,250);
-    ctx.lineTo(1200,250);
+    ctx.moveTo(0,canvas.height-100);
+    ctx.lineTo(canvas.width,canvas.height-100);
     ctx.lineWidth = 2;
     ctx.strokeStyle = "black";
     ctx.stroke();
@@ -255,7 +263,7 @@ function animate(){
         arrayBlock.slide();
         //end game when collision
         if (collision(player, arrayBlock)){
-            points.textContent = score;
+            cardScore.textContent = score/20 + 2;
             date.textContent = myDate;
             card.style.display = "block";
             cancelAnimationFrame(animationId);
@@ -283,6 +291,8 @@ animate();
 setTimeout(() => {
     generateBlocks();
 }, randomInterval(presetTime));
+
+
 
 
 //event listeners --> jump when space key is pressed
