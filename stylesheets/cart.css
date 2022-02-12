@@ -33,3 +33,14 @@ h4, h3 {
     margin-top: 0%;
     margin-bottom: 0%;
 }
+
+#cartInformation {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    
+    width: 50%;
+    margin-left: 20px;
+}
