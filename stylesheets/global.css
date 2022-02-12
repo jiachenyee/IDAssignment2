@@ -112,3 +112,7 @@ nav {
 .stepper > button:hover {
     color: #838dc9;
 }
+
+button {
+    font-family: 'IBM Plex Sans', sans-serif;
+}

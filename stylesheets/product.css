@@ -43,3 +43,21 @@
     height: fit-content;
     background-color: #0d21a117;
 }
+
+#addToCart {
+    background-color: #0D21A1;
+    color: #ffffff;
+    border-radius: 32px;
+    width: 100%;
+    margin-top: 16px;
+
+    display: flex;
+    padding: 32px;
+}
+
+#addToCartPrice {
+    margin-left: auto;
+    color: #0D21A1;
+    padding: 16px;
+    background-color: #ffffff;
+}

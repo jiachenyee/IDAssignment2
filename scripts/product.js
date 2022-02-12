@@ -37,6 +37,8 @@ async function load() {
 
     productInformationDiv.appendChild(productImage);
 
+    var sidebarContainer = document.createElement("div");
+
     var productDescriptionContainer = document.createElement("div");
     productDescriptionContainer.className = "productDescriptionContainer";
 
@@ -46,7 +48,9 @@ async function load() {
 
     productDescriptionContainer.appendChild(productDescription);
     
-    productInformationDiv.appendChild(productDescriptionContainer);
+    sidebarContainer.appendChild(productDescriptionContainer);
+    
+    productInformationDiv.appendChild(sidebarContainer);
 
     var stepper = document.createElement("div");
     stepper.className = "stepper";
@@ -58,6 +62,17 @@ async function load() {
     `
 
     productDescriptionContainer.appendChild(stepper);
+
+    var addToCartButton = document.createElement("button");
+    addToCartButton.id = "addToCart";
+    addToCartButton.innerHTML = `
+    <div style="display:flex; width:100%">
+        <h3>Add to Cart</h3>
+        <h3 id="addToCartPrice">$${(product["price"] * itemQty).toFixed(2)}</h3>
+    </div>
+    `
+    
+    sidebarContainer.appendChild(addToCartButton);
 }
 
 function increment() {
