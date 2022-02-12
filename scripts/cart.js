@@ -27,8 +27,21 @@ function checkEnter(event) {
 
 async function load() {
     var productData = await loadProductData();
+    var products = productData.flatMap(category => category["products"])
 
-    console.log(cartContents)
+    var parent = document.getElementById("cartContents");
+
+    for (let i = 0; i < cartContents.length; i++) {
+        var cartContentDiv = document.createElement("section");
+        var product = cartContents[i];
+
+        cartContentDiv.innerHTML = `
+        <h3>${product["sku"]}</h3>
+        <h4>${product["sku"]}</h4>
+        `
+
+        parent.appendChild(cartContentDiv);
+    }
 }
 
 async function loadProductData() {
