@@ -8,6 +8,8 @@ const cardScore = document.getElementById("score");
 
 const points = document.getElementById("points");
 
+const date = document.getElementById("date");
+
 
 
 
@@ -26,6 +28,12 @@ let score = 0;
 let scoreIncrement = 0; 
 //ball doesnt score more than one point at a time 
 let canScore = true;
+//current date
+var dateObj = new Date();
+let expDate = dateObj.setMonth(dateObj.getMonth()+2);
+let myDate = (dateObj.getMonth() + 2) + "/" + (dateObj.getFullYear());
+console.log(dateObj);
+console.log(expDate);
 
 
 //start game
@@ -70,7 +78,7 @@ function collision(player, block){
     let s1 = Object.assign(Object.create(Object.getPrototypeOf(player)), player);
     let s2 = Object.assign(Object.create(Object.getPrototypeOf(block)), block);
     //dont need pixel perfect collision detection 
-    //s2.length = s2.length - 5;
+     s2.length = s2.length - 5;
     s2.x = s2.x + 5;
     s2.y = s2.y + 5;
     return !(
@@ -247,7 +255,8 @@ function animate(){
         arrayBlock.slide();
         //end game when collision
         if (collision(player, arrayBlock)){
-            cardScore.textContent = score;
+            points.textContent = score;
+            date.textContent = myDate;
             card.style.display = "block";
             cancelAnimationFrame(animationId);
         }
