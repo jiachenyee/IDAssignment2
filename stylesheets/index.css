@@ -66,6 +66,9 @@
 
 .categoryItem > a {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .category {
@@ -76,6 +79,24 @@
     align-content: center;
     justify-content: center;
     gap: 12px;
+    margin-top: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    .categoryItem {
+        width: calc((100% / 3) - 9px); 
+    }
+
+    .category {
+        padding: 0px;
+        margin-top: 12px;
+    }
+
+    .categoryItem > a > img {
+        width: calc(100% - 16px); 
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .productDisplay {
