@@ -17,11 +17,6 @@ h2 {
     font-size: 30px;
     font-weight: 700;
 }
-@media only screen and (max-width: 600px) {
-    h2 {
-        font-size: 16px;
-    }
-}
 
 h3 {
     font-size: 18px;
@@ -32,6 +27,12 @@ h4 {
     font-size: 18px;
     font-weight: 500;
     color: #707070;
+}
+
+@media only screen and (max-width: 600px) {
+    h2, h3, h4 {
+        font-size: 16px;
+    }   
 }
 
 p {
@@ -63,7 +64,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
     .container {
-        margin: 23px;
+        margin: 16px;
     }
 }
 

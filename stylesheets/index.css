@@ -1,8 +1,12 @@
 #rewards {
     background-color: #0D21A1;
-    padding: 3px 24px 24px 24px;
+    padding: 24px;
     color: #FFFFFF;
     border-radius: 10px;
+}
+
+#rewards > h2 {
+    margin-top: 0px;
 }
 
 .bannerCTAStack {
@@ -24,6 +28,20 @@
 
 .bannerCTA:hover {
     background-color: #eef0f2da;
+}
+
+@media only screen and (max-width: 600px) {
+    #rewards {
+        padding: 12px;
+    }
+    .bannerCTAStack {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .bannerCTA {
+        padding: 9px 19px 9px 19px;
+        font-size: 12px;
+    }
 }
 
 .categoryItem {
@@ -105,4 +123,11 @@
     gap: 32px;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #featuredProducts {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
 }
