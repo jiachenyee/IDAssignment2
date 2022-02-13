@@ -12,3 +12,6 @@ function myfunction(){
       element.classList.add('animate');
     }, 5000);
   }
+
+
+  
