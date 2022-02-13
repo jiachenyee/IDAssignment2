@@ -17,6 +17,11 @@ h2 {
     font-size: 30px;
     font-weight: 700;
 }
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 16px;
+    }
+}
 
 h3 {
     font-size: 18px;
@@ -46,16 +51,27 @@ nav {
         align-items: flex-start;
         flex-direction: column;
     }
+
+    nav > h1 {
+        margin-bottom: 12px;
+    }
 }
 
 .container {
     margin: 48px
 }
 
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 23px;
+    }
+}
+
 .searchCartContainer {
     display: flex;
     margin-left: auto;
     width: 50%;
+    margin-bottom: 12px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -85,6 +101,11 @@ nav {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+    #search {
+        font-size: 18px;
+    }
+}
 
 .cartContainer {
     width: 50px;
