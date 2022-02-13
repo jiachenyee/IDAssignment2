@@ -107,6 +107,7 @@ nav {
     font-size: 30px;
     border: none;
     padding: 8px;
+    background: none;
 }
 
 .stepper > button:hover {
