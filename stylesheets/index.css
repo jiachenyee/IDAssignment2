@@ -126,6 +126,21 @@
 }
 
 @media only screen and (max-width: 600px) {
+    
+    .productDisplay {
+        width: calc(50% - 8px);
+        height: 270px;
+    }
+
+    .productDisplay > img {
+        width: calc(100% - 32px);
+        height: fit-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    #productsList {
+        gap: 16px;
+    }
     #featuredProducts {
         margin-left: -24px;
         margin-right: -24px;
