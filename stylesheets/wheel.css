@@ -11,6 +11,7 @@
     height: 100vh;
     overflow: hidden;
     background: #EEF0F2;
+    font-family: 'IBM Plex Sans', sans-serif;
   }
   
   .container{
@@ -96,7 +97,6 @@
     line-height: 65px;
     border-radius: 50%;
     font-size: 28px;
-    font-family: 'IBM Plex Sans', sans-serif;
     text-align: center;
     background: #EEC643;
     color: #FFFFFF;
@@ -141,6 +141,100 @@
   }
 
 
+  #overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #overlay #card{
+    color: white;
+    text-align: center;
+    background: #0D21A1;
+    padding: 1.5rem;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    animation: cardIn 1s forwards;
+    
+  }
+
+  #title{
+    margin: 0;
+    white-space: nowrap;
+    position: absolute;
+    right: 20%;
+    top: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0D21A1;
+  }
+
+  #overlay #card > h3{
+    left: 0%;
+    font-size: 40px;
+    margin: 1rem auto 1rem;
+    user-select: none;
+  }
+
+  #overlay #card > p{
+    font-size: 23px;
+    margin: 0.5rem auto 0.5rem;
+    user-select: none;
+  }
+
+  #product{
+    width: auto;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    white-space: nowrap;
+  }
+
+  #qty{
+    width: auto;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    white-space: nowrap;
+  }
+
+  #overlay #card > button{
+    margin: 0.5rem auto 1rem;
+    outline: none;
+    color: #0D21A1;
+    border: none;
+    background-color: #EEF0F2;
+    padding: 1rem;
+    width: auto;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #overlay #card > button:hover{
+    color: #0D21A1;
+    background-color: #FFFFFF;
+  }
+  
+  @keyframes cardIn{
+    0%{
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100%{
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+  }
 
 
 

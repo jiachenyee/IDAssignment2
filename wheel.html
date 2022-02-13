@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1 id="title">Spin(s) left: 2</h1>
     <div id="mainbox" class="container">
         <div id="box" class="slice">
           <span class="one"   id="sku01"><b>1</b></span>
@@ -23,7 +24,18 @@
           <span class="eight" id="sku08"><b>8</b></span>
         </div>
         <button class="spin" onclick="myfunction();">SPIN</button>
-      </div>
-      <script src="scripts/wheel.js"></script>
+    </div>
+    <section id="overlay">
+        <div id="card">
+          <p>Congratulations! You have won</p>
+          <h3 id="rewards">hi x 1</h3>
+          <p>Items acquired in this spin will be added to your cart.</p>
+          <button onclick="again()">Continue</button>
+        </div>
+    </section>
+
+
+
+    <script src="scripts/wheel.js"></script>
 </body>
 </html>
