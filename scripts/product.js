@@ -42,6 +42,12 @@ async function load() {
     var productDescriptionContainer = document.createElement("div");
     productDescriptionContainer.className = "productDescriptionContainer";
 
+    var productNameMobile = document.createElement("h1");
+    productNameMobile.id = "productNameMobile";
+
+    productNameMobile.innerText = product["name"];
+    productDescriptionContainer.appendChild(productNameMobile);
+
     var productDescription = document.createElement("p");
     
     productDescription.innerText = product["description"];

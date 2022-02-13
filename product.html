@@ -13,21 +13,23 @@
     </head>
     <body onload="load()" style="background-color: #EEF0F2;">
         <div class="container" >
-            <nav>
-                <h1 id="productName"></h1>
-                <div class="searchCartContainer">
-                    <div class="searchContainer">
-                        <img src="assets/icons/search.svg">
-                        
-                        <input type="text" name="Search" id="search" onPaste="" onkeydown="checkEnter(event);" placeholder="Search Scoop Wholefoods" />
+            <div class="header">
+                <nav>
+                    <h1 id="productName"></h1>
+                    <div class="searchCartContainer">
+                        <div class="searchContainer">
+                            <img src="assets/icons/search.svg">
+                            
+                            <input type="text" name="Search" id="search" onPaste="" onkeydown="checkEnter(event);" placeholder="Search Scoop Wholefoods" />
+                        </div>
+                        <a href="cart" class="cartContainer">
+                            <img class="cartButton" src="assets/icons/cart.svg">
+                        </a>
                     </div>
-                    <a href="cart" class="cartContainer">
-                        <img class="cartButton" src="assets/icons/cart.svg">
-                    </a>
-                </div>
-            </nav>
-            
-            <section id="tags"></section>
+                </nav>
+                
+                <section id="tags"></section>
+            </div>
             <section id="productInformation"></section>
         </div>
 

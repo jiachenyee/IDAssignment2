@@ -97,6 +97,10 @@ nav {
     margin-top: 32px;
 }
 
+#productNameMobile {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     .searchContainer {
         display: none !important;
@@ -105,8 +109,11 @@ nav {
     .productImage {
         border-radius: 32px;
         width: 100%;
-        height: 100%;
+        aspect-ratio: 1;
         background-color: #00000000;
+        position: fixed;
+        margin-top: 32px;
+        z-index: 0;
     }
 
     #productInformation {
@@ -115,7 +122,29 @@ nav {
         margin-right: -24px;
     }
 
-    /* #productName { */
-        /* display: none; */
-    /* } */
+    #productName {
+        display: none;
+    }
+
+    #productNameMobile {
+        display: inherit;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .productDescriptionContainer {
+        margin-top: calc(100vw + 32px);
+        flex-direction: column;
+        position: relative;
+        gap: 16px;
+    }
+
+    .header {
+        z-index: 5;
+        position: fixed;
+    }
+
+    .tag {
+        display: none;
+    }
 }
