@@ -106,7 +106,7 @@
 .productDisplay > h3 {
     color: #011638;
     margin: 12px;
-    margin-right: auto;
+    width: calc(100% - 24px);
 }
 
 #featuredProducts {
