@@ -74,6 +74,7 @@ nav {
 .searchCartContainer {
     display: flex;
     margin-left: auto;
+    flex-direction: row;
     width: 50%;
     margin-bottom: 12px;
 }
