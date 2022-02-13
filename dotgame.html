@@ -14,17 +14,18 @@
     <!--Screen will appear when game has ended-->
     <section id="overlay">
         <div id="card">
-          <h3>$<span id="score">0</span></h3>
-          <p id="line1">off your next purchase</p>
-          <p id="line2">Expires: <span id="date">0</span></p>
+          <p>Congratulations! You have won</p>
+          <h3><span id="spins">0</span>  spin(s)</h3>
+          <p id="line1">to play the Scoop Wheel!</p>
+          <p id="line2">All spins acquired in this game expires on: <span id="date">0</span></p>
           <button onclick="restartGame(this)">Continue</button>
         </div>
     </section>
     <!--Game canvas used to play the dot game-->
-    <h1 id="title">Rewards<span id="points">$2.00</span></h1>
-    <canvas width="1000px" height="300px"id="canvas"></canvas>
+    <h1 id="title">Rewards<span id="score">$2.00</span></h1>
+    <canvas width="1200px" height="300px"id="canvas"></canvas>
     <!--Game instructions-->
-    <span id="how">Click on the space bar to jump, avoid hitting the walls!</span> 
+    <span id="howToPlay">Every score of 5 will be converted to a chance to spin the Scoop Wheel!<br>Click on the space bar to jump, avoid hitting the walls!</span> 
 
       
       <script src="scripts/dotgame.js"></script>

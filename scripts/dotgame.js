@@ -6,16 +6,10 @@ const ctx = canvas.getContext("2d");
 const card = document.getElementById("card");
 const cardScore = document.getElementById("score");
 
-const points = document.getElementById("points");
+const spins = document.getElementById("spins");
 const date = document.getElementById("date");
 
-var sf = window.devicePixelRatio;
-const elWidth = canvas.clientWidth;
-const elHeight = canvas.clientHeight;
-canvas.width = Math.round(elWidth * sf);
-canvas.height = Math.round(elHeight * sf);
-canvas.style.width = '${elWidth}px';
-canvas.style.height = '${elHeight}px';
+
 
 
 
@@ -28,29 +22,45 @@ let arrayBlocks = [];
 //used for 'setInterval'
 let presetTime = 1000;
 //speed of block
-let enemySpeed = 5;
+let enemySpeed = 3.5;
 //player score
 let score = 0; 
 //used to see if user has scored another 10 points or not
 let scoreIncrement = 0; 
 //ball doesnt score more than one point at a time 
 let canScore = true;
-//current date
-var dateObj = new Date();
-let expDate = dateObj.setMonth(dateObj.getMonth()+2);
-let myDate = (dateObj.getMonth() + 2) + "/" + (dateObj.getFullYear());
+//current date to expiry date
+const dateObj = new Date();
+dateObj.setMonth(dateObj.getMonth()+2);
+let monTH = dateObj.toLocaleString("default", {month : "long"});
+let expDate = monTH + " " + (dateObj.getFullYear());
 console.log(dateObj);
 console.log(expDate);
 
 
+function initialize(){
+  window.addEventListener("resize", resizeCanvas, false);
+  resizeCanvas();
+}
+
+function redraw(){
+  ctx.fillStyle = "#808080";
+  ctx.fillRect(0,0,window.innerWidth, window.innerHeight);
+}
+
+function resizeCanvas(){
+  canvas.width = window.innerWidth * 0.9;
+  canvas.height = window.innerHeight * 0.4;
+}
+
 
 //start game
 function startGame(){
-    player = new Player((canvas.width*0.1),(canvas.height - 106),5, "#EEC643");
+    player = new Player((canvas.width*0.1),((canvas.height * 0.7) - 6),5, "#EEC643");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0
-    enemySpeed = 5;
+    enemySpeed = 3.5;
     canScore = true;
     presetTime = 1000;
 }
@@ -72,7 +82,7 @@ function getRandomNumber (min, max){
 
 function randomInterval(timeInterval){
     let returnTime = timeInterval;
-    if(Math.random() < 0.5){
+    if(Math.random() < 0.7){
         returnTime += getRandomNumber(presetTime / 3, presetTime * 1.5);
     } else {
         returnTime -= getRandomNumber(presetTime / 5, presetTime / 2);
@@ -86,7 +96,7 @@ function collision(player, block){
     let s1 = Object.assign(Object.create(Object.getPrototypeOf(player)), player);
     let s2 = Object.assign(Object.create(Object.getPrototypeOf(block)), block);
     //dont need pixel perfect collision detection 
-     s2.length = s2.length - 5;
+    s2.length = s2.length - 5;
     s2.x = s2.x + 5;
     s2.y = s2.y + 5;
     return !(
@@ -158,7 +168,7 @@ class Player{
 class AvoidBlock {
     constructor(length, breath, radius, speed){
         this.x = canvas.width + length;
-        this.y = (canvas.height-100) - breath;
+        this.y = (canvas.height * 0.7) - breath;
         this.length = length;
         this.breath = breath;
         this.radius = radius;
@@ -208,8 +218,8 @@ function generateBlocks(){
 //drawing the ground
 function drawBackgroundLine(){
     ctx.beginPath();
-    ctx.moveTo(0,canvas.height-100);
-    ctx.lineTo(canvas.width,canvas.height-100);
+    ctx.moveTo(0,canvas.height*0.7);
+    ctx.lineTo(canvas.width,canvas.height*0.7);
     ctx.lineWidth = 2;
     ctx.strokeStyle = "black";
     ctx.stroke();
@@ -219,12 +229,10 @@ function drawBackgroundLine(){
 function drawScore() {
     //ctx.font = "60px Arial";
     //ctx.fillStyle = "black";
-    //let scoreString = score.toString();
+    let scoreString = score.toString();
+    cardScore.textContent = score;
     //let xOffset = ((scoreString.length - 1) * 20);
     //ctx.fillText(scoreString, 400 - xOffset, 100);
-    let price = score/20;
-    let num = price + 2;
-    points.innerHTML = "$" + (Math.round(num * 100) / 100).toFixed(2);
 }
 
 //increase difficulty of the game when user score more points --> speed increases
@@ -258,13 +266,15 @@ function animate(){
     //check to see if game speed should be should be increased
     shouldIncreaseSpeed();
 
+    console.log(enemySpeed);
+
 
     arrayBlocks.forEach((arrayBlock, index) => {
         arrayBlock.slide();
         //end game when collision
         if (collision(player, arrayBlock)){
-            cardScore.textContent = score/20 + 2;
-            date.textContent = myDate;
+            spins.textContent = 1 + Math.floor(score/5);
+            date.textContent = expDate;
             card.style.display = "block";
             cancelAnimationFrame(animationId);
         }
@@ -281,11 +291,10 @@ function animate(){
         }
     });
 }
-  
 
 
 
-
+initialize();
 startGame();
 animate();
 setTimeout(() => {

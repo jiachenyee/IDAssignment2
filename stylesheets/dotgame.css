@@ -21,7 +21,7 @@ body{
   margin: 2rem auto;
 }
 
-#points{
+#score{
   margin-left: 100%;
   font-size: 25px;
   font-weight: bold;
@@ -32,11 +32,12 @@ body{
   background-color: #FFFFFF;
 }
 
-#how{
+#howToPlay{
   text-align: center;
   font-size: 23px;
   font-weight: 400;
   margin: 3rem auto;
+  padding: 2rem;
 }
 
 #overlay{
@@ -48,42 +49,47 @@ body{
   display: flex;
   justify-content:center;
   align-items: center;
-  color: black;
-  text-align: center;
 }
 
 #overlay #card{
-  background-color: #EEF0F2;
-  width: 500px;
+  color: white;
+  text-align: center;
+  background-color: #0D21A1;
+  padding: 1.5rem;
+  width: auto;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   animation: cardIn 1s forwards;
   display: none;
-  border: 3px solid red;
 }
 
 #overlay #card > h3{
   font-size: 40px;
-  margin: 2rem auto 1rem;
+  margin: 1rem auto 1rem;
   user-select: none;
 }
 
 #overlay #card > p{
-  font-size: 25px;
+  font-size: 23px;
   margin-top: 0.5rem auto 0.5rem;
   user-select: none;
+}
+
+#date{
+  text-decoration: underline;
+  font-size: 26px;
 }
 
 #overlay #card > button{
   margin: 0.5rem auto 1rem;
   outline: none;
-  color: #FFFFFF;
+  color: #0D21A1;
   border: none;
-  background-color: #0D21A1;
+  background-color: #EEF0F2;
   padding: 1rem;
   width: auto;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -105,82 +111,41 @@ body{
 }
 
 @media screen and (max-width: 600px) {
-  body{
-    margin: 0;
-  }
-  
   #title{
     font-size: 30px;
-    margin: 2rem auto;
   }
   
-  #points{
+  #score{
     margin-left: 30%;
     font-size: 15px;
   }
   
-  #canvas{
-    border-radius: 10px;
-    background-color: #FFFFFF;
-  }
-  
-  #how{
-    text-align: center;
+  #howToPlay{
     font-size: 16px;
-    margin: 3rem auto;
-  }
-  
-  #overlay{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    /*justify-content: center;*/
-    align-items: center;
-    color: #FFFFFF;
-    text-align: center;
   }
   
   #overlay #card{
-    background-color: #0D21A1;
     margin-bottom: 5%;
-    width: 500px;
-    height: 190px;
-    border-radius: 5px;
-    animation: cardIn 1s forwards;
-    display: none;
+    padding: 1rem;
   }
 
   #overlay #card > h3{
-    font-size: 40px;
-    margin-top: 2rem;
-    font-weight: bold;
+    font-size: 30px;
   }
   
   #overlay #card > p{
-    font-size: 25px;
+    font-size: 13px;
     margin-top: 1rem;
     user-select: none;
   }
-  
-  #overlay #card > button{
-    margin-top: 10px;
-    outline: none;
-    color: #FFFFFF;
-    border: none;
-    background-color: #0D21A1;
-    padding: 1rem;
-    width: auto;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
+
+  #date{
+    font-size: 16px;
   }
   
-  #overlay #card > button:hover{
-    color: #0D21A1;
-    background-color: #FFFFFF;
+  #overlay #card > button{
+    margin: 0.75rem auto 0.75rem;
+    padding: 0.75rem;
+    font-size: 13px;
   }
 }
