@@ -168,6 +168,23 @@ body{
     padding: 0.9rem 1.2rem;
 }
 
+.payment__text-main{
+    width: 80%;
+}
+
+#plus{
+    display: inline-block;
+    background-color: #0D21A1;
+    color: white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+
+#plusimg{
+    width: 1.85rem;
+    height: 1.85rem;
+}
 
 
 
