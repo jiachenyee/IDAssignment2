@@ -15,15 +15,17 @@
         <div class="container" >
             <nav>
                 <h1 id="greeting"></h1>
-                <div class="searchContainer">
-                    <img src="assets/icons/search.svg">
+                <div class="searchCartContainer">
+                    <div class="searchContainer">
+                        <img src="assets/icons/search.svg">
+                        
+                        <input type="text" name="Search" id="search" onPaste="" onkeydown="checkEnter(event);" placeholder="Search Scoop Wholefoods" />
+                    </div>
                     
-                    <input type="text" name="Search" id="search" onPaste="" onkeydown="checkEnter(event);" placeholder="Search Scoop Wholefoods" />
+                    <a href="cart" class="cartContainer">
+                        <img class="cartButton" src="assets/icons/cart.svg">
+                    </a>
                 </div>
-                
-                <a href="cart" class="cartContainer">
-                    <img class="cartButton" src="assets/icons/cart.svg">
-                </a>
             </nav>
 
             <section id="rewards"></section>

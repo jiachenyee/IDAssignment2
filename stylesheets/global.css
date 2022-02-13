@@ -7,6 +7,12 @@ h1 {
     font-weight: 700;
 }
 
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
 h2 {
     font-size: 30px;
     font-weight: 700;
@@ -35,19 +41,38 @@ nav {
     align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 .container {
     margin: 48px
 }
 
+.searchCartContainer {
+    display: flex;
+    margin-left: auto;
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    .searchCartContainer {
+        margin-left: inherit;
+        width: 100%;
+    }
+}
+
 .searchContainer {
     background-color: #ffffff;
-    margin-left: auto;
     display: flex;
     align-items: center;
     border-radius: 19px;
     padding: 0px 16px 0px 16px;
     height: 50px;
-    width: 30%;
+    width: calc(100% - 100px);
 }
 
 #search {
