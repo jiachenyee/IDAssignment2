@@ -141,6 +141,7 @@ nav {
         flex-direction: column;
         position: relative;
         gap: 16px;
+        z-index: 3;
     }
 
     .header {
@@ -171,7 +172,7 @@ nav {
     }
 
     .header {
-        z-index: 5;
+        z-index: 2;
         position: fixed;
     }
 
