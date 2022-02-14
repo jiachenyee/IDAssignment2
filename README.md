@@ -96,6 +96,8 @@ The following are the various languages, frameworks, libraries, and any other to
   - The project uses **GitHub** uses a code hosting platform for version control and collaboration.
 - [VSC](https://code.visualstudio.com/)
   - This project uses **Visual Studio Code** as a source-code editor for development operations like debugging, task running and version control.
+- [RestDB]()
+  - This project uses **RestDB** as a database tool to store user's information and purchase.
 
 
 ## Testing
