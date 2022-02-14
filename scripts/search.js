@@ -59,7 +59,4 @@ function displayResults(query, productList) {
 
         searchResultsDiv.appendChild(searchResultDiv);
     }
-    
-
-    console.log(searchResults);
 }

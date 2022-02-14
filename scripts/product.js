@@ -109,7 +109,6 @@ async function onAddToCartButtonClick() {
     var cart = JSON.parse(localStorage.getItem("cart"));
     if (cart == undefined) {
         cart = [];
-        console.log("test");
     }
 
     console.log(product);
