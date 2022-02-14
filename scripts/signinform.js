@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 if (member == undefined) {
                     setFormMessage(loginForm, "error", "Authentication error. Try again with a different username or password.");
+                } else {
+                    localStorage.setItem("userInfo", JSON.stringify(member));
+                    window.open(`/index.html`,"_self")
                 }
             } else {
                 setFormMessage(loginForm, "error", "Network error");

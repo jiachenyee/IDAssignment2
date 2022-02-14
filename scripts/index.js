@@ -14,11 +14,12 @@ async function loadProductData() {
 showGreeting()
 
 function showGreeting() {
-    var user = localStorage.getItem("username");
+    var user = JSON.parse(localStorage.getItem("userInfo"));
+
     if (user == null) {
         document.getElementById("greeting").innerHTML = "Hello!";
     } else {
-        document.getElementById("greeting").innerHTML = `Hello ${user}!`;
+        document.getElementById("greeting").innerHTML = `Hello ${user["username"]}!`;
     }
 }
 
@@ -27,9 +28,9 @@ showRewards()
 function showRewards() {
     let parent = document.getElementById("rewards");
 
-    var user = localStorage.getItem("username");
+    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-    if (user == null) { 
+    if (userInfo == null) { 
         parent.innerHTML = `
         <h2>Get a more personalized experience!</h2>
         <div class="bannerCTAStack">
@@ -70,7 +71,9 @@ async function loadCategories() {
 
 async function loadPopularItems() {
 
-    var loggedIn = localStorage.getItem("username") != null;
+    var user = JSON.parse(localStorage.getItem("userInfo"));
+
+    var loggedIn = user != null;
 
     var productData = await loadProductData();
 
