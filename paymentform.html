@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Payment</title>
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <!--link rel="stylesheet" href="stylesheets/global.css"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--Add Payment Method-->
+        <form action="" class="form" id="addpayment"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 2-->
+            <h1 class="payMethod__title-main">Add Payment Method</h1><!--do css for this-->
+
+            <!--Card Number section of the form-->
+            <div class="form__input-group">
+                <label for="cardNumber">Card Number</label><br>
+                <input type="number" class="form__input" id="cardNumber" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Name section of the form-->
+            <div class="form__input-group">
+                <label for="name">Name</label><br>
+                <input type="text" class="form__input" id="name" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <div class="row">
+                <div class="column col1">
+                    <!--Expiry Date section of the form-->
+                    <div class="form__input-group">
+                        <label for="expiryDate">Expiry Date</label><br>
+                        <input type="date" class="form__input" id="expiryDate" required>
+                        <div class="form__input-message-error"></div>
+                    </div>
+                </div>
+
+                <div class="column col2">
+                    <!--CVC section of the form-->
+                    <div class="form__input-group">
+                        <label for="cvc">CVC</label><br>
+                        <input type="number" class="form__input" id="cvc" required>
+                        <div class="form__input-message-error"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--for storing the sign in button and hyperlink in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for submission of payment details-->
+                <button class="form__button" type="submit" id="addcard">Add Card</button>
+            </div>
+        </form>
+        <!--End of Add Payment-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="scripts/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Method</title>
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <!--link rel="stylesheet" href="stylesheets/global.css"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--Sign Up Form Part 3-->
+        <form action="" class="form" id="signup3"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 2-->
+            <h1 class="form__title-main">Almost there...</h1>
+            <h1 class="form__title-sub">A little more information and you'll be on your way!</h1>
+
+            <!--Payment Method section of the form-->
+            <div class="form__input-group">
+                <div>
+                    <p class="payment__text-main">Payment Method</p><!--do css for this-->
+                    <a href="#" id="plus">
+                        <img id="plusimg" src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" alt="add card">
+                    </a>
+                </div>
+                
+                <p class="payment__text-sub">There are no payment methods, click on + to add a new one!</p><!--do css for this-->
+                <!--icon-->
+            </div>
+
+            <!--Contact No section of the form-->
+            <div class="form__input-group">
+                <label for="contactNo">Contact No.</label><br>
+                <input type="number" class="form__input" id="contactNo" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--for storing the sign in button in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for continuation of sign up-->
+                <button class="form__button" type="submit">Let's Go</button>
+            </div>
+        </form>
+        <!--End of Part 3-->
+    </div>
+
+    <script src="scripts/login.js"></script>
+</body>
+</html>

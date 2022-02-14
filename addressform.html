@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Address</title>
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <!--link rel="stylesheet" href="stylesheets/global.css"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--Sign Up Form Part 2-->
+        <form action="" class="form" id="signup2"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 2-->
+            <h1 class="form__title-main">Where do you stay?</h1>
+            <h1 class="form__title-sub">We'll need this to deliver to your doorstep.</h1>
+
+            <!--First Address section of the form-->
+            <div class="form__input-group">
+                <label for="addrLine1">Address Line 1</label><br>
+                <input type="text" class="form__input" id="addrLine1" autofocus required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Second Address section of the form-->
+            <div class="form__input-group">
+                <label for="addrLine2">Address Line 2(optional)</label><br>
+                <input type="text" class="form__input" id="addrLine2">
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Unit Number section of the form-->
+            <div class="form__input-group">
+                <label for="unitNo">Unit Number (optional)</label><br>
+                <input type="number" class="form__input" id="unitNo">
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Postal/Zip Code section of the form-->
+            <div class="form__input-group">
+                <label for="postalCode">Postal/Zip Code</label><br>
+                <input type="number" class="form__input" id="postalCode" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--for storing the sign in button in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for continuation of sign up-->
+                <button class="form__button" type="submit">Let's Go</button>
+            </div>
+        </form>
+        <!--End of Part 2-->
+    </div>
+
+    <script src="scripts/login.js"></script>
+</body>
+</html>

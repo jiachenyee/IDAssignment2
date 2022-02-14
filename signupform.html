@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <!--link rel="stylesheet" href="stylesheets/global.css"-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--Sign Up Form Part 1-->
+        <form action="" class="form" id="signup1"> <!--edit action of form-->
+            <!--Title of Sign Up Form Part 1-->
+            <h1 class="form__title-main">Welcome</h1>
+            <h1 class="form__title-sub">Join our Scoop family</h1>
+
+            <!--Username section of the form-->
+            <div class="form__input-group">
+                <label for="username">Username</label><br>
+                <input type="text" class="form__input" id="username" autofocus required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Email section of the form-->
+            <div class="form__input-group">
+                <label for="emailaddr">Email</label><br>
+                <input type="email" class="form__input" id="emailaddr" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Password section of the form-->
+            <div class="form__input-group">
+                <label for="password">Password</label><br>
+                <input type="password" class="form__input" id="password" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+            <!--Confirm Password section of the form-->
+            <div class="form__input-group">
+                <label for="cfmpassword">Confirm Password</label><br>
+                <input type="password" class="form__input" id="cfmpassword" required>
+                <div class="form__input-message-error"></div>
+            </div>
+
+
+            <!--for storing the sign in button and hyperlink in mobile view-->
+            <div class = "buttonlink">
+                <!--Button for continuation of sign up-->
+                <button class="form__button" type="submit">Let's Go</button>
+
+                <!--Hyperlink for Sign Up-->
+                <p class="form__text">
+                    <a href="" id="linkLogin" class="form__link">Already have an account? Sign In!</a>
+                </p>
+            </div>
+        </form>
+        <!--End of Part 1-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="scripts/login.js"></script>
+</body>
+</html>
