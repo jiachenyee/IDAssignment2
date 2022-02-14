@@ -19,8 +19,30 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
 
-        //perform ajax/fetch login here
+        var inputUsername = document.getElementById("username").value;
+        var inputPassword = document.getElementById("password").value;
 
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
+        var request = new XMLHttpRequest();
+        request.open("GET", "https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d", true);
+
+        request.addEventListener("load", function() {
+            if (request.status >= 200 && request.status < 400) {
+                var data = JSON.parse(request.responseText);
+
+                var member = data.filter(member => (member["username"] == inputUsername && member["password"] == inputPassword))[0]
+                
+                if (member == undefined) {
+                    setFormMessage(loginForm, "error", "Authentication error. Try again with a different username or password.");
+                }
+            } else {
+                setFormMessage(loginForm, "error", "Network error");
+            }
+        });
+        
+        request.addEventListener("error", function() {
+            setFormMessage(loginForm, "error", "Network error");
+        })
+        
+        request.send();
     });
 })
