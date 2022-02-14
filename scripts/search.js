@@ -43,6 +43,19 @@ function displayResults(query, productList) {
     var searchResults = productList.filter(product => query.includes(product["name"].toLowerCase()) || product["name"].toLowerCase().includes(query))
 
     var searchResultsDiv = document.getElementById("searchResult");
+
+    if (searchResults.length == 0) {
+        searchResultsDiv.innerHTML = `
+        <div style="margin-left:auto;margin-right:auto;">
+            <h3 style="font-size:27px;margin-bottom:0px;margin-top:0px;text-align:center;margin-left:auto;margin-right:auto;">
+                There's nothing to see here.
+            </h3>
+            <p style="text-align:center;">
+                There are no products that match your query. Try changing your search query.
+            </p>
+        </div>
+        `
+    }
     
     for (let i = 0; i < searchResults.length; i++) { 
         var searchResult = searchResults[i];
