@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var regExp1 = /\d/;
     let pwd = "";
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    const next1 = document.getElementById("next1");
     let inputValidator = {
       "usernameTF" : false,
       "emailTF" : false,
@@ -123,6 +124,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         
 
+    });
+
+    next1.addEventListener("click", e => {
+        e.preventDefault();
+        window.location.href = "addressform.html";
     });
 });
 
