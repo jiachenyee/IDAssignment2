@@ -1,4 +1,4 @@
-
+//for status of login form
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector(".form__message");
 
@@ -7,38 +7,29 @@ function setFormMessage(formElement, type, message){
     messageElement.classList.add('form__message-${type}');
 }
 
+//for data validations
 function setInputError(inputElement, message){
     inputElement.classList.add("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = message;
 }
-
+//for data validations
 function clearInputError(inputElement){
     inputElement.classList.remove("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#signin");
+    var validity = false;
+    
     const createAccountForm1 = document.querySelector("#signup1");
 
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm1.classList.remove("form--hidden");
-    });
-
     document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm1.classList.add("form--hidden");
-    });
-
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        //perform ajax/fetch login here
-
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
+      e.preventDefault();
+      window.location.href = "signinform.html";
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
