@@ -30,18 +30,6 @@ These files should themselves either be included as a pdf file in the project it
 Include the Adobe XD wireframe as a folder. You can include the XD share url. 
 
 ## Features
-- Feature 1: Sign In 
-- Feature 2: Sign Up
-- Feature 3: Home 
-- Feature 4: Category 
-- Feature 5: Product
-- Feature 6: View Cart
-- Feature 7: Confirm Payment
-- Feature 8: Final Payment 
-- Feature 9: Delivery 
-- Feature 10: Points Bar
-- Feature 11: Game Page
- 
 ### Existing Features
 - Personalized Greeting
   - For members, the title located at the top of the Home Page will be displayed with their username which is collected when they sign up for membership. Whereas, for non-members, a simple 'Hello' title will be displayed while they glancing through the products as guests. This personalized feature will improve user experience when they visit the website. 
@@ -103,7 +91,7 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
 
 
 ### Features Left to Implement
-- Another feature idea
+- 
 
 ## Technologies Used
 The following are the various languages, frameworks, libraries, and any other tools used to construct this project. 
