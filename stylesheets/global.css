@@ -168,3 +168,18 @@ nav {
 button {
     font-family: 'IBM Plex Sans', sans-serif;
 }
+
+.progressBar, .progressBarItem {
+    border-radius: 6px;
+    height: 12px;
+}
+
+.progressBar {
+    background-color: #EEF0F2; 
+    width: 100%;
+    margin-top: 16px;
+}
+
+.progressBarItem {
+    background-color: #EEC643;
+}

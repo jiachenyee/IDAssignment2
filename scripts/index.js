@@ -39,7 +39,24 @@ function showRewards() {
         </div>
         `;
     } else {
+        var encouragmenetText = "Earn points, win prizes!";
 
+        if (userInfo["points"] > 900) {
+            encouragmenetText = "Almost there!";
+        } else if (userInfo["points"] > 500) {
+            encouragmenetText = "Halfway there!";
+        } else if (userInfo["points"] > 200) {
+            encouragmenetText = "Buy more and win more!";
+        }
+
+        parent.innerHTML = `
+        <h2>${encouragmenetText}</h2>
+        <p style="color:#ffffff;">Get a spin and win some free products every 1000 points!</p>
+
+        <div class="progressBar">
+            <div class="progressBarItem" style="width:${userInfo["points"] / 1000}%"></div>
+        </div>
+        `;
     }
 }
 
