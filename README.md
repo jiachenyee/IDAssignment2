@@ -60,25 +60,42 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
   - {display}
 
 - Quick Sign In and Sign Up 
-  - The addition of two buttons in replacement of the points bar allows members to sign in or non-members to sign up to be able to purchase items and earn points. In guest mode, users are restricted to only view the products in each category but are able to carry out features set aside for members as mentioned in the previous line. 
+  - The addition of two buttons in replacement of the points bar allows members to sign in or non-members to sign up to be able to purchase items and earn points. In guest mode, users are restricted to only view the products in each category but are able to carry out features set aside for members as mentioned in the previous line. Placed in the home page, users are able to easily access the sign in and sign up features
   - {display}
 
+- For You/Popular Section
+  - This feature found at the bottom of the home page introduces new and randomized products for users. A total number of 10 products will be displayed for the users. For members, the section is named 'For You' to add touch in personalization while the section is named 'Popular' for non-members. --more--
+  - {display}
+
+- Sold Out/New Logos
+  - For products which are just released into the store, they are labelled with the 'New' logo, whereas for products which are unavailable due to limited or no stock will be labelled with the 'Sold Out' logo. 
+  - {display}
+
+- 
 
 
 ### Features Left to Implement
 - Another feature idea
 
 ## Technologies Used
+The following are the various languages, frameworks, libraries, and any other tools used to construct this project. 
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
 - [HTML](https://html.com/)
+- The project uses **HTML** to describe the structure of web pages.
 - [CSS](http://css.com/)
+  - The project uses **CSS** to describe the presentation of web pages, including colors, layout and fonts.
 - [JavaScript](https://www.javascript.com/)
+  - The project uses **JavaScript** to create highly responsive  and interactive interfaces that improve user experience and provide dynmic functionality.
+- [JSON](https://www.json.org/)
+  - The project uses **JSON** to transmit data in web applications. 
+- [JQuery](https://jquery.com)
+  - The project uses **JQuery** to simplify DOM manipulation.????????????????
 - [Adobe XD](https://www.adobe.com/sg/products/xd.html)
+  - The project uses **XD** as a design platform to create the prototypes/wireframes.
 - [GitHub](https://github.com/)
+  - The project uses **GitHub** uses a code hosting platform for version control and collaboration.
+- [VSC](https://code.visualstudio.com/)
+  - This project uses **Visual Studio Code** as a source-code editor for development operations like debugging, task running and version control.
 
 
 ## Testing
@@ -99,12 +116,16 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-
-### Media
-- The photos used in this site were obtained from ...
+### Content and Media
+- Product Information - Name, Description, Price, Image are taken from [Scoop Wholefoods SG](https://scoopwholefoodsshop.com/collections/shop-all)
+- Icons - The relevant icons are taken from [Icon]()
+- Fonts - IBM Plex Sans, font used throughout the website, is taken from [Google Font]()
+- Animation - The animated truck was taken from [Lottie]() 
 
 ### Acknowledgements
+- [MEL]() - Reference on lesson materials and links.
+- [W3 Schools]() - Reference on html, css and other content.
+- [Youtube]() - Reference was taken for certain codes such as games.  
+- [Stack Overflow]() - Reference on codes for specific content such as data validations for forms.
 
 - I received inspiration for this project from X
