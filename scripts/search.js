@@ -3,6 +3,10 @@ const query = params.get('query').toLowerCase();
 document.getElementById('search').value = query;
 var productsList = []
 
+if (query == "") {
+    window.open("index.html","_self")
+}
+
 async function load() {
     var productData = await loadProductData();
     productsList = productData.flatMap(category => category["products"]);
