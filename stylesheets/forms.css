@@ -222,7 +222,7 @@ body{
 }
 
 #card1{
-    display: block;
+    display: none; /*block*/
     padding: 1.5rem;
     width: 90%;
     height: auto;
@@ -257,7 +257,7 @@ body{
     display: inline-block;
 }
 #cdName {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     margin: 0;
 }
@@ -344,6 +344,27 @@ body{
         width: 40%;
     }
 
+    #card1{
+        padding: 1.2rem;
+    }
     
+    #cdTitle {
+        font-size: 16px;
+    }
+    #cdNumber {
+        font-size: 24px;
+    }
+    #cdExpiryTitle {
+        font-size: 10px;
+    }
+    #cdExpiry {
+        font-size: 16px;
+    }
+    #cdName {
+        font-size: 18px;
+    }
+    #logo{
+        width: 75px;
+    }
     
 }
