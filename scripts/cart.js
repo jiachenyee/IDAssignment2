@@ -13,6 +13,16 @@ async function load() {
     var productData = await loadProductData();
     var products = productData.flatMap(category => category["products"])
 
+    if (cartContents.length == 0) {
+        var cartDiv = document.getElementById("cart");
+        cartDiv.innerHTML = `
+        <div style="margin-left:auto;margin-right:auto;">
+            <h3 style="text-align:center;margin-left:auto;margin-right:auto;">There's nothing to see here.</h3>
+            <p style="text-align:center;">Add products to your cart to see them here.</p>
+        </div>
+        `
+        return 
+    }
     var parent = document.getElementById("cartContents");
 
     removeChilds(parent);
