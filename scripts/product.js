@@ -72,12 +72,32 @@ async function load() {
     var addToCartButton = document.createElement("button");
     addToCartButton.id = "addToCart";
     addToCartButton.onclick = onAddToCartButtonClick;
-    addToCartButton.innerHTML = `
+
+    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+    var points = Math.round(product["price"])
+    if (userInfo != null) {
+        addToCartButton.innerHTML = `
+        <div style="display:flex; width:100%">
+            <div>    
+                <h3>Add to Cart</h3>
+                <p style="text-align: left; color:#ffffff; font-size:15px">+${points} Points</p>
+            </div>
+            <h3 id="addToCartPrice">$${(product["price"] * itemQty).toFixed(2)}</h3>
+        </div>
+        <div class="progressBar" style="position:relative">
+            <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
+            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
+        </div>
+    `
+    } else {
+        addToCartButton.innerHTML = `
     <div style="display:flex; width:100%">
         <h3>Add to Cart</h3>
         <h3 id="addToCartPrice">$${(product["price"] * itemQty).toFixed(2)}</h3>
     </div>
     `
+    }
     
     sidebarContainer.appendChild(addToCartButton);
 }
