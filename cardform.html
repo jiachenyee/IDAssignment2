@@ -20,16 +20,37 @@
             <h1 class="form__title-sub">A little more information and you'll be on your way!</h1>
 
             <!--Payment Method section of the form-->
-            <div class="form__input-group">
-                <div>
-                    <p class="payment__text-main">Payment Method</p><!--do css for this-->
-                    <a href="#" id="plus">
-                        <img id="plusimg" src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" alt="add card">
-                    </a>
+            <div class="plusCard">
+                <div class="row">
+                    <div class="col3">
+                        <p class="payment__text-main">Payment Method</p>
+                        <p class="payment__text-sub">There are no payment methods, click on + to add a new one!</p>
+                    </div>
+                    <div class="col4">
+                        <a href="#" id="plusContainer">
+                            <img id="plusButton" src="assets/icons/plus.svg" alt="add card">
+                        </a>
+                    </div>
                 </div>
                 
-                <p class="payment__text-sub">There are no payment methods, click on + to add a new one!</p><!--do css for this-->
+                
                 <!--icon-->
+            </div>
+
+            <!--card display-->
+            <div class="cards">
+                <div id="card1">
+                    <p id="cdTitle">Credit/Debit Card</p>
+                    <p id="cdNumber">**** **** **** 1234</p>
+                    <p id="cdExpiryTitle">Expiry</p>
+                    <p id="cdExpiry">12/23</p>
+                    <span id="last">
+                        <p id="cdName">Yee Jia Chen<img id="logo" src="https://vectorlogo4u.com/wp-content/uploads/2020/10/mastercard-logo-01.png" alt="logo"></p>
+                        
+                    </span>
+                   
+                    
+                </div>
             </div>
 
             <!--Contact No section of the form-->

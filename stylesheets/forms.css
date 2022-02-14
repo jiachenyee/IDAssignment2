@@ -168,22 +168,105 @@ body{
     padding: 0.9rem 1.2rem;
 }
 
+.plusCard{
+    margin: 0 auto;
+}
+
 .payment__text-main{
-    width: 80%;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-#plus{
-    display: inline-block;
+.payment__text-sub{
+    margin-top: 0;
+    font-size: 14px;
+}
+
+#plusContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #0D21A1;
-    color: white;
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
-#plusimg{
-    width: 1.85rem;
-    height: 1.85rem;
+
+#plusButton{
+    position: relative;
+    fill: currentColor;
+    width: 1.65rem;
+    height: 1.65rem;
+}
+
+.col3{
+    width: 80%;
+    float: left;
+}
+
+.col4{
+    margin-left: 10%;
+    width: 10%;
+    float: right;
+    margin: 1rem 0;
+}
+
+.cards{
+    margin: 0 auto 1.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#card1{
+    display: block;
+    padding: 1.5rem;
+    width: 90%;
+    height: auto;
+    background-color: #011638;
+    border-radius: 20px;
+    text-align: left;
+    color: var(--color-secondary);
+}
+
+#cdTitle {
+    font-size: 23px;
+    font-weight: 400;
+    margin:0 auto 0.5rem;
+}
+#cdNumber {
+    font-size: 36px;
+    font-weight: bold;
+    margin:0 auto 0.75rem;
+}
+#cdExpiryTitle {
+    font-size: 15px;
+    font-weight: bold;
+    margin:0 auto 0.25rem;
+}
+#cdExpiry {
+    font-size: 23px;
+    font-weight: bold;
+    margin:0 auto 1.5rem;
+}
+#last{
+    width: 100%;
+    display: inline-block;
+}
+#cdName {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+#logo{
+    position: relative;
+    left: 5%;
+    width: 100px;
+    height: auto;
+    float:right;
 }
 
 
