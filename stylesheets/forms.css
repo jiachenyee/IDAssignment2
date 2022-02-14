@@ -17,6 +17,11 @@ body{
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
 .container{
     width: 500px;
     margin: 1rem;
@@ -127,6 +132,12 @@ body{
 
 .form__button:active{
     transform: scale(0.95);
+}
+
+.form__button:disabled{
+    opacity: 60%;
+    color: var(--color-secondary);
+    background: var(--color-tertiary);
 }
 
 .form__text{
