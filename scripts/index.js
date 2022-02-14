@@ -150,7 +150,6 @@ function updateUserData() {
             var data = JSON.parse(request.responseText);
 
             var member = data.filter(member => (member["username"] == user["username"] && member["password"] == user["password"]))[0]
-            console.log("hello")
 
             if (member != undefined) {
                 localStorage.setItem("userInfo", JSON.stringify(member));
