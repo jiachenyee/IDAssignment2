@@ -48,3 +48,36 @@ h4, h3 {
 .searchContainer {
     width: 100%;
 }
+
+#addToCart {
+    
+    background-color: #0D21A1;
+    color: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 64px;
+
+    display: flex;
+    padding: 16px;
+    
+    border: none;
+
+    flex-direction: column;
+}
+
+#addToCart:hover {
+    background-color: #5665c3;
+}
+
+#addToCartPrice {
+    margin-left: auto;
+    color: #0D21A1;
+    padding: 8px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    border-radius: 8px;
+}
+
+.progressBar {
+    margin-bottom: 16px;
+}

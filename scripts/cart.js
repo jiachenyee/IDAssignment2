@@ -52,6 +52,8 @@ async function load() {
     var tax = totalPrice * 0.07
 
     var cartInformationDiv = document.getElementById("cartInformation");
+
+    var deliveryPrice = totalPrice >= 50 ? 0 : 10
     cartInformationDiv.innerHTML = `
     <div style="display:flex;">
         <h3>Subtotal</h3>
@@ -59,13 +61,40 @@ async function load() {
     </div>
     <div style="display:flex;">
         <h3>Delivery</h3>
-        <h3 style="margin-left: auto; color: #0D21A1;">$${(totalPrice >= 50 ? 0 : 10).toFixed(2)}</h3>
+        <h3 style="margin-left: auto; color: #0D21A1;">$${(deliveryPrice).toFixed(2)}</h3>
     </div>
     <div style="display:flex;">
         <h3>Tax</h3>
         <h3 style="margin-left: auto; color: #0D21A1;">$${tax.toFixed(2)}</h3>
     </div>
     `
+
+    var addToCartButton = document.createElement("button");
+    addToCartButton.id = "addToCart";
+    // addToCartButton.onclick = onAddToCartButtonClick;
+
+    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+    var points = Math.round(totalPrice)
+    if (userInfo != null) {
+        addToCartButton.innerHTML = `
+        <div style="display:flex; width:100%">
+            <div>    
+                <h3>Checkout</h3>
+                <p id="pointsParagraph" style="text-align: left; color:#ffffff; font-size:15px">+${points} Points</p>
+            </div>
+            <h3 id="addToCartPrice">$${(totalPrice + deliveryPrice + tax).toFixed(2)}</h3>
+        </div>
+        <div class="progressBar" style="position:relative">
+            <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
+            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
+        </div>
+    `
+    } else {
+
+    }
+
+    cartInformationDiv.appendChild(addToCartButton);
 }
 
 function increment(index) {
