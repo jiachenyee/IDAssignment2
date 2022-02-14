@@ -43,11 +43,27 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
 - Feature 11: Game Page
  
 ### Existing Features
-- [Home Page] Personalized Greeting
-   - For members, the title located at the top of the Home Page will be displayed with their username which is collected when they sign up for membership. Whereas, for non-members, a simple 'Hello' title will be displayed while they glancing through the products as guests. This personalized feature will improve user experience when they visit the website. 
-    {display}
+- Personalized Greeting
+  - For members, the title located at the top of the Home Page will be displayed with their username which is collected when they sign up for membership. Whereas, for non-members, a simple 'Hello' title will be displayed while they glancing through the products as guests. This personalized feature will improve user experience when they visit the website. 
+  - {display}
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Search Bar
+  - This general feature is located at the top of the Home Page, Product Page, Category Page, Cart Page and Payment Page. It allow users to navigate throughout the website to look for products which they have in mind. This helps to shorten the process of finding their desired products, improving the user experience. 
+  - {display}
+
+- View Cart
+  - Found at the top right corner of the Home Page, Product Page, Category Page, Cart Page and Payment Page, this features allow the ease of access to navigate to their checkout chart where they are able to view an overall of the products selected. This feature is only applicable to members as there is limited information of guests to enable them to use the feature. 
+  - {display}
+
+- Points Bar
+  - This features is only available for members. When members checkout and made payment for their purchase, they are able to earn points depending on the amount and quantity of products purchased. The higher the amount spent, the more points earned. The limit on the total number of points accumulated is 1000 points. When the current points bar is full, it will reset to 0 points and the extra points are brought forward to the new bar. Every 1000 points earned will entitle members to play a few games and earn more rewards such as discounts and free products. With the implementation of this feature, non-members will be entice to sign up for membership and members can better visualize their progress of their points accumulation. 
+  - {display}
+
+- Quick Sign In and Sign Up 
+  - The addition of two buttons in replacement of the points bar allows members to sign in or non-members to sign up to be able to purchase items and earn points. In guest mode, users are restricted to only view the products in each category but are able to carry out features set aside for members as mentioned in the previous line. 
+  - {display}
+
+
 
 ### Features Left to Implement
 - Another feature idea
