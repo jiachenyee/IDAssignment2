@@ -104,6 +104,7 @@ nav {
     font-weight: 500;
     padding-left: 8px;
     font-family: 'IBM Plex Sans', sans-serif;
+    outline: none !important;
 }
 
 @media only screen and (max-width: 600px) {
