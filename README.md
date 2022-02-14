@@ -43,8 +43,9 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
 - Feature 11: Game Page
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- [Home Page] Personalized Greeting
+   - For members, the title located at the top of the Home Page will be displayed with their username which is collected when they sign up for membership. Whereas, for non-members, a simple 'Hello' title will be displayed while they glancing through the products as guests. This personalized feature will improve user experience when they visit the website. 
+    {display}
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
