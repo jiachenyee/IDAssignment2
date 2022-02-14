@@ -75,13 +75,13 @@ async function load() {
 
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-    var points = Math.round(product["price"])
+    var points = Math.round(product["price"]) * itemQty
     if (userInfo != null) {
         addToCartButton.innerHTML = `
         <div style="display:flex; width:100%">
             <div>    
                 <h3>Add to Cart</h3>
-                <p style="text-align: left; color:#ffffff; font-size:15px">+${points} Points</p>
+                <p id="pointsParagraph" style="text-align: left; color:#ffffff; font-size:15px">+${points} Points</p>
             </div>
             <h3 id="addToCartPrice">$${(product["price"] * itemQty).toFixed(2)}</h3>
         </div>
@@ -125,7 +125,7 @@ async function onAddToCartButtonClick() {
     window.open(`cart`,"_self")
 }
 
-function increment() {
+async function increment() {
     if (itemQty < 10) {
         itemQty++
         var stepper = document.getElementById("stepper");
@@ -133,11 +133,21 @@ function increment() {
         <button type="button" onclick="increment()">+</button>
         <h3>${itemQty}</h3>
         <button type="button" onclick="decrement()">-</button>
-    `
+        `
+        var productData = await loadProductData();
+        var product = productData.flatMap(category => category["products"]).filter(product => product["sku"] == sku)[0];
+
+        var addToCartPrice = document.getElementById("addToCartPrice");
+        addToCartPrice.innerText = `$${(product["price"] * itemQty).toFixed(2)}`;
+
+        var pointsParagraph = document.getElementById("pointsParagraph");
+        var points = Math.round(product["price"]) * itemQty
+
+        pointsParagraph.innerText = `+${points} Points`
     }
 }
 
-function decrement() {
+async function decrement() {
     if (itemQty > 1) {
         itemQty--
 
@@ -146,7 +156,17 @@ function decrement() {
         <button type="button" onclick="increment()">+</button>
         <h3>${itemQty}</h3>
         <button type="button" onclick="decrement()">-</button>
-    `
+        `
+        var productData = await loadProductData();
+        var product = productData.flatMap(category => category["products"]).filter(product => product["sku"] == sku)[0];
+
+        var addToCartPrice = document.getElementById("addToCartPrice");
+        addToCartPrice.innerText = `$${(product["price"] * itemQty).toFixed(2)}`;
+
+        var pointsParagraph = document.getElementById("pointsParagraph");
+        var points = Math.round(product["price"]) * itemQty
+
+        pointsParagraph.innerText = `+${points} Points`
     }
 }
 
