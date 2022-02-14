@@ -11,8 +11,6 @@ async function loadProductData() {
     return productData;
 }
 
-showGreeting()
-
 function showGreeting() {
     var user = JSON.parse(localStorage.getItem("userInfo"));
 
@@ -22,8 +20,6 @@ function showGreeting() {
         document.getElementById("greeting").innerHTML = `Hello ${user["username"]}!`;
     }
 }
-
-showRewards()
 
 function showRewards() {
     let parent = document.getElementById("rewards");
@@ -52,9 +48,10 @@ function showRewards() {
         parent.innerHTML = `
         <h2>${encouragmenetText}</h2>
         <p style="color:#ffffff;">Get a spin and win some free products every 1000 points!</p>
+        <p style="text-align: right; color:#ffffff;">${userInfo["points"]}/1000</p>
 
         <div class="progressBar">
-            <div class="progressBarItem" style="width:${userInfo["points"] / 1000}%"></div>
+            <div class="progressBarItem" style="width:${userInfo["points"] / 10}%"></div>
         </div>
         `;
     }
@@ -135,4 +132,33 @@ function checkEnter(event) {
         window.open(`search?query=${text}`,"_self")
         return false;
     }
+}
+
+updateUserData()
+showGreeting()
+showRewards()
+
+function updateUserData() {
+    var user = JSON.parse(localStorage.getItem("userInfo"));
+
+    var request = new XMLHttpRequest();
+
+    request.open("GET", "https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d", true);
+    
+    request.addEventListener("load", function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+
+            var member = data.filter(member => (member["username"] == user["username"] && member["password"] == user["password"]))[0]
+            console.log("hello")
+
+            if (member != undefined) {
+                localStorage.setItem("userInfo", JSON.stringify(member));
+                showGreeting()
+                showRewards()
+            }
+        } 
+    });
+    
+    request.send();
 }
