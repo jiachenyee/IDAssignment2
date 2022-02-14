@@ -2,14 +2,11 @@
 
 Welcome to Project Scoop! 
 
-Presenting to you an new ecommerce created for Scoop Wholefoods. This is a platform where you can view and purchase in-stock products of your choice as well as to earn rewards and discounts when you become a member. In addition to that, we have added new gamification features to provide all members a better shopping experince online while saving cost on purchases when they check out. 
+Finding current style of ecommerce website as well as the checkout process boring? Well, we got you. Presenting to you a new and improved website for the brand, Scoop Wholefoods. This updated platform allows users to view and purchase in-stock items of their choice while earning rewards and discounts as a member. In addition to that, gamification features have been added to elevate users’ shopping experience. 
 
-Who are we? Scoop started off as an Australian based store founded by Jeremy and Bettina Kirk in 2013 with the mission to improve people's health and well-being while safeguarding the planet for future generations. Align with their mission, Scoop provides natural,  organic and affordable products which brings health and environmental benefits. Packages delivered to customers are made from biodegradable and recyclable materials. 
+From attracting the user’s attention to enhancing every user’s shopping experience, all features and design are researched, refined and well-thought of from all aspects. An upgrade of the UI and UX will definitely bring in more users as well as more returning users while standing out from the crowd. The process has been streamlined to ensure a smoother flow from signing up to checking out.  This modern and minimalistic website is created with the goal of a seamless purchase and transaction process. 
 
-Why the creation of website? To enhance every shopper's experience, we made sure that every feature was well-thought of from the buttons to the colour choice. Generating a 'For You' section based on current purchases and selection is one of the many new features added. A game can be played by members to entice them to shop more as huge discounts are given to members when they check out. 
-
-Let us bring you through the process of creation of Project Scoop!
- 
+Let us bring you through the development of Project Scoop! 
 ## Design Process
 
 Before we started, we first thought of the needs of every shoppers as well as compare the processes of shopping from the selection to the payment. We then sieve out interesting and useful features from other website and implemented it into our website. Of course, we studied the basis of the orginal website and found out which areas can be improved. 
