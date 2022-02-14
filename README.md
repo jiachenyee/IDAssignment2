@@ -51,7 +51,7 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
   - This general feature is located at the top of the Home Page, Product Page, Category Page, Cart Page and Payment Page. It allow users to navigate throughout the website to look for products which they have in mind. This helps to shorten the process of finding their desired products, improving the user experience. 
   - {display}
 
-- View Cart
+- Cart Button
   - Found at the top right corner of the Home Page, Product Page, Category Page, Cart Page and Payment Page, this features allow the ease of access to navigate to their checkout chart where they are able to view an overall of the products selected. This feature is only applicable to members as there is limited information of guests to enable them to use the feature. 
   - {display}
 
@@ -71,7 +71,35 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
   - For products which are just released into the store, they are labelled with the 'New' logo, whereas for products which are unavailable due to limited or no stock will be labelled with the 'Sold Out' logo. 
   - {display}
 
-- 
+- Products Display
+  - Store items are presented to users in the form of cards with the item name, price and image. Due to time constraint, only 10 images from each of the 6 categories are displayed and users are able to click on any of the items which brings them to a product description and add to cart page. 
+  - {display}
+
+- Filters 
+  - For each product in the Products Page, there are filters added at the bottom of the product name to provide more information such as Vegan and Halal for better understanding of the product. For the collated products in each category are also provided with the relevent filters containing the product category name for easier reference. 
+  - {display}
+
+- Selected Product 
+
+- View Cart
+
+- Confirm Payment
+
+- predicted points bar 
+
+- success page 
+
+- animation 
+
+- hyperlink 
+
+- data validation 
+
+- Add card
+
+- Jumping Game 
+
+- Wheel Game
 
 
 ### Features Left to Implement
