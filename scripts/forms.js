@@ -104,6 +104,7 @@ function validationSignUp(){
             });
     
             console.log(inputValidator);
+            console.log(allTrue);
     
             if (allTrue) {
                 document.getElementById("next1").disabled = false;
@@ -379,11 +380,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (window.location.pathname.endsWith("signup.html"))
     {
-        while(next1btn.disabled == true)
-        {
-            validationSignUp();
-        }
-        console.log("hi there");
+        validationSignUp();
+        console.log("hi there1");
         signUpForm.addEventListener("submit", e => {
             e.preventDefault();
             var username = document.getElementById("username").value;
@@ -394,17 +392,17 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("username" , username);
             localStorage.setItem("email" , email);
             localStorage.setItem("password" , password);
-
             window.location.href = "addressform.html";
+            
         });
+        
     }
     else if (window.location.pathname.endsWith("addressform.html"))
     {
-        while(next2btn.disabled == true)
+        if(next2btn.disabled == true)
         {
             validationAddress();
         }
-
         addressForm.addEventListener("submit", e => {
             e.preventDefault();
             window.location.href = "cardform.html";
@@ -412,7 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     else if (window.location.pathname.endsWith("cardform.html"))
     {
-        while(completebtn.disabled == true)
+        if(completebtn.disabled == true)
         {
             validationCard(true);
         }
@@ -423,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     else if (window.location.pathname.endsWith("paymentform.html"))
     {
-        while(addcardbtn.disabled == true)
+        if(addcardbtn.disabled == true)
         {
             validationPayment();
         }
@@ -455,4 +453,14 @@ function clickLink(){
     }
 }
 
+/*
+function toAddressForm(){
+    if (window.location.pathname.endsWith("signup.html")){
+        document.getElementById("next1").addEventListener("click", e => {
+            e.preventDefault();
+            ;
+        });
+    }
+}
+*/
 
