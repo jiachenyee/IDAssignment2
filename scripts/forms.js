@@ -427,6 +427,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         cardForm.addEventListener("submit", e => {
             e.preventDefault();
+            var contact = document.getElementById("contactNo");
+
+            localStorage.setItem("contact" , contact);
             window.location.href = "index.html";
         });
     }
@@ -438,6 +441,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         paymentForm.addEventListener("submit", e => {
             e.preventDefault();
+            var cardno = document.getElementById("cardNumber");
+            var name = document.getElementById("name");
+            var expdate = document.getElementById("expiryDate");
+            var cvc = document.getElementById("cvc");
+
+            localStorage.setItem("cardno" , cardno);
+            localStorage.setItem("name" , name);
+            localStorage.setItem("expdate" , expdate);
+            localStorage.setItem("cvc" , cvc);
+            
             window.location.href = "cardform.html";
         });
     }
