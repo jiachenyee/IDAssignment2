@@ -85,7 +85,6 @@ function onBuy() {
         "products": cartContents
     }
 
-    console.log(JSON.stringify(body))
     request.send(JSON.stringify(body));
 }
 
