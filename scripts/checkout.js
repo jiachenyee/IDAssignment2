@@ -1,13 +1,13 @@
 var cartContents = JSON.parse(localStorage.getItem("cart"));
 var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
+var totalPrice = cartContents.reduce((pv, cv) => pv + (cv["price"] * cv["qty"]), 0);
+
+var tax = totalPrice * 0.07
+
+var deliveryPrice = totalPrice >= 50 ? 0 : 10
+
 async function load() {
-    var totalPrice = cartContents.reduce((pv, cv) => pv + (cv["price"] * cv["qty"]), 0);
-
-    var tax = totalPrice * 0.07
-
-
-    var deliveryPrice = totalPrice >= 50 ? 0 : 10
     
     var subtotal = document.getElementById("subtotal");
     subtotal.innerText = `$${totalPrice.toFixed(2)}`;
@@ -59,6 +59,36 @@ function getCreditCard() {
     
     request.send();
 }
+
+function onBuy() {
+    var request = new XMLHttpRequest();
+    var url = 'https://idassignment2-22a6.restdb.io/rest/purchase?apikey=620a818d34fd62156585852d';
+    
+    request.open('POST', url, true);
+
+    request.setRequestHeader('Content-Type', 'application/json');
+    
+
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == 200) {
+            alert(request.responseText);
+        }
+    }
+
+    var body = {
+        "username": userInfo["username"],
+        "subtotal": Math.round(totalPrice * 100) / 100,
+        "tax": Math.round(tax * 100) / 100,
+        "deliveryFee": Math.round(deliveryPrice * 100) / 100,
+        "totalPrice": Math.round(totalPrice + tax + deliveryPrice * 100) / 100,
+        "purchaseID": createUUID(),
+        "products": cartContents
+    }
+
+    console.log(JSON.stringify(body))
+    request.send(JSON.stringify(body));
+}
+
 async function loadProductData() {
     var productData = [];
 
@@ -76,3 +106,10 @@ const removeChilds = (parent) => {
         parent.removeChild(parent.lastChild);
     }
 };
+
+function createUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+       return v.toString(16);
+    });
+ }
