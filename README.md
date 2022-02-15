@@ -31,6 +31,38 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
 
 ## Features
 ### Existing Features
+```mermaid
+flowchart TD
+    subgraph Store
+        A[Home] <--> D[Search]
+        A ---> E[Product]
+        A ---> F[Category]
+
+        D ---> E
+        F ---> E
+        E <--> G[Cart]
+        G --> H[Checkout]
+        H --> I[Delivery Confirmation]
+    end
+    A <---> C
+    A <---> B
+    H --> L
+    I ---> Gamification
+    
+    subgraph Authentication
+        B[Sign Up] <--> C[Sign In]
+        subgraph B[Sign Up]
+            O[User Details] --> M[Add Address]
+            M --> P[Add Contact Info]
+            P --> L[Add Payment Method]
+        end
+    end
+
+    subgraph Gamification
+        J[Dot Game] --> K[Spin the wheel]
+    end
+```
+
 - Personalized Greeting
   - For members, the title located at the top of the Home Page will be displayed with their username which is collected when they sign up for membership. Whereas, for non-members, a simple 'Hello' title will be displayed while they glancing through the products as guests. This personalized feature will improve user experience when they visit the website. 
   - {display}
