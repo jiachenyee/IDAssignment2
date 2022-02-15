@@ -15,46 +15,6 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
-function nextForm(){
-    if(window.location.pathname.endsWith("signup.html")){
-        document.getElementById("next1").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "addressform.html";
-        });
-    } else if (window.location.pathname.endsWith("addressform.html")){
-        document.getElementById("next2").addEventListener("click", e =>{
-            e.preventDefault();
-            window.location.href = "cardform.html"
-        });
-    } else if (window.location.pathname.endsWith("cardform.html")){
-        document.getElementById("plusButton").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "paymentform.html";
-        });
-    } else if (window.location.pathname.endsWith("signup.html")){
-        document.querySelector("#linkLogin").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "signin.html";
-        });
-    } else if (window.location.pathname.endsWith("paymentform.html")){
-        document.getElementById("addcard").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "cardform.html";
-        });
-    } else if (window.location.pathname.endsWith("cardform.html")){
-        document.getElementById("complete").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "index.html";
-        });
-    }
-    
-}
-
-
-
-
-
-
 
 
 //-----------------------------------------------------------------------------------------------------------
@@ -407,21 +367,92 @@ function validationPayment(){
 
 //acts as main program
 document.addEventListener("DOMContentLoaded", () => {
-    nextForm();
-    let next1 = document.getElementById("next1");
-    let next2 = document.getElementById("next2");
-    let complete = document.getElementById("complete");
-    let addcard = document.getElementById("addcard");
-    if (window.location.pathname.endsWith("signup.html") && next1.disabled == true){
-        validationSignUp();
-    } else if (window.location.pathname.endsWith("addressform.html") && next2.disabled == true){
-        validationAddress();
-    } else if (window.location.pathname.endsWith("cardform.html") && complete.disabled == true){
-        validationCard(true);
-    } else if (window.location.pathname.endsWith("paymentform.html") && addcard.disabled == true){
-        validationPayment();
+    let next1btn = document.getElementById("next1");
+    let next2btn = document.getElementById("next2");
+    let completebtn = document.getElementById("complete");
+    let addcardbtn = document.getElementById("addcard");
+
+    const signUpForm = document.getElementById("signup");
+    const addressForm = document.getElementById("addresses");
+    const cardForm = document.getElementById("contactcard");
+    const paymentForm = document.getElementById("addpayment");
+
+    if (window.location.pathname.endsWith("signup.html"))
+    {
+        while(next1btn.disabled == true)
+        {
+            validationSignUp();
+        }
+        console.log("hi there");
+        signUpForm.addEventListener("submit", e => {
+            e.preventDefault();
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("emailaddr").value;
+            var password = document.getElementById("password").value;
+            
+            var request = new XMLHttpRequest;
+            localStorage.setItem("username" , username);
+            localStorage.setItem("email" , email);
+            localStorage.setItem("password" , password);
+
+            window.location.href = "addressform.html";
+        });
     }
+    else if (window.location.pathname.endsWith("addressform.html"))
+    {
+        while(next2btn.disabled == true)
+        {
+            validationAddress();
+        }
+
+        addressForm.addEventListener("submit", e => {
+            e.preventDefault();
+            window.location.href = "cardform.html";
+        });
+    }
+    else if (window.location.pathname.endsWith("cardform.html"))
+    {
+        while(completebtn.disabled == true)
+        {
+            validationCard(true);
+        }
+        cardForm.addEventListener("submit", e => {
+            e.preventDefault();
+            window.location.href = "index.html";
+        });
+    }
+    else if (window.location.pathname.endsWith("paymentform.html"))
+    {
+        while(addcardbtn.disabled == true)
+        {
+            validationPayment();
+        }
+        paymentForm.addEventListener("submit", e => {
+            e.preventDefault();
+            window.location.href = "cardform.html";
+        });
+    }
+
 
     
 });
+
+function addNewCard(){
+    if (window.location.pathname.endsWith("cardform.html")){
+        document.getElementById("plusButton").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "paymentform.html";
+        });
+    }
+}
+
+function clickLink(){
+    if (window.location.pathname.endsWith("signup.html")){
+        document.querySelector("#linkLogin").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "signin.html";
+        });
+    }
+}
+
 
