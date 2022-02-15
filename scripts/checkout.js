@@ -96,7 +96,7 @@ function onBuy() {
     // Delete the cart
     localStorage.removeItem("cart");
 
-    window.open(`confirmation?date=${getDeliveryDate().toLocaleString()}`,"_self")
+    window.open(`confirmation?date=${getDeliveryDate().toLocaleDateString().replaceAll("/", "-")}`,"_self")
 }
 
 async function loadProductData() {
