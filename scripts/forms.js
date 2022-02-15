@@ -380,20 +380,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (window.location.pathname.endsWith("signup.html"))
     {
-        validationSignUp();
-        console.log("hi there1");
+        if(next1btn.disabled == true)
+        {
+            validationSignUp();
+        }
         signUpForm.addEventListener("submit", e => {
             e.preventDefault();
             var username = document.getElementById("username").value;
             var email = document.getElementById("emailaddr").value;
             var password = document.getElementById("password").value;
             
-            var request = new XMLHttpRequest;
             localStorage.setItem("username" , username);
             localStorage.setItem("email" , email);
             localStorage.setItem("password" , password);
+
             window.location.href = "addressform.html";
-            
         });
         
     }
@@ -405,6 +406,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         addressForm.addEventListener("submit", e => {
             e.preventDefault();
+            var addr1 = document.getElementById("addrLine1");
+            var addr2 = document.getElementById("addrLine2");
+            var unitno = document.getElementById("unitNo");
+            var postal = document.getElementById("postalCode");
+
+            localStorage.setItem("addr1" , addr1);
+            localStorage.setItem("addr2" , addr2);
+            localStorage.setItem("unitno" , unitno);
+            localStorage.setItem("postal" , postal);
+
             window.location.href = "cardform.html";
         });
     }
