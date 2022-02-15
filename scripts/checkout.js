@@ -1,80 +1,26 @@
 var cartContents = JSON.parse(localStorage.getItem("cart"));
+var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 async function load() {
-    var productData = await loadProductData();
-    var products = productData.flatMap(category => category["products"])
-
-    if (cartContents.length == 0) {
-        var cartDiv = document.getElementById("cart");
-        cartDiv.innerHTML = `
-        <div style="margin-left:auto;margin-right:auto;">
-            <h3 style="text-align:center;margin-left:auto;margin-right:auto;">There's nothing to see here.</h3>
-            <p style="text-align:center;">Add products to your cart to see them here.</p>
-        </div>
-        `
-        return 
-    }
-    var parent = document.getElementById("cartContents");
-
-    removeChilds(parent);
-
-    var totalPrice = 0;
-
-    for (let i = 0; i < cartContents.length; i++) {
-        var cartProduct = cartContents[i];
-        var product = products.find(prod => prod["sku"] == cartProduct["sku"]);
-
-        var cartContentDiv = document.createElement("a");
-        cartContentDiv.className = "product";
-        
-        cartContentDiv.innerHTML = `
-        <a href="product?sku=${product["sku"]}">
-            <img src=${product["productImage"]}/>
-            <div>
-                <h3>${product["name"]}</h3>
-                <h4>$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}</h4>
-            </div>
-        </a>
-        `
-        if (cartProduct["editableQty"]) {
-            cartContentDiv.innerHTML += `<div class="stepper">
-            <button type="button" onclick="increment(${i})">+</button>
-            <h3>${cartProduct["qty"]}</h3>
-            <button type="button" onclick="decrement(${i})">-</button>
-        </div>
-        `
-        }
-
-        parent.appendChild(cartContentDiv);
-
-        totalPrice += cartProduct["price"] * cartProduct["qty"];
-    }
+    var totalPrice = cartContents.reduce((pv, cv) => pv + (cv["price"] * cv["qty"]), 0);
 
     var tax = totalPrice * 0.07
 
-    var cartInformationDiv = document.getElementById("cartInformation");
 
     var deliveryPrice = totalPrice >= 50 ? 0 : 10
-    cartInformationDiv.innerHTML = `
-    <div style="display:flex;">
-        <h3>Subtotal</h3>
-        <h3 style="margin-left: auto; color: #0D21A1;">$${totalPrice.toFixed(2)}</h3>
-    </div>
-    <div style="display:flex;">
-        <h3>Delivery</h3>
-        <h3 style="margin-left: auto; color: #0D21A1;">$${(deliveryPrice).toFixed(2)}</h3>
-    </div>
-    <div style="display:flex;">
-        <h3>Tax</h3>
-        <h3 style="margin-left: auto; color: #0D21A1;">$${tax.toFixed(2)}</h3>
-    </div>
-    `
+    
+    var subtotal = document.getElementById("subtotal");
+    subtotal.innerText = `$${totalPrice.toFixed(2)}`;
+
+    var delivery = document.getElementById("delivery");
+    delivery.innerText = `$${deliveryPrice.toFixed(2)}`;
+
+    var taxText = document.getElementById("tax");
+    taxText.innerText = `$${tax.toFixed(2)}`;
 
     var addToCartButton = document.createElement("button");
     addToCartButton.id = "addToCart";
-    addToCartButton.onclick = onCheckout;
-
-    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    // addToCartButton.onclick = onCheckout;
 
     var points = Math.round(totalPrice)
     if (userInfo != null) {
@@ -96,8 +42,36 @@ async function load() {
     }
 
     cartInformationDiv.appendChild(addToCartButton);
+
+    getCreditCard()
 }
 
+function getCreditCard() {
+    var request = new XMLHttpRequest();
+
+    request.open("GET", "https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d", true);
+    
+    request.addEventListener("load", function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+
+            var member = data.filter(member => (member["username"] == userInfo["username"] && member["password"] == userInfo["password"]))[0]
+
+            if (member != undefined) {
+                // Update user in local storage
+                localStorage.setItem("userInfo", JSON.stringify(member));
+                userInfo = member;
+            }
+
+            member["cardNo"]
+            member["name"]
+            member["expiryDate"]
+            member["cvc"]
+        } 
+    });
+    
+    request.send();
+}
 async function loadProductData() {
     var productData = [];
 
