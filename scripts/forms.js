@@ -1,3 +1,9 @@
+//declaring variables
+var alphabets = /[a-zA-Z]/g;
+var numerals = /\d/;
+const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+
 //for data validations
 function setInputError(inputElement, message){
     inputElement.classList.add("form__input-error");
@@ -9,31 +15,40 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
-document.getElementById("next1").onclick = function(){
-  window.location.href = "addressform.html";
+function nextForm(){
+    if(window.location.pathname.endsWith("signup.html")){
+        document.getElementById("next1").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "addressform.html";
+        });
+    } else if (window.location.pathname.endsWith("addressform.html")){
+        document.getElementById("next2").addEventListener("click", e =>{
+            e.preventDefault();
+            window.location.href = "cardform.html"
+        });
+    } else if (window.location.pathname.endsWith("cardform.html")){
+        document.getElementById("plusButton").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "paymentform.html";
+        });
+    } else if (window.location.pathname.endsWith("signup.html")){
+        document.querySelector("#linkLogin").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "signin.html";
+        });
+    }
+    
 }
 
 
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    var regExp = /[a-zA-Z]/g;
-    var regExp1 = /\d/;
+function validationSignUp(){
     let pwd = "";
-    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    const next1 = document.getElementById("next1");
     let inputValidator = {
       "usernameTF" : false,
       "emailTF" : false,
       "passwordTF" : false,
       "confirmPwdTF" : false
     }
-
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-      e.preventDefault();
-      window.location.href = "signin.html";
-    });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
@@ -126,10 +141,22 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInputError(inputElement);
         });
 
-        
-
     });
+}
 
+
+
+
+
+
+//acts as main program
+document.addEventListener("DOMContentLoaded", () => {
+    nextForm();
+    let next1 = document.getElementById("next1");
+    if (window.location.pathname.endsWith("signup.html") && next1.disabled == true){
+        validationSignUp();
+    }
+    
     
 });
 
