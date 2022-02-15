@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
         e.preventDefault();
-        window.location.href = "signupform.html";
+        window.location.href = "signup.html";
     });
 
     loginForm.addEventListener("submit", e => {
