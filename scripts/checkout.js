@@ -82,7 +82,9 @@ function onBuy() {
         "deliveryFee": Math.round(deliveryPrice * 100) / 100,
         "totalPrice": Math.round(totalPrice + tax + deliveryPrice * 100) / 100,
         "purchaseID": createUUID(),
-        "products": cartContents
+        "products": cartContents,
+        "deliveryDateTime": getDeliveryDate().toLocaleString(),
+        "purchaseDateTime": (new Date()).toLocaleString()
     }
 
     request.send(JSON.stringify(body));
@@ -111,4 +113,18 @@ function createUUID() {
        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
        return v.toString(16);
     });
- }
+}
+
+function getDeliveryDate() {
+    var date = new Date()
+    
+    
+    var finalDate = new Date(
+        date.getFullYear(), 
+        date.getMonth(), 
+        date.getDate() + 1, 
+        13, 0, 0, 0
+    )
+    
+    return finalDate;
+}
