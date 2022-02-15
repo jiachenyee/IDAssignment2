@@ -1,6 +1,10 @@
 var cartContents = JSON.parse(localStorage.getItem("cart"));
 var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
+if (cartContents == null) {
+    window.open(`index`,"_self")
+}
+
 var totalPrice = cartContents.reduce((pv, cv) => pv + (cv["price"] * cv["qty"]), 0);
 
 var tax = totalPrice * 0.07
@@ -88,6 +92,11 @@ function onBuy() {
     }
 
     request.send(JSON.stringify(body));
+
+    // Delete the cart
+    localStorage.removeItem("cart");
+
+    window.open(`confirmation?date=${getDeliveryDate().toLocaleString()}`,"_self")
 }
 
 async function loadProductData() {
@@ -117,7 +126,6 @@ function createUUID() {
 
 function getDeliveryDate() {
     var date = new Date()
-    
     
     var finalDate = new Date(
         date.getFullYear(), 

@@ -13,7 +13,7 @@ async function load() {
     var productData = await loadProductData();
     var products = productData.flatMap(category => category["products"])
 
-    if (cartContents.length == 0) {
+    if (cartContents == null || cartContents.length == 0) {
         var cartDiv = document.getElementById("cart");
         cartDiv.innerHTML = `
         <div style="margin-left:auto;margin-right:auto;">
