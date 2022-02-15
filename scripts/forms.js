@@ -90,10 +90,10 @@ function validationSignUp(){
                 else if(e.target.value.length < 8){
                     setInputError(inputElement, "Password must be at least 8 characters in length");
                 }
-                else if(!regExp.test(e.target.value)){
+                else if(!alphabets.test(e.target.value)){
                      setInputError(inputElement, "Password must contain at least a letter.");
                 }
-                else if(!regExp1.test(e.target.value)){
+                else if(!numerals.test(e.target.value)){
                     setInputError(inputElement, "Password must contain at least a number");
                 }
                 else if(!specialChars.test(e.target.value)){
@@ -144,8 +144,198 @@ function validationSignUp(){
     });
 }
 
+function validationAddress(){
+    let inputValidator = {
+      "addrlineTF" : false,
+      "postalcodeTF" : false
+    }
+
+    document.querySelectorAll(".form__input").forEach(inputElement => {
+      inputElement.addEventListener("blur", e => {
+          //data validation for input fields
+
+          //address field
+          if (e.target.id === "addrLine1"){
+              if(e.target.value.length == 0){
+                  setInputError(inputElement, "An address is required.");
+              }
+              else{
+                  let name = "addrlineTF";
+                  inputValidator[name] = true;
+              }
+          }
+
+          //unit no field
+          if (e.target.id === "unitNo" && e.target.value.length > 0){
+              if( !e.target.value.includes("#") && !e.target.value.includes("-") ){
+                  setInputError(inputElement, "Format of Unit No. is Invalid");
+              }
+          }
 
 
+          //postal code field
+          if(e.target.id === "postalCode"){
+            if(e.target.value.length == 0){
+                setInputError(inputElement, "Postal Code is required.");
+            }
+            else if(e.target.value.length != 6){
+                setInputError(inputElement, "Postal Code must be 6 numbers in length");
+            }
+            else{
+                let name = "postalcodeTF";
+                inputValidator[name] = true;
+            }
+          }
+
+
+          let allTrue = Object.keys(inputValidator).every((item) => {
+              return inputValidator[item] === true;
+          });
+  
+          console.log(inputValidator);
+  
+          if (allTrue) {
+              document.getElementById("next2").disabled = false;
+          }
+          else{
+              document.getElementById("next2").disabled = true;
+          }
+          
+      });
+
+      inputElement.addEventListener("input", e => {
+          clearInputError(inputElement);
+      });
+
+  });
+
+}
+
+
+
+function validationCard(isCard){
+    let isCard;
+    let inputValidator = {
+      "cardTF" : false,
+      "contactTF" : false
+    }
+
+    document.querySelectorAll(".form__input").forEach(inputElement => {
+        inputElement.addEventListener("blur", e => {
+            //data validation for input fields
+
+            //contact field
+            if (e.target.id === "contactNo"){
+                if(e.target.value.length == 0){
+                    setInputError(inputElement, "A contact number is required.");
+                }
+                else if(e.target.value.length != 8){
+                    setInputError(inputElement, "Contact number must be 8 numbers in length");
+                }
+                else{
+                    let name = "contactTF";
+                    inputValidator[name] = true;
+                }
+            }
+
+            //card field
+            if (isCard == true){
+                let name = "cardTF";
+                inputValidator[name] = true;
+            }
+
+
+
+            let allTrue = Object.keys(inputValidator).every((item) => {
+                return inputValidator[item] === true;
+            });
+
+            console.log(inputValidator);
+
+            if (allTrue) {
+                document.getElementById("next2").disabled = false;
+            }
+            else{
+                document.getElementById("next2").disabled = true;
+            }
+            
+        });
+
+        inputElement.addEventListener("input", e => {
+            clearInputError(inputElement);
+        });
+
+    });
+
+}
+
+
+function validationPayment(){
+    let inputValidator = {
+      "addrlineTF" : false,
+      "postalcodeTF" : false
+    }
+
+    document.querySelectorAll(".form__input").forEach(inputElement => {
+      inputElement.addEventListener("blur", e => {
+          //data validation for input fields
+
+          //address field
+          if (e.target.id === "addrLine1"){
+              if(e.target.value.length == 0){
+                  setInputError(inputElement, "An address is required.");
+              }
+              else{
+                  let name = "addrlineTF";
+                  inputValidator[name] = true;
+              }
+          }
+
+          //unit no field
+          if (e.target.id === "unitNo" && e.target.value.length > 0){
+              if( !e.target.value.includes("#") && !e.target.value.includes("-") ){
+                  setInputError(inputElement, "Format of Unit No. is Invalid");
+              }
+          }
+
+
+          //postal code field
+          if(e.target.id === "postalCode"){
+            if(e.target.value.length == 0){
+                setInputError(inputElement, "Postal Code is required.");
+            }
+            else if(e.target.value.length != 6){
+                setInputError(inputElement, "Postal Code must be 6 numbers in length");
+            }
+            else{
+                let name = "postalcodeTF";
+                inputValidator[name] = true;
+            }
+          }
+
+
+          let allTrue = Object.keys(inputValidator).every((item) => {
+              return inputValidator[item] === true;
+          });
+
+          console.log(inputValidator);
+
+          if (allTrue) {
+              document.getElementById("next2").disabled = false;
+          }
+          else{
+              document.getElementById("next2").disabled = true;
+          }
+          
+      });
+
+      inputElement.addEventListener("input", e => {
+          clearInputError(inputElement);
+      });
+
+  });
+
+}
 
 
 
@@ -153,10 +343,16 @@ function validationSignUp(){
 document.addEventListener("DOMContentLoaded", () => {
     nextForm();
     let next1 = document.getElementById("next1");
+    let next2 = document.getElementById("next2");
+    let complete = document.getElementById("complete");
     if (window.location.pathname.endsWith("signup.html") && next1.disabled == true){
         validationSignUp();
+    } else if (window.location.pathname.endsWith("addressform.html") && next2.disabled == true){
+        validationAddress();
+    } else if (window.location.pathname.endsWith("cardform.html") && complete.disabled == true){
+        validationAddress();
     }
-    
+
     
 });
 
