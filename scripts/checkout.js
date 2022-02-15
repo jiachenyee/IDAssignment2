@@ -18,30 +18,15 @@ async function load() {
     var taxText = document.getElementById("tax");
     taxText.innerText = `$${tax.toFixed(2)}`;
 
-    var addToCartButton = document.createElement("button");
-    addToCartButton.id = "addToCart";
-    // addToCartButton.onclick = onCheckout;
-
     var points = Math.round(totalPrice)
     if (userInfo != null) {
-        addToCartButton.innerHTML = `
-        <div style="display:flex; width:100%">
-            <div>    
-                <h3>Checkout</h3>
-                <p id="pointsParagraph" style="text-align: left; color:#ffffff; font-size:15px">+${points} Points</p>
-            </div>
-            <h3 id="addToCartPrice">$${(totalPrice + deliveryPrice + tax).toFixed(2)}</h3>
-        </div>
-        <div class="progressBar" style="position:relative">
-            <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
-            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
-        </div>
-    `
-    } else {
-
+        document.getElementById("pointsParagraph").innerText = `+${points} Points`
+        document.getElementById("addToCartPrice").innerText = `$${(totalPrice + deliveryPrice + tax).toFixed(2)}`
+        document.getElementById("currentProgress").style = `opacity: 0.5; width:${(userInfo["points"] + points) / 10}%`
+        document.getElementById("futureProgress").style = `position:absolute; width:${userInfo["points"] / 10}%`
     }
 
-    cartInformationDiv.appendChild(addToCartButton);
+    document.getElementById("cardPreview").style.visibility = "hidden"
 
     getCreditCard()
 }
@@ -63,10 +48,12 @@ function getCreditCard() {
                 userInfo = member;
             }
 
-            member["cardNo"]
-            member["name"]
-            member["expiryDate"]
-            member["cvc"]
+            if (member["cardNo"] != undefined) {
+                document.getElementById("cardPreview").style.visibility = "visible"
+                document.getElementById("cardNumber").innerText = "**** **** **** " + (member["cardNo"] % 10000).toString();
+                document.getElementById("cardExpiry").innerText = member["expiryDate"];
+                document.getElementById("cardHolderName").innerText = member["name"];
+            }
         } 
     });
     
