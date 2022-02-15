@@ -36,11 +36,28 @@ function nextForm(){
             e.preventDefault();
             window.location.href = "signin.html";
         });
+    } else if (window.location.pathname.endsWith("paymentform.html")){
+        document.getElementById("addcard").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "cardform.html";
+        });
+    } else if (window.location.pathname.endsWith("cardform.html")){
+        document.getElementById("complete").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "index.html";
+        });
     }
     
 }
 
 
+
+
+
+
+
+
+//-----------------------------------------------------------------------------------------------------------
 function validationSignUp(){
     let pwd = "";
     let inputValidator = {
@@ -143,7 +160,15 @@ function validationSignUp(){
 
     });
 }
+//-------------------------------------------------------------------------------------------------------------
 
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------
 function validationAddress(){
     let inputValidator = {
       "addrlineTF" : false,
@@ -179,7 +204,7 @@ function validationAddress(){
                 setInputError(inputElement, "Postal Code is required.");
             }
             else if(e.target.value.length != 6){
-                setInputError(inputElement, "Postal Code must be 6 numbers in length");
+                setInputError(inputElement, "Postal Code must be 6 digits in length");
             }
             else{
                 let name = "postalcodeTF";
@@ -210,11 +235,15 @@ function validationAddress(){
   });
 
 }
+//-----------------------------------------------------------------------------------------------------------
 
 
 
+
+
+
+//-----------------------------------------------------------------------------------------------------------
 function validationCard(isCard){
-    let isCard;
     let inputValidator = {
       "cardTF" : false,
       "contactTF" : false
@@ -230,7 +259,7 @@ function validationCard(isCard){
                     setInputError(inputElement, "A contact number is required.");
                 }
                 else if(e.target.value.length != 8){
-                    setInputError(inputElement, "Contact number must be 8 numbers in length");
+                    setInputError(inputElement, "Contact number must be 8 digits in length");
                 }
                 else{
                     let name = "contactTF";
@@ -253,10 +282,10 @@ function validationCard(isCard){
             console.log(inputValidator);
 
             if (allTrue) {
-                document.getElementById("next2").disabled = false;
+                document.getElementById("complete").disabled = false;
             }
             else{
-                document.getElementById("next2").disabled = true;
+                document.getElementById("complete").disabled = true;
             }
             
         });
@@ -268,49 +297,86 @@ function validationCard(isCard){
     });
 
 }
+//---------------------------------------------------------------------------------------------------------
 
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------
+function isDateBeforeToday(pickeddate){
+    const todayDate = new Date();
+    todayDate.setHours(0,0,0,0);
+    return pickeddate < todayDate;
+}
 
 function validationPayment(){
+    var d1 = new Date()
     let inputValidator = {
-      "addrlineTF" : false,
-      "postalcodeTF" : false
+      "cardnoTF" : false,
+      "nameTF" : false,
+      "expirydateTF" : false,
+      "cvcTF" : false
     }
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
       inputElement.addEventListener("blur", e => {
           //data validation for input fields
 
-          //address field
-          if (e.target.id === "addrLine1"){
+          //card number field
+          if (e.target.id === "cardNumber"){
               if(e.target.value.length == 0){
-                  setInputError(inputElement, "An address is required.");
+                  setInputError(inputElement, "A card number is required.");
+              }
+              else if(e.target.value.length != 16){
+                  setInputError(inputElement, "Card number must be 16 digits in length.");
               }
               else{
-                  let name = "addrlineTF";
+                  let name = "cardnoTF";
                   inputValidator[name] = true;
               }
           }
 
-          //unit no field
-          if (e.target.id === "unitNo" && e.target.value.length > 0){
-              if( !e.target.value.includes("#") && !e.target.value.includes("-") ){
-                  setInputError(inputElement, "Format of Unit No. is Invalid");
+          //name field
+          if (e.target.id === "name"){
+              if(e.target.value.length == 0){
+                  setInputError(inputElement, "Your name is required.");
+              }
+              else{
+                let name = "nameTF";
+                inputValidator[name] = true;
               }
           }
 
+          //expiry date field
+          if (e.target.id === "expiryDate"){
+              if(e.target.value.length == 0){
+                  setInputError(inputElement, "Expiry Date is required.");
+              }
+              else if(isDateBeforeToday(e.target.value)){
+                  setInputError(inputElement, "Card is already expired");
+              }
+              else{
+                  let name = "expirydateTF";
+                  inputValidator[name] = true;
+              }
+              pwd = e.target.value;
+          }
 
-          //postal code field
-          if(e.target.id === "postalCode"){
-            if(e.target.value.length == 0){
-                setInputError(inputElement, "Postal Code is required.");
-            }
-            else if(e.target.value.length != 6){
-                setInputError(inputElement, "Postal Code must be 6 numbers in length");
-            }
-            else{
-                let name = "postalcodeTF";
-                inputValidator[name] = true;
-            }
+
+          //cvc password field
+          if(e.target.id === "cvc"){
+              if(e.target.value.length == 0){
+                  setInputError(inputElement, "CVC is required.");
+              }
+              else if(e.target.value.length != 3){
+                  setInputError(inputElement, "CVC must be 3 digits in length.");
+              }
+              else{
+                  let name = "cvcTF";
+                  inputValidator[name] = true;
+              }
           }
 
 
@@ -321,10 +387,10 @@ function validationPayment(){
           console.log(inputValidator);
 
           if (allTrue) {
-              document.getElementById("next2").disabled = false;
+              document.getElementById("addcard").disabled = false;
           }
           else{
-              document.getElementById("next2").disabled = true;
+              document.getElementById("addcard").disabled = true;
           }
           
       });
@@ -345,72 +411,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let next1 = document.getElementById("next1");
     let next2 = document.getElementById("next2");
     let complete = document.getElementById("complete");
+    let addcard = document.getElementById("addcard");
     if (window.location.pathname.endsWith("signup.html") && next1.disabled == true){
         validationSignUp();
     } else if (window.location.pathname.endsWith("addressform.html") && next2.disabled == true){
         validationAddress();
     } else if (window.location.pathname.endsWith("cardform.html") && complete.disabled == true){
-        validationAddress();
+        validationCard(true);
+    } else if (window.location.pathname.endsWith("paymentform.html") && addcard.disabled == true){
+        validationPayment();
     }
 
     
 });
 
-
-/*
-function setFormMessage(formElement, type, message){
-    const messageElement = formElement.querySelector(".form__message");
-  
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message-success", "form__message-error");
-    messageElement.classList.add('form__message-${type}');
-  }
-  
-  function setInputError(inputElement, message){
-    inputElement.classList.add("form__input-error");
-    inputElement.parentElement.querySelector(".form__input-message-error").textContent = message;
-  }
-  
-  
-  function clearInputError(inputElement){
-    inputElement.classList.remove("form__input-error");
-    inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
-  }
-  
-  document.addEventListener("DOMContentLoaded", () =>{
-    const loginForm = document.querySelector("#signin");
-    const createAccountForm = document.querySelector("#signup1");
-  
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-      e.preventDefault();
-      loginForm.classList.add("form--hidden");
-      createAccountForm.classList.remove("form--hidden");
-    });
-  
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-      e.preventDefault();
-      loginForm.classList.remove("form--hidden");
-      createAccountForm.classList.add("form--hidden");
-    });
-  
-    loginForm.addEventListener("submit", e => {
-      e.preventDefault();
-  
-      //perform your ajax/fetch login
-  
-      setFormMessage(loginForm, "error", "Invalid username/password combination");
-    });
-  
-    document.querySelectorAll(".form__input").forEach(inputElement => {
-      inputElement.addEventListener("blur", e => {
-        if (e.target.id === "username" && e.target.value.length > 0 && e.target.value.length < 8){
-          setInputError(inputElement, "Username must be at least 8 characters in length.");
-        }
-      });
-  
-      inputElement.addEventListener("input", e => {
-        clearInputError(inputElement);
-      });
-    });
-  });
-  */
