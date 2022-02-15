@@ -1,14 +1,5 @@
 var cartContents = JSON.parse(localStorage.getItem("cart"));
 
-function checkEnter(event) {
-    if (event.keyCode == 13) {
-        var text = document.getElementById('search').value;
-
-        window.open(`search?query=${text}`,"_self")
-        return false;
-    }
-}
-
 async function load() {
     var productData = await loadProductData();
     var products = productData.flatMap(category => category["products"])
@@ -105,35 +96,6 @@ async function load() {
     }
 
     cartInformationDiv.appendChild(addToCartButton);
-}
-
-function onCheckout() {
-    var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-
-    if (userInfo == null) {
-        window.location.href = "signup.html";
-    } else {
-        window.location.href = "checkout.html";
-    }
-}
-
-function increment(index) {
-    if (cartContents[index]["qty"] < 10) {
-        cartContents[index]["qty"]++;
-    }
-
-    load();
-    localStorage.setItem("cart", JSON.stringify(cartContents));
-}
-
-function decrement(index) {
-    cartContents[index]["qty"]--;
-    if (cartContents[index]["qty"] == 0) {
-        cartContents.pop(index);
-    }
-
-    load();
-    localStorage.setItem("cart", JSON.stringify(cartContents));
 }
 
 async function loadProductData() {
