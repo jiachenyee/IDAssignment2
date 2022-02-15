@@ -9,6 +9,10 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
+document.getElementById("next1").onclick = function(){
+  window.location.href = "addressform.html";
+}
+
 
 
 
@@ -28,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#linkLogin").addEventListener("click", e => {
       e.preventDefault();
-      window.location.href = "signinform.html";
+      window.location.href = "signin.html";
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
@@ -126,10 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    next1.addEventListener("click", e => {
-        e.preventDefault();
-        window.location.href = "addressform.html";
-    });
+    
 });
 
 
