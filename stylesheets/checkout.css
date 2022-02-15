@@ -18,3 +18,47 @@ h4, h3 {
     width: 50%;
     margin-left: 20px;
 }
+
+#cardPreview {
+    background-color: #011638;
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#cardTitle {
+    font-size: 23px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+#cardNumber {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+#cardExpiryTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0px;
+    opacity: 0.8;
+}
+
+#cardExpiry {
+    font-size: 23px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0px;
+    opacity: 0.8;
+}
+
+#cardHolderName {
+    font-size: 23px;
+    font-weight: 500;
+    color: #ffffff;
+}
