@@ -368,6 +368,9 @@ function validationPayment(){
 
 //acts as main program
 document.addEventListener("DOMContentLoaded", () => {
+    var postData = false;
+    var cardExist = false;
+
     let next1btn = document.getElementById("next1");
     let next2btn = document.getElementById("next2");
     let completebtn = document.getElementById("complete");
@@ -406,10 +409,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         addressForm.addEventListener("submit", e => {
             e.preventDefault();
-            var addr1 = document.getElementById("addrLine1");
-            var addr2 = document.getElementById("addrLine2");
-            var unitno = document.getElementById("unitNo");
-            var postal = document.getElementById("postalCode");
+            var addr1 = document.getElementById("addrLine1").value;
+            var addr2 = document.getElementById("addrLine2").value;
+            var unitno = document.getElementById("unitNo").value;
+            var postal = document.getElementById("postalCode").value;
 
             localStorage.setItem("addr1" , addr1);
             localStorage.setItem("addr2" , addr2);
@@ -417,20 +420,6 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("postal" , postal);
 
             window.location.href = "cardform.html";
-        });
-    }
-    else if (window.location.pathname.endsWith("cardform.html"))
-    {
-        if(completebtn.disabled == true)
-        {
-            validationCard(true);
-        }
-        cardForm.addEventListener("submit", e => {
-            e.preventDefault();
-            var contact = document.getElementById("contactNo");
-
-            localStorage.setItem("contact" , contact);
-            window.location.href = "index.html";
         });
     }
     else if (window.location.pathname.endsWith("paymentform.html"))
@@ -441,20 +430,70 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         paymentForm.addEventListener("submit", e => {
             e.preventDefault();
-            var cardno = document.getElementById("cardNumber");
-            var name = document.getElementById("name");
-            var expdate = document.getElementById("expiryDate");
-            var cvc = document.getElementById("cvc");
+            var cardno = document.getElementById("cardNumber").value;
+            var naming = document.getElementById("name").value;
+            var expdate = document.getElementById("expiryDate").value;
+            var cvc = document.getElementById("cvc").value;
 
             localStorage.setItem("cardno" , cardno);
-            localStorage.setItem("name" , name);
+            localStorage.setItem("name" , naming);
             localStorage.setItem("expdate" , expdate);
             localStorage.setItem("cvc" , cvc);
             
+            cardExist = true;
+            console.log(cardExist);
             window.location.href = "cardform.html";
         });
     }
+    else if (window.location.pathname.endsWith("cardform.html"))
+    {
+        if(completebtn.disabled == true)
+        {
+            validationCard(true);
+        }
+        console.log(cardExist);
+        cardForm.addEventListener("submit", e => {
+            e.preventDefault();
+            var contact = document.getElementById("contactNo").value;
 
+            localStorage.setItem("contact" , contact);
+            postData = true;
+            window.location.href = "index.html";
+        });
+    }
+    
+
+    
+    var method = 'POST';
+    var request = new XMLHttpRequest();
+    var url = 'https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d';
+    var data = {
+        "username" : username,
+        "email" : email,
+        "password" : password,
+        "address1" : addr1,
+        "address2" : addr2,
+        "unitNo" : unitno,
+        "postalCode" : postal,
+        "contact" : contact,
+        "payment" : [
+            { "cardNo" : cardno , "name" : naming , "expiryDate" : expdate , "cvc" : cvc }]
+    };
+
+    request.open(method, url, true);
+    request.setRequestHeader("Content-Type", "application/json");
+    const memberJSON = JSON.stringify(data);
+    request.onreadystatechange = function(){ 
+        if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
+            console.log(JSON.parse(request.responseText));
+        } else if (request.readyState === XMLHttpRequest.DONE && request.status !== 200){
+            console.log("Error");
+        }
+    }
+    request.send(data);
+    
+
+    //continue here
 
     
 });
