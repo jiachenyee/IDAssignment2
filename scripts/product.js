@@ -107,11 +107,10 @@ async function onAddToCartButtonClick() {
     var product = productData.flatMap(category => category["products"]).filter(product => product["sku"] == sku)[0];
 
     var cart = JSON.parse(localStorage.getItem("cart"));
+    
     if (cart == undefined) {
         cart = [];
     }
-
-    console.log(product);
 
     cart.push({
         "sku": product["sku"],

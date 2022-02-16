@@ -38,7 +38,7 @@ async function load() {
         
         cartContentDiv.innerHTML = `
         <a href="product?sku=${product["sku"]}">
-            <img src=${product["productImage"]}/>
+            <img src=${product["productImage"]}>
             <div>
                 <h3>${product["name"]}</h3>
                 <h4>$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}</h4>
