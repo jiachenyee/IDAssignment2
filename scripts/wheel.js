@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded" , e => {
     document.getElementById("title").textContent = "Spin(s) Left: " + spins;
     //localStorage.setItem("spins", spins);
 });
-    
-
 
 function myfunction(){
     let spins = localStorage.getItem("spins");
@@ -55,25 +53,27 @@ function displayEle(){
 }
 
 function again(){
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    
+    if (cart == undefined) {
+        cart = [];
+    }
+
+    cart.push({
+        "sku": ele.id, // replace with SKU
+        "price": 0, // make it free
+        "qty": 1,   // give them 1
+        "editableQty": false // set this to false so users cannot add more
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     let spins = localStorage.getItem("spins");
     if(spins <= 0){
         window.open(`cart`,"_self");
     }
     else{
         overlayEle.style.display = "none";
-        var cart = JSON.parse(localStorage.getItem("cart"));
-          
-        if (cart == undefined) {
-            cart = [];
-        }
-    
-        cart.push({
-            "sku": ele.id, // replace with SKU
-            "price": 0, // make it free
-            "qty": 1,   // give them 1
-            "editableQty": false // set this to false so users cannot add more
-        });
-        localStorage.setItem("cart", JSON.stringify(cart));
     }
 }
 

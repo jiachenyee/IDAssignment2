@@ -33,11 +33,21 @@ if (userInfo["points"] >= 1000) {
 
 var pointsProgress = document.getElementById("pointsProgress");
 
+var barWidth = userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10;
+
 pointsProgress.innerHTML = `
 <h2>${encouragmenetText}</h2>
 <p style="color:#ffffff;">Get a spin and win some free products every 1000 points!</p>
 <p style="text-align: right; color:#ffffff;">${userInfo["points"]}/1000</p>
 <div class="progressBar">
-    <div class="progressBarItem" style="width:${userInfo["points"] / 10}%"></div>
+    <div class="progressBarItem" style="width:${barWidth}%"></div>
 </div>
 `;
+
+if (userInfo["points"] >= 1000) {
+    userInfo["points"] %= 1000
+
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+    document.getElementById("gameCTA").style.display = "inherit";
+}

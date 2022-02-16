@@ -42,6 +42,29 @@ body {
     margin-top: 0px;
 }
 
+#gameCTA {
+    display: none;
+    text-decoration: none;
+    background-color: #0D21A1;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 32px;
+}
+
+#gameCTA > h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+#gameCTA:hover {
+    background-color: #EEF0F2;
+}
+
+#gameCTA:hover > h2 {
+    color: #0D21A1;
+}
+
+
 @media only screen and (max-width: 700px) {
     .container {
         background-color: #ffffff00;
