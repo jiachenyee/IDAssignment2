@@ -22,21 +22,21 @@
             <!--Username section of the form-->
             <div class="form__input-group">
                 <label for="username">Username</label><br>
-                <input type="text" class="form__input" id="username" name="usernameTF" autofocus required>
+                <input type="text" class="form__input" id="username" autofocus required>
                 <div class="form__input-message-error"></div>
             </div>
 
             <!--Email section of the form-->
             <div class="form__input-group">
                 <label for="emailaddr">Email</label><br>
-                <input type="email" class="form__input" id="emailaddr" name="emailTF" required>
+                <input type="email" class="form__input" id="emailaddr" required>
                 <div class="form__input-message-error"></div>
             </div>
 
             <!--Password section of the form-->
             <div class="form__input-group">
                 <label for="password">Password</label><br>
-                <input type="password" class="form__input" id="password" name="passwordTF" required>
+                <input type="password" class="form__input" id="password" required>
                 <div class="form__input-message-error"></div>
             </div>
 
@@ -51,7 +51,7 @@
             <!--for storing the sign in button and hyperlink in mobile view-->
             <div class = "buttonlink">
                 <!--Button for continuation of sign up-->
-                <button class="form__button" type="submit" id="next1" disabled>Let's Go</button>
+                <button onclick="submitSignUpForm()" class="form__button" type="submit" id="next1" disabled>Let's Go</button>
 
                 <!--Hyperlink for Sign Up-->
                 <p class="form__text">

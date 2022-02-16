@@ -364,10 +364,120 @@ function validationPayment(){
 
 }
 
+function addNewCard(){
+    if (window.location.pathname.endsWith("cardform.html")){
+        document.getElementById("plusButton").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "paymentform.html";
+        });
+    }
+}
+
+function clickLink(){
+    if (window.location.pathname.endsWith("signup.html")){
+        document.querySelector("#linkLogin").addEventListener("click", e => {
+            e.preventDefault();
+            window.location.href = "signin.html";
+        });
+    }
+}
+
+function submitSignUpForm(){
+    alert("form submitted");
+    localStorage.setItem("username" , document.getElementById("username").value);
+    console.log("1");
+    localStorage.setItem("email" , document.getElementById("emailaddr").value);
+    console.log("2");
+    localStorage.setItem("password" , document.getElementById("password").value);
+    setTimeout(() => {console.log("here")},1000);
+    clearLocalStorage();
+    setTimeout(() => {window.location.href = "addressform.html"},1500);
+    
+}
+
+function submitAddressForm(){
+    localStorage.setItem("addr1" , document.getElementById("addrLine1").value);
+    localStorage.setItem("addr2" , document.getElementById("addrLine2").value);
+    localStorage.setItem("unitno" , document.getElementById("unitNo").value);
+    localStorage.setItem("postal" , document.getElementById("postalCode").value);
+    window.location.href = "cardform.html";
+}
+
+function submitPaymentForm(){
+    localStorage.setItem("cardno" , document.getElementById("cardNumber").value);
+    localStorage.setItem("name" , document.getElementById("name").value);
+    localStorage.setItem("expdate" , document.getElementById("expiryDate").value);
+    localStorage.setItem("cvc" , document.getElementById("cvc").value);
+    window.location.href = "cardform.html";
+    return true;
+}
+
+function submitCardForm(){
+    localStorage.setItem("contact" , document.getElementById("contactNo").value);
+    window.location.href = "index.html";
+}
+
+function postData(){
+
+}
+
+function clearLocalStorage(){
+    //localStorage.removeItem("username");
+    //localStorage.removeItem("email");
+    //localStorage.removeItem("password");
+    localStorage.removeItem("addr1");
+    localStorage.removeItem("addr2");
+    localStorage.removeItem("unitno");
+    localStorage.removeItem("postal");
+    localStorage.removeItem("cardno");
+    localStorage.removeItem("name");
+    localStorage.removeItem("expdate");
+    localStorage.removeItem("cvc");
+    localStorage.removeItem("contact");
+}
 
 
 //acts as main program
 document.addEventListener("DOMContentLoaded", () => {
+    var data = {
+        "username" : localStorage.getItem("username"),
+        "email" : localStorage.getItem("email"),
+        "password" : localStorage.getItem("password"),
+        "address1" : localStorage.getItem("addr1"),
+        "address2" : localStorage.getItem("addr2"),
+        "unitNo" : localStorage.getItem("unitno"),
+        "postalCode" : localStorage.getItem("postal"),
+        "contact" : localStorage.getItem("contact"),
+        "payment" : 
+            [{ 
+            "cardNo" : localStorage.getItem("cardno"), 
+            "name" : localStorage.getItem("naming"), 
+            "expiryDate" : localStorage.getItem("expdate"), 
+            "cvc" : localStorage.getItem("cvc") 
+            }]
+    };
+    console.log(data);
+    console.log(JSON.stringify(data));
+
+
+
+    /*
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("emailaddr").value;
+    var password = document.getElementById("password").value;
+    var addr1 = document.getElementById("addrLine1").value;
+    var addr2 = document.getElementById("addrLine2").value;
+    var unitno = document.getElementById("unitNo").value;
+    var postal = document.getElementById("postalCode").value;
+    var cardno = document.getElementById("cardNumber").value;
+    var naming = document.getElementById("name").value;
+    var expdate = document.getElementById("expiryDate").value;
+    var cvc = document.getElementById("cvc").value;
+    var contact = document.getElementById("contactNo").value;
+
+
+
+
     var postData = false;
     var cardExist = false;
 
@@ -380,18 +490,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const addressForm = document.getElementById("addresses");
     const cardForm = document.getElementById("contactcard");
     const paymentForm = document.getElementById("addpayment");
-
+    */
     if (window.location.pathname.endsWith("signup.html"))
     {
-        if(next1btn.disabled == true)
-        {
-            validationSignUp();
-        }
+        validationSignUp();
+        /*
         signUpForm.addEventListener("submit", e => {
             e.preventDefault();
-            var username = document.getElementById("username").value;
-            var email = document.getElementById("emailaddr").value;
-            var password = document.getElementById("password").value;
+            //var username = document.getElementById("username").value;
+            //var email = document.getElementById("emailaddr").value;
+            //var password = document.getElementById("password").value;
             
             localStorage.setItem("username" , username);
             localStorage.setItem("email" , email);
@@ -399,20 +507,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.location.href = "addressform.html";
         });
+        */
         
     }
     else if (window.location.pathname.endsWith("addressform.html"))
     {
-        if(next2btn.disabled == true)
-        {
-            validationAddress();
-        }
+        validationAddress();
+        /*
         addressForm.addEventListener("submit", e => {
             e.preventDefault();
-            var addr1 = document.getElementById("addrLine1").value;
-            var addr2 = document.getElementById("addrLine2").value;
-            var unitno = document.getElementById("unitNo").value;
-            var postal = document.getElementById("postalCode").value;
+            //var addr1 = document.getElementById("addrLine1").value;
+            //var addr2 = document.getElementById("addrLine2").value;
+            //var unitno = document.getElementById("unitNo").value;
+            //var postal = document.getElementById("postalCode").value;
 
             localStorage.setItem("addr1" , addr1);
             localStorage.setItem("addr2" , addr2);
@@ -421,19 +528,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.location.href = "cardform.html";
         });
+        */
     }
     else if (window.location.pathname.endsWith("paymentform.html"))
     {
-        if(addcardbtn.disabled == true)
-        {
-            validationPayment();
-        }
+        validationPayment();
+        /*
         paymentForm.addEventListener("submit", e => {
             e.preventDefault();
-            var cardno = document.getElementById("cardNumber").value;
-            var naming = document.getElementById("name").value;
-            var expdate = document.getElementById("expiryDate").value;
-            var cvc = document.getElementById("cvc").value;
+            //var cardno = document.getElementById("cardNumber").value;
+            //var naming = document.getElementById("name").value;
+            //var expdate = document.getElementById("expiryDate").value;
+            //var cvc = document.getElementById("cvc").value;
 
             localStorage.setItem("cardno" , cardno);
             localStorage.setItem("name" , naming);
@@ -444,26 +550,26 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(cardExist);
             window.location.href = "cardform.html";
         });
+        */
     }
     else if (window.location.pathname.endsWith("cardform.html"))
     {
-        if(completebtn.disabled == true)
-        {
-            validationCard(true);
-        }
+        let cardExist = submitPaymentForm;
         console.log(cardExist);
+        validationCard(cardExist);
+        /*
         cardForm.addEventListener("submit", e => {
             e.preventDefault();
-            var contact = document.getElementById("contactNo").value;
+            //var contact = document.getElementById("contactNo").value;
 
             localStorage.setItem("contact" , contact);
             postData = true;
             window.location.href = "index.html";
         });
+        */
     }
-    
 
-    
+    /*
     var method = 'POST';
     var request = new XMLHttpRequest();
     var url = 'https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d';
@@ -491,6 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     request.send(data);
+    */
     
 
     //continue here
@@ -498,23 +605,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
-function addNewCard(){
-    if (window.location.pathname.endsWith("cardform.html")){
-        document.getElementById("plusButton").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "paymentform.html";
-        });
-    }
-}
 
-function clickLink(){
-    if (window.location.pathname.endsWith("signup.html")){
-        document.querySelector("#linkLogin").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "signin.html";
-        });
-    }
-}
 
 /*
 function toAddressForm(){
