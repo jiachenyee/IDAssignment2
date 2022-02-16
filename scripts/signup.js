@@ -126,15 +126,15 @@ function clearLocalStorage(){
     //localStorage.removeItem("username");
     //localStorage.removeItem("email");
     //localStorage.removeItem("password");
-    localStorage.removeItem("addr1");
-    localStorage.removeItem("addr2");
-    localStorage.removeItem("unitno");
-    localStorage.removeItem("postal");
-    localStorage.removeItem("cardno");
-    localStorage.removeItem("name");
-    localStorage.removeItem("expdate");
-    localStorage.removeItem("cvc");
-    localStorage.removeItem("contact");
+    sessionStorage.removeItem("addr1");
+    sessionStorage.removeItem("addr2");
+    sessionStorage.removeItem("unitno");
+    sessionStorage.removeItem("postal");
+    sessionStorage.removeItem("cardno");
+    sessionStorage.removeItem("name");
+    sessionStorage.removeItem("expdate");
+    sessionStorage.removeItem("cvc");
+    sessionStorage.removeItem("contact");
 }
 
 
@@ -150,9 +150,9 @@ function clickLink(){
 
 
 function submitSignUpForm(){
-    localStorage.setItem("username" , document.getElementById("username").value);
-    localStorage.setItem("email" , document.getElementById("emailaddr").value);
-    localStorage.setItem("password" , document.getElementById("password").value);
+    sessionStorage.setItem("username" , document.getElementById("username").value);
+    sessionStorage.setItem("email" , document.getElementById("emailaddr").value);
+    sessionStorage.setItem("password" , document.getElementById("password").value);
     console.log("done");
     //clearLocalStorage();
     window.open(`/addressform.html`, "_self");

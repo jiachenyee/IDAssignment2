@@ -71,7 +71,6 @@ function onBuy() {
     request.open('POST', url, true);
 
     request.setRequestHeader('Content-Type', 'application/json');
-    
 
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == 200) {

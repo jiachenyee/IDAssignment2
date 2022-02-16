@@ -107,11 +107,11 @@ function validationPayment(){
 
 
 function submitPaymentForm(){
-    localStorage.setItem("existance" , true);
-    localStorage.setItem("cardno" , document.getElementById("cardNumber").value);
-    localStorage.setItem("name" , document.getElementById("name").value);
-    localStorage.setItem("expdate" , document.getElementById("expiryDate").value);
-    localStorage.setItem("cvc" , document.getElementById("cvc").value);
+    sessionStorage.setItem("existance" , true);
+    sessionStorage.setItem("cardno" , document.getElementById("cardNumber").value);
+    sessionStorage.setItem("name" , document.getElementById("name").value);
+    sessionStorage.setItem("expdate" , document.getElementById("expiryDate").value);
+    sessionStorage.setItem("cvc" , document.getElementById("cvc").value);
     //displayCard();
     window.location.href = "cardform.html";
 }

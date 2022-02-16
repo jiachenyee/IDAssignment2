@@ -81,10 +81,10 @@ function validationAddress(){
 
 
 function submitAddressForm(){
-    localStorage.setItem("addr1" , document.getElementById("addrLine1").value);
-    localStorage.setItem("addr2" , document.getElementById("addrLine2").value);
-    localStorage.setItem("unitno" , document.getElementById("unitNo").value);
-    localStorage.setItem("postal" , document.getElementById("postalCode").value);
+    sessionStorage.setItem("addr1" , document.getElementById("addrLine1").value);
+    sessionStorage.setItem("addr2" , document.getElementById("addrLine2").value);
+    sessionStorage.setItem("unitno" , document.getElementById("unitNo").value);
+    sessionStorage.setItem("postal" , document.getElementById("postalCode").value);
     window.location.href = "cardform.html";
 }
 

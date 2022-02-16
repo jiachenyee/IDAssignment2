@@ -83,9 +83,9 @@ function displayCard(){
     let thenumber = document.getElementById("cdNumber");
     let thedate = document.getElementById("cdExpiry");
 
-    thename.textContent = localStorage.getItem("name");
-    thenumber.textContent = localStorage.getItem("cardno");
-    thedate.textContent = localStorage.getItem("expdate");
+    thename.textContent = sessionStorage.getItem("name");
+    thenumber.textContent = sessionStorage.getItem("cardno");
+    thedate.textContent = sessionStorage.getItem("expdate");
 
     card.style.display = "block";
     txt.textContent = "";
@@ -95,35 +95,38 @@ function displayCard(){
 
 
 function submitCardForm(){
-    localStorage.setItem("contact" , document.getElementById("contactNo").value);
-    window.location.href = "index.html";
+    sessionStorage.setItem("contact", document.getElementById("contactNo").value);
+    // alert(1);
+    postData();
+    // window.location.href = "index.html";
+
+    return false;
 }
 
-function postData(){
-    var method = 'POST';
+function postData() {
     var request = new XMLHttpRequest();
-    var url = 'https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d';
+
+    var url = "https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d";
     var data = {
-        "username" : localStorage.getItem("username"),
-        "email" : localStorage.getItem("email"),
-        "password" : localStorage.getItem("password"),
-        "address1" : localStorage.getItem("addr1"),
-        "address2" : localStorage.getItem("addr2"),
-        "unitNo" : localStorage.getItem("unitno"),
-        "postalCode" : localStorage.getItem("postal"),
-        "contact" : localStorage.getItem("contact"),
-        "payment" : 
-            [{ 
-            "cardNo" : localStorage.getItem("cardno"), 
-            "name" : localStorage.getItem("naming"), 
-            "expiryDate" : localStorage.getItem("expdate"), 
-            "cvc" : localStorage.getItem("cvc") 
-            }]
+        "username": sessionStorage.getItem("username"),
+        "email": sessionStorage.getItem("email"),
+        "password": sessionStorage.getItem("password"),
+        "address1": sessionStorage.getItem("addr1"),
+        "address2": sessionStorage.getItem("addr2"),
+        "unitNo": sessionStorage.getItem("unitno"),
+        "postalCode": sessionStorage.getItem("postal"),
+        "contact": sessionStorage.getItem("contact"),
+        "cardNo": sessionStorage.getItem("cardno"), 
+        "name": sessionStorage.getItem("name"), 
+        "expiryDate": sessionStorage.getItem("expdate"), 
+        "cvc": sessionStorage.getItem("cvc"),
+        "points": 0
     };
 
-    request.open(method, url, true);
+    request.open('POST', url, true);
+
     request.setRequestHeader("Content-Type", "application/json");
-    const memberJSON = JSON.stringify(data);
+    
     request.onreadystatechange = function(){ 
         if(request.readyState == 4 && request.status == 200){
             console.log(JSON.parse(request.responseText));
@@ -131,7 +134,8 @@ function postData(){
             console.log("Error");
         }
     }
-    request.send(data);
+
+    request.send(JSON.stringify(data));
 }
 
 
@@ -146,5 +150,7 @@ document.addEventListener("DOMContentLoaded" , e =>{
         f.preventDefault();
         submitCardForm();
         postData();
+
+        return false;
     });
 })
