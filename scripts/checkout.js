@@ -96,7 +96,24 @@ function onBuy() {
     // Delete the cart
     localStorage.removeItem("cart");
 
-    window.open(`confirmation?date=${getDeliveryDate().toLocaleDateString().replaceAll("/", "-")}`,"_self")
+    // Update user info
+    var userRequest = new XMLHttpRequest();
+    var userURL = `https://idassignment2-22a6.restdb.io/rest/member/${userInfo["_id"]}?apikey=620a818d34fd62156585852d`
+
+    userRequest.open('PATCH', userURL, true);
+
+    userRequest.setRequestHeader('Content-Type', 'application/json');
+
+    userInfo["points"] += Math.round(totalPrice)
+    var newBody = {
+        "points": userInfo["points"]
+    }
+
+    userRequest.send(JSON.stringify(newBody));
+
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+    window.open(`confirmation?date=${getDeliveryDate().toLocaleDateString().replaceAll("/", "-")}`,"_self");
 }
 
 async function loadProductData() {

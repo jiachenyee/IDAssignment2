@@ -29,12 +29,20 @@
     gap: 32px;
 }
 
+#productInformation > div {
+    width: 100%;
+}
+
 .productDescriptionContainer {
     border-radius: 32px;
     background-color: #ffffff;
     padding: 32px;
     display: flex;
     gap: 32px;
+}
+
+.productDescriptionContainer > p {
+    margin-right: auto;
 }
 
 .productImage {
