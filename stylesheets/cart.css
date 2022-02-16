@@ -96,4 +96,8 @@ h4, h3 {
         bottom: 0;
         left: 0;
     }
+
+    #cartContents {
+        margin-bottom: 400px;
+    }
 }
