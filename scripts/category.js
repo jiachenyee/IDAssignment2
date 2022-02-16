@@ -43,11 +43,12 @@ async function loadCategoryData() {
 }
 
 function showGreeting() {
-    var user = localStorage.getItem("username");
+    var user = JSON.parse(localStorage.getItem("userInfo"));
+    
     if (user == null) {
         document.getElementById("greeting").innerHTML = "Hello!";
     } else {
-        document.getElementById("greeting").innerHTML = `Hello ${user}!`;
+        document.getElementById("greeting").innerHTML = `Hello ${user["username"]}!`;
     }
 }
 
