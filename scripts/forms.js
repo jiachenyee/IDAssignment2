@@ -385,13 +385,14 @@ function clickLink(){
 function submitSignUpForm(){
     alert("form submitted");
     localStorage.setItem("username" , document.getElementById("username").value);
-    console.log("1");
     localStorage.setItem("email" , document.getElementById("emailaddr").value);
-    console.log("2");
     localStorage.setItem("password" , document.getElementById("password").value);
-    setTimeout(() => {console.log("here")},1000);
-    clearLocalStorage();
-    setTimeout(() => {window.location.href = "addressform.html"},1500);
+    setTimeout(function(){
+        location.href = "addressform.html";
+    },2000)
+    
+    //setTimeout(() => {console.log("here")},1000);
+    //setTimeout(() => {window.location.href = "addressform.html"},1500);
     
 }
 
