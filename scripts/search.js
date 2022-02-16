@@ -47,6 +47,8 @@ function displayResults(query, productList) {
     if (searchResults.length == 0) {
         searchResultsDiv.innerHTML = `
         <div style="margin-left:auto;margin-right:auto;">
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_lbleaciv.json" background="transparent" speed="1" style="width: 200px; height: 200px; margin-left:auto;margin-right:auto;" loop autoplay></lottie-player>
+        
             <h3 style="font-size:27px;margin-bottom:0px;margin-top:0px;text-align:center;margin-left:auto;margin-right:auto;">
                 There's nothing to see here.
             </h3>
