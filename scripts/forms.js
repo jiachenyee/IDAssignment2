@@ -266,11 +266,6 @@ function validationCard(isCard){
 
 
 //------------------------------------------------------------------------------------------------------------
-function isDateBeforeToday(pickeddate){
-    const todayDate = new Date();
-    todayDate.setHours(0,0,0,0);
-    return pickeddate < todayDate;
-}
 
 function validationPayment(){
     var d1 = new Date()
@@ -315,8 +310,11 @@ function validationPayment(){
               if(e.target.value.length == 0){
                   setInputError(inputElement, "Expiry Date is required.");
               }
-              else if(isDateBeforeToday(e.target.value)){
-                  setInputError(inputElement, "Card is already expired");
+              else if(!e.target.value.includes("/")){
+                setInputError(inputElement, "A '/' is missing");
+              }
+              else if(e.target.value.length != 7){
+                  setInputError(inputElement, "Expiry Date must be 7 characters in length");
               }
               else{
                   let name = "expirydateTF";
@@ -382,14 +380,22 @@ function clickLink(){
     }
 }
 
+function displayCard(){
+    let card = document.getElementById("card1");
+    let name = document.getElementById("cdTitle")
+    card.style.display = "block";
+}
+
 function submitSignUpForm(){
-    alert("form submitted");
+    
     localStorage.setItem("username" , document.getElementById("username").value);
     localStorage.setItem("email" , document.getElementById("emailaddr").value);
+    alert("hithereisryan");
     localStorage.setItem("password" , document.getElementById("password").value);
     setTimeout(function(){
         location.href = "addressform.html";
-    },2000)
+        alert("form submitted");
+    },200)
     
     //setTimeout(() => {console.log("here")},1000);
     //setTimeout(() => {window.location.href = "addressform.html"},1500);
@@ -458,7 +464,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }]
     };
     console.log(data);
-    console.log(JSON.stringify(data));
 
 
 
@@ -482,17 +487,19 @@ document.addEventListener("DOMContentLoaded", () => {
     var postData = false;
     var cardExist = false;
 
-    let next1btn = document.getElementById("next1");
-    let next2btn = document.getElementById("next2");
-    let completebtn = document.getElementById("complete");
-    let addcardbtn = document.getElementById("addcard");
-
     const signUpForm = document.getElementById("signup");
     const addressForm = document.getElementById("addresses");
     const cardForm = document.getElementById("contactcard");
     const paymentForm = document.getElementById("addpayment");
     */
-    if (window.location.pathname.endsWith("signup.html"))
+
+    let next1btn = document.getElementById("next1");
+    let next2btn = document.getElementById("next2");
+    let completebtn = document.getElementById("complete");
+    let addcardbtn = document.getElementById("addcard");
+
+    
+    if (window.location.pathname.endsWith("signup.html") && next1btn.disabled == true)
     {
         validationSignUp();
         /*
@@ -511,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
         */
         
     }
-    else if (window.location.pathname.endsWith("addressform.html"))
+    else if (window.location.pathname.endsWith("addressform.html") && next2btn.disabled == true)
     {
         validationAddress();
         /*
