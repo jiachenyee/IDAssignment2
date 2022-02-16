@@ -17,6 +17,8 @@ async function load() {
         var cartDiv = document.getElementById("cart");
         cartDiv.innerHTML = `
         <div style="margin-left:auto;margin-right:auto;">
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_vs9quqcy.json" background="transparent" speed="0.5" style="width: 200px; height: 200px; margin-left:auto;margin-right:auto;" loop autoplay></lottie-player>
+
             <h3 style="text-align:center;margin-left:auto;margin-right:auto;">There's nothing to see here.</h3>
             <p style="text-align:center;">Add products to your cart to see them here.</p>
         </div>
