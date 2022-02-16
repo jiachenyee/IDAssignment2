@@ -399,19 +399,11 @@ function displayCard(){
 }
 
 function submitSignUpForm(){
-    
     localStorage.setItem("username" , document.getElementById("username").value);
     localStorage.setItem("email" , document.getElementById("emailaddr").value);
-    alert("hithereisryan");
     localStorage.setItem("password" , document.getElementById("password").value);
-    setTimeout(function(){
-        location.href = "addressform.html";
-        alert("form submitted");
-    },200)
-    
-    //setTimeout(() => {console.log("here")},1000);
-    //setTimeout(() => {window.location.href = "addressform.html"},1500);
-    
+    clearLocalStorage();
+    window.location.href = "addressform.html";
 }
 
 function submitAddressForm(){
@@ -427,9 +419,8 @@ function submitPaymentForm(){
     localStorage.setItem("name" , document.getElementById("name").value);
     localStorage.setItem("expdate" , document.getElementById("expiryDate").value);
     localStorage.setItem("cvc" , document.getElementById("cvc").value);
-    displayCard();
+    //displayCard();
     window.location.href = "cardform.html";
-    return true;
 }
 
 function submitCardForm(){
@@ -438,7 +429,38 @@ function submitCardForm(){
 }
 
 function postData(){
+    var method = 'POST';
+    var request = new XMLHttpRequest();
+    var url = 'https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d';
+    var data = {
+        "username" : localStorage.getItem("username"),
+        "email" : localStorage.getItem("email"),
+        "password" : localStorage.getItem("password"),
+        "address1" : localStorage.getItem("addr1"),
+        "address2" : localStorage.getItem("addr2"),
+        "unitNo" : localStorage.getItem("unitno"),
+        "postalCode" : localStorage.getItem("postal"),
+        "contact" : localStorage.getItem("contact"),
+        "payment" : 
+            [{ 
+            "cardNo" : localStorage.getItem("cardno"), 
+            "name" : localStorage.getItem("naming"), 
+            "expiryDate" : localStorage.getItem("expdate"), 
+            "cvc" : localStorage.getItem("cvc") 
+            }]
+    };
 
+    request.open(method, url, true);
+    request.setRequestHeader("Content-Type", "application/json");
+    const memberJSON = JSON.stringify(data);
+    request.onreadystatechange = function(){ 
+        if(request.readyState == 4 && request.status == 200){
+            console.log(JSON.parse(request.responseText));
+        } else if (request.readyState === XMLHttpRequest.DONE && request.status !== 200){
+            console.log("Error");
+        }
+    }
+    request.send(data);
 }
 
 function clearLocalStorage(){
@@ -457,54 +479,67 @@ function clearLocalStorage(){
 }
 
 
+document.addEventListener("DOMContentLoaded" , y =>{
+    var cardExist = false;
+
+    if (window.location.pathname.includes("signup.html")){
+        validationSignUp();
+
+        document.getElementById("next1").addEventListener("submit", q => {
+            q.preventDefault();
+            submitSignUpForm();
+        });
+
+    } else if (window.location.pathname.includes("addressform.html")){
+        validationAddress();
+
+        document.getElementById("next2").addEventListener("submit", q=>{
+            q.preventDefault();
+            submitAddressForm();
+        });
+
+    } else if (window.location.pathname.includes("paymentform.html")){
+        validationPayment();
+
+        document.getElementById("addcard").addEventListener("submit", q => {
+            q.preventDefault();
+            cardExist = true;
+            submitAddressForm();
+        });
+
+    } else if (window.location.pathname.includes("cardform.html")){
+        validationCard(cardExist);
+
+        document.getElementById("submit").addEventListener("submit", q => {
+            q.preventDefault();
+            submitCardForm();
+        });
+
+    }
+
+    postData();
+    console.log(data);
+
+});
+   
+
+
+
+
+
+/*
 //acts as main program
 document.addEventListener("DOMContentLoaded", () => {
-    var data = {
-        "username" : localStorage.getItem("username"),
-        "email" : localStorage.getItem("email"),
-        "password" : localStorage.getItem("password"),
-        "address1" : localStorage.getItem("addr1"),
-        "address2" : localStorage.getItem("addr2"),
-        "unitNo" : localStorage.getItem("unitno"),
-        "postalCode" : localStorage.getItem("postal"),
-        "contact" : localStorage.getItem("contact"),
-        "payment" : 
-            [{ 
-            "cardNo" : localStorage.getItem("cardno"), 
-            "name" : localStorage.getItem("naming"), 
-            "expiryDate" : localStorage.getItem("expdate"), 
-            "cvc" : localStorage.getItem("cvc") 
-            }]
-    };
-    console.log(data);
+    
 
 
 
     /*
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("emailaddr").value;
-    var password = document.getElementById("password").value;
-    var addr1 = document.getElementById("addrLine1").value;
-    var addr2 = document.getElementById("addrLine2").value;
-    var unitno = document.getElementById("unitNo").value;
-    var postal = document.getElementById("postalCode").value;
-    var cardno = document.getElementById("cardNumber").value;
-    var naming = document.getElementById("name").value;
-    var expdate = document.getElementById("expiryDate").value;
-    var cvc = document.getElementById("cvc").value;
-    var contact = document.getElementById("contactNo").value;
-
-
-
-
-    var postData = false;
-    var cardExist = false;
-
     const signUpForm = document.getElementById("signup");
     const addressForm = document.getElementById("addresses");
     const cardForm = document.getElementById("contactcard");
     const paymentForm = document.getElementById("addpayment");
-    */
+    
 
     let next1btn = document.getElementById("next1");
     let next2btn = document.getElementById("next2");
@@ -512,10 +547,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let addcardbtn = document.getElementById("addcard");
 
     
-    if (window.location.pathname.endsWith("signup.html") && next1btn.disabled == true)
+    if (window.location.pathname.endsWith("signup.html"))
     {
         validationSignUp();
-        /*
+        submitSignUpForm();
+        
+        
+        
         signUpForm.addEventListener("submit", e => {
             e.preventDefault();
             //var username = document.getElementById("username").value;
@@ -528,13 +566,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.location.href = "addressform.html";
         });
-        */
+        
         
     }
     else if (window.location.pathname.endsWith("addressform.html") && next2btn.disabled == true)
     {
         validationAddress();
-        /*
+        
         addressForm.addEventListener("submit", e => {
             e.preventDefault();
             //var addr1 = document.getElementById("addrLine1").value;
@@ -549,12 +587,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.location.href = "cardform.html";
         });
-        */
+        
     }
     else if (window.location.pathname.endsWith("paymentform.html"))
     {
         validationPayment();
-        /*
+        
         paymentForm.addEventListener("submit", e => {
             e.preventDefault();
             //var cardno = document.getElementById("cardNumber").value;
@@ -571,14 +609,14 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(cardExist);
             window.location.href = "cardform.html";
         });
-        */
+        
     }
     else if (window.location.pathname.endsWith("cardform.html"))
     {
         let cardExist = submitPaymentForm;
         console.log(cardExist);
         validationCard(cardExist);
-        /*
+        
         cardForm.addEventListener("submit", e => {
             e.preventDefault();
             //var contact = document.getElementById("contactNo").value;
@@ -587,44 +625,21 @@ document.addEventListener("DOMContentLoaded", () => {
             postData = true;
             window.location.href = "index.html";
         });
-        */
+        
     }
 
-    /*
-    var method = 'POST';
-    var request = new XMLHttpRequest();
-    var url = 'https://idassignment2-22a6.restdb.io/rest/member?apikey=620a818d34fd62156585852d';
-    var data = {
-        "username" : username,
-        "email" : email,
-        "password" : password,
-        "address1" : addr1,
-        "address2" : addr2,
-        "unitNo" : unitno,
-        "postalCode" : postal,
-        "contact" : contact,
-        "payment" : [
-            { "cardNo" : cardno , "name" : naming , "expiryDate" : expdate , "cvc" : cvc }]
-    };
-
-    request.open(method, url, true);
-    request.setRequestHeader("Content-Type", "application/json");
-    const memberJSON = JSON.stringify(data);
-    request.onreadystatechange = function(){ 
-        if(request.readyState === XMLHttpRequest.DONE && request.status === 200){
-            console.log(JSON.parse(request.responseText));
-        } else if (request.readyState === XMLHttpRequest.DONE && request.status !== 200){
-            console.log("Error");
-        }
-    }
-    request.send(data);
-    */
+    
+    
+    
     
 
     //continue here
 
     
 });
+
+*/
+
 
 
 

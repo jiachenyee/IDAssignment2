@@ -22,9 +22,9 @@ let arrayBlocks = [];
 //used for 'setInterval'
 let presetTime = 1000;
 //speed of block
-let enemySpeed = 3.5;
+let enemySpeed = 3.8;
 //player score
-let score = 0; 
+let score = 0;  
 //used to see if user has scored another 10 points or not
 let scoreIncrement = 0; 
 //ball doesnt score more than one point at a time 
@@ -60,7 +60,7 @@ function startGame(){
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0
-    enemySpeed = 3.5;
+    enemySpeed = 3.8;
     canScore = true;
     presetTime = 1000;
 }
@@ -274,6 +274,7 @@ function animate(){
         //end game when collision
         if (collision(player, arrayBlock)){
             spins.textContent = 1 + Math.floor(score/5);
+            localStorage.setItem("spins" , spins.textContent);
             date.textContent = expDate;
             card.style.display = "block";
             cancelAnimationFrame(animationId);
