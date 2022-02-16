@@ -382,7 +382,19 @@ function clickLink(){
 
 function displayCard(){
     let card = document.getElementById("card1");
-    let name = document.getElementById("cdTitle")
+
+    let thename = document.getElementById("cdName");
+    let thenumber = document.getElementById("cdNumber");
+    let thedate = document.getElementById("cdExpiry");
+
+    let newname = document.getElementById("name");
+    let newnumber = document.getElementById("cardNumber");
+    let newdate = document.getElementById("expiryDate");
+    
+    thename.textContent = newname.textContent;
+    thenumber.textContent = newnumber.textContent;
+    thedate.textContent = newdate.textContent;
+
     card.style.display = "block";
 }
 
@@ -415,6 +427,7 @@ function submitPaymentForm(){
     localStorage.setItem("name" , document.getElementById("name").value);
     localStorage.setItem("expdate" , document.getElementById("expiryDate").value);
     localStorage.setItem("cvc" , document.getElementById("cvc").value);
+    displayCard();
     window.location.href = "cardform.html";
     return true;
 }
