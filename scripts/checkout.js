@@ -77,7 +77,7 @@ function onBuy() {
 
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == 200) {
-            alert(request.responseText);
+            // alert(request.responseText);
         }
     }
 
