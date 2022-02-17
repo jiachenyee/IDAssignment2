@@ -1,14 +1,18 @@
-//for data validations
+//adding validations message - error msg
 function setInputError(inputElement, message){
     inputElement.classList.add("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = message;
 }
-//for data validations
+
+
+//clearing validations message 
 function clearInputError(inputElement){
     inputElement.classList.remove("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
+
+//execute data validation for card form
 function validationCard(isCard){
     let inputValidator = {
       "cardTF" : false,
@@ -64,16 +68,8 @@ function validationCard(isCard){
 
 }
 
-function addNewCard(){
-    if (window.location.pathname.endsWith("cardform.html")){
-        document.getElementById("plusButton").addEventListener("click", e => {
-            e.preventDefault();
-            window.location.href = "paymentform.html";
-        });
-    }
-}
 
-
+//add new credit/debit card using details from payment form
 function displayCard(){
     let card = document.getElementById("card1");
     let txt = document.getElementsByClassName("payment__text-sub");
@@ -93,16 +89,7 @@ function displayCard(){
     
 }
 
-
-function submitCardForm(){
-    sessionStorage.setItem("contact", document.getElementById("contactNo").value);
-    // alert(1);
-    postData();
-    // window.location.href = "index.html";
-
-    return false;
-}
-
+//send post request to restDB
 function postData() {
     var request = new XMLHttpRequest();
 
@@ -139,6 +126,7 @@ function postData() {
 }
 
 
+//main program execution
 document.addEventListener("DOMContentLoaded" , e =>{
     let cardExist = localStorage.getItem("existance");
     if (cardExist == true){
@@ -148,9 +136,12 @@ document.addEventListener("DOMContentLoaded" , e =>{
     validationCard(true); //change this
     document.getElementById("complete").addEventListener("submit", f => {
         f.preventDefault();
-        submitCardForm();
+        sessionStorage.setItem("contact", document.getElementById("contactNo").value);
         postData();
 
         return false;
     });
 })
+
+
+

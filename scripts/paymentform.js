@@ -1,15 +1,18 @@
-//for data validations
+//adding validations message - error msg
 function setInputError(inputElement, message){
     inputElement.classList.add("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = message;
 }
-//for data validations
+
+
+//clearing validations message
 function clearInputError(inputElement){
     inputElement.classList.remove("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
 
+//execute data validation for payment form
 function validationPayment(){
     var d1 = new Date()
     let inputValidator = {
@@ -106,21 +109,16 @@ function validationPayment(){
 }
 
 
-function submitPaymentForm(){
-    sessionStorage.setItem("existance" , true);
-    sessionStorage.setItem("cardno" , document.getElementById("cardNumber").value);
-    sessionStorage.setItem("name" , document.getElementById("name").value);
-    sessionStorage.setItem("expdate" , document.getElementById("expiryDate").value);
-    sessionStorage.setItem("cvc" , document.getElementById("cvc").value);
-    //displayCard();
-    window.location.href = "cardform.html";
-}
-
-
+//main program execution
 document.addEventListener("DOMContentLoaded" , e =>{
     validationPayment();
     document.getElementById("addcard").addEventListener("click", f => {
         f.preventDefault();
-        submitPaymentForm();
+        sessionStorage.setItem("existance" , true);
+        sessionStorage.setItem("cardno" , document.getElementById("cardNumber").value);
+        sessionStorage.setItem("name" , document.getElementById("name").value);
+        sessionStorage.setItem("expdate" , document.getElementById("expiryDate").value);
+        sessionStorage.setItem("cvc" , document.getElementById("cvc").value);
+        window.location.href = "cardform.html";
     });
 });

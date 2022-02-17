@@ -1,15 +1,18 @@
-//for data validations messages
+//adding validations message - error msg
 function setInputError(inputElement, message){
     inputElement.classList.add("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = message;
 }
-//for data validations
+
+
+//clearing validations message 
 function clearInputError(inputElement){
     inputElement.classList.remove("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
 
+//execute data validation for address form
 function validationAddress(){
     let inputValidator = {
       "addrlineTF" : false,
@@ -78,22 +81,15 @@ function validationAddress(){
 }
 
 
-
-
-function submitAddressForm(){
-    sessionStorage.setItem("addr1" , document.getElementById("addrLine1").value);
-    sessionStorage.setItem("addr2" , document.getElementById("addrLine2").value);
-    sessionStorage.setItem("unitno" , document.getElementById("unitNo").value);
-    sessionStorage.setItem("postal" , document.getElementById("postalCode").value);
-    window.location.href = "cardform.html";
-}
-
-
-
+//main program execution
 document.addEventListener("DOMContentLoaded" , e =>{
     validationAddress();
     document.getElementById("next2").addEventListener("click", f => {
         f.preventDefault();
-        submitAddressForm();
+        sessionStorage.setItem("addr1" , document.getElementById("addrLine1").value);
+        sessionStorage.setItem("addr2" , document.getElementById("addrLine2").value);
+        sessionStorage.setItem("unitno" , document.getElementById("unitNo").value);
+        sessionStorage.setItem("postal" , document.getElementById("postalCode").value);
+        window.location.href = "cardform.html";
     });
 });

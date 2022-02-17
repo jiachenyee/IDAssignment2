@@ -1,21 +1,24 @@
-//declaring variables messages
+//declaring variables for validation
 var alphabets = /[a-zA-Z]/g;
 var numerals = /\d/;
 const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
 
-//for data validations
+//adding validations message - error msg
 function setInputError(inputElement, message){
     inputElement.classList.add("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = message;
 }
-//for data validations
+
+
+//clearing validations message
 function clearInputError(inputElement){
     inputElement.classList.remove("form__input-error");
     inputElement.parentElement.querySelector(".form__input-message-error").textContent = "";
 }
 
 
+//execute data validation for sign up form
 function validationSignUp(){
     let pwd = "";
     let inputValidator = {
@@ -121,7 +124,7 @@ function validationSignUp(){
 }
 
 
-
+//remove values for specific keys in session storage
 function clearLocalStorage(){
     //localStorage.removeItem("username");
     //localStorage.removeItem("email");
@@ -138,23 +141,16 @@ function clearLocalStorage(){
 }
 
 
-
-
-
-function submitSignUpForm(){
-    sessionStorage.setItem("username" , document.getElementById("username").value);
-    sessionStorage.setItem("email" , document.getElementById("emailaddr").value);
-    sessionStorage.setItem("password" , document.getElementById("password").value);
-    console.log("done");
-    //clearLocalStorage();
-    window.open(`/addressform.html`, "_self");
-}
-
-
+//main program execution
 document.addEventListener("DOMContentLoaded" , e =>{
     validationSignUp();
     document.getElementById("next1").addEventListener("click", f => {
         f.preventDefault();
-        submitSignUpForm();
+        sessionStorage.setItem("username" , document.getElementById("username").value);
+        sessionStorage.setItem("email" , document.getElementById("emailaddr").value);
+        sessionStorage.setItem("password" , document.getElementById("password").value);
+        console.log("done");
+        //clearLocalStorage();
+        window.location.href = "addressform.html"
     });
 });
