@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded" , e =>{
             alert("startpost");
         },1000);
         setTimeout(function(){
-            window.open(`/index.html` , "_self");
+            window.open(`index.html` , "_self");
         },2000);
 
     });
