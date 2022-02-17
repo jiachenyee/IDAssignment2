@@ -148,6 +148,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   #overlay #card{
@@ -176,7 +177,7 @@
   #overlay #card > h3{
     left: 0%;
     font-size: 40px;
-    margin: 1rem auto 1rem;
+    margin: 2rem auto 2rem;
     user-select: none;
   }
 
@@ -205,7 +206,7 @@
   }
 
   #overlay #card > button{
-    margin: 0.5rem auto 1rem;
+    margin: 3rem auto 1rem;
     outline: none;
     color: #0D21A1;
     border: none;

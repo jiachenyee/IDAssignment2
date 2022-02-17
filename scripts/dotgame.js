@@ -3,7 +3,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 //variables of game over screen --> overlay card
-const card = document.getElementById("card");
+const card = document.getElementById("overlay");
 const cardScore = document.getElementById("score");
 
 const spins = document.getElementById("spins");
@@ -276,7 +276,7 @@ function animate(){
             spins.textContent = 1 + Math.floor(score/5);
             localStorage.setItem("spins" , spins.textContent);
             date.textContent = expDate;
-            card.style.display = "block";
+            card.style.display = "flex";
             cancelAnimationFrame(animationId);
         }
         //user should score a point if this is the case
