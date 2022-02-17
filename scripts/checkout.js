@@ -26,7 +26,10 @@ async function load() {
     if (userInfo != null) {
         document.getElementById("pointsParagraph").innerText = `+${points} Points`
         document.getElementById("addToCartPrice").innerText = `$${(totalPrice + deliveryPrice + tax).toFixed(2)}`
-        document.getElementById("currentProgress").style = `opacity: 0.5; width:${(userInfo["points"] + points) / 10}%`
+
+        var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
+
+        document.getElementById("currentProgress").style = `opacity: 0.5; width:${futurePoints}%`
         document.getElementById("futureProgress").style = `position:absolute; width:${userInfo["points"] / 10}%`
     }
 
