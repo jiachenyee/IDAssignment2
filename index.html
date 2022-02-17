@@ -14,25 +14,25 @@
     <body onload="load()" style="background-color: #EEF0F2;">
         <div class="container" >
             <nav>
-                <h1 id="greeting"></h1>
+                <h1 id="greeting">Hello</h1>
                 <div class="searchCartContainer">
                     <div class="searchContainer">
-                        <img src="assets/icons/search.svg">
+                        <img src="assets/icons/search.svg" alt="search">
                         
                         <input type="text" name="Search" id="search" onPaste="" onkeydown="checkEnter(event);" placeholder="Search Scoop Wholefoods" />
                     </div>
                     
                     <a href="cart" class="cartContainer">
-                        <img class="cartButton" src="assets/icons/cart.svg">
+                        <img class="cartButton" src="assets/icons/cart.svg" alt="cart">
                     </a>
                 </div>
             </nav>
 
-            <section id="rewards"></section>
-            <section class="category" id="categories"></section>
-            <section>
+            <div id="rewards"></div>
+            <div class="category" id="categories"></div>
+            <div>
                 <div id="featuredProducts"></div>
-            </section>
+            </div>
         </div>
         
         <script src="scripts/index.js"></script>

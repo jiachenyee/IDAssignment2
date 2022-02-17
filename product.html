@@ -15,25 +15,25 @@
         <div class="container" >
             <div class="header">
                 <nav>
-                    <h1 id="productName"></h1>
+                    <h1 id="productName">Product Name</h1>
                     <div class="searchCartContainer">
                         <button onclick="history.back()">
-                            <img src="assets/icons/back.svg"/>
+                            <img src="assets/icons/back.svg" alt="back"/>
                         </button>
                         <div class="searchContainer">
-                            <img src="assets/icons/search.svg">
+                            <img src="assets/icons/search.svg" alt="search">
                             
                             <input type="text" name="Search" id="search" onPaste="" onkeydown="checkEnter(event);" placeholder="Search Scoop Wholefoods" />
                         </div>
                         <a href="cart" class="cartContainer">
-                            <img class="cartButton" src="assets/icons/cart.svg">
+                            <img class="cartButton" src="assets/icons/cart.svg" alt="cart">
                         </a>
                     </div>
                 </nav>
                 
-                <section id="tags"></section>
+                <div id="tags"></div>
             </div>
-            <section id="productInformation"></section>
+            <div id="productInformation"></div>
         </div>
 
         <script src="scripts/product.js"></script>
