@@ -205,6 +205,10 @@ input::-webkit-inner-spin-button {
     height: 2rem;
 }
 
+#plusContainer:disabled{
+    opacity: 60%;
+}
+
 
 #plusButton{
     position: relative;

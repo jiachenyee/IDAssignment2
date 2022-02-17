@@ -72,7 +72,7 @@ function validationCard(isCard){
 //add new credit/debit card using details from payment form
 function displayCard(){
     let card = document.getElementById("card1");
-    let txt = document.getElementsByClassName("payment__text-sub");
+    let txt = document.getElementById("removed");
     let buttoN = document.getElementById("plusContainer");
 
     let thename = document.getElementById("cdName");
@@ -88,7 +88,7 @@ function displayCard(){
     thedate.textContent = sessionStorage.getItem("expdate");
 
     card.style.display = "block";
-    txt.textContent = "";
+    txt.style.display = "none";
     buttoN.disabled = true; 
     
 }
