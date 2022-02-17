@@ -30,7 +30,7 @@ async function load() {
         var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
 
         document.getElementById("currentProgress").style = `opacity: 0.5; width:${futurePoints}%`
-        document.getElementById("futureProgress").style = `position:absolute; width:${userInfo["points"] / 10}%`
+        document.getElementById("futureProgress").style = `position:absolute; width:${userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10}%`
     }
 
     document.getElementById("cardPreview").style.visibility = "hidden"
