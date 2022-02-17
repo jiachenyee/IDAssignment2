@@ -76,8 +76,9 @@ async function load() {
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     var points = Math.round(product["price"]) * itemQty
-    var futurePoints = (userInfo["points"] + points) / 10 > 100 ? (userInfo["points"] + points) / 10 : 100;
-
+    
+    var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
+    
     if (userInfo != null) {
         addToCartButton.innerHTML = `
         <div style="display:flex; width:100%">
@@ -156,7 +157,7 @@ async function updateProductBuyButton() {
     
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
     
-    var futurePoints = (userInfo["points"] + points) / 10 > 100 ? (userInfo["points"] + points) / 10 : 100;
+    var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
 
     progressBarDiv.innerHTML = `
         <div class="progressBarItem" style="opacity: 0.5; width:${futurePoints}%"></div>

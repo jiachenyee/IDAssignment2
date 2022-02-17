@@ -90,8 +90,8 @@ async function load() {
     var points = Math.round(totalPrice)
     if (userInfo != null) {
 
-        var futurePoints = (userInfo["points"] + points) / 10 > 100 ? (userInfo["points"] + points) / 10 : 100;
-
+        var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
+        
         addToCartButton.innerHTML = `
         <div style="display:flex; width:100%">
             <div>    
