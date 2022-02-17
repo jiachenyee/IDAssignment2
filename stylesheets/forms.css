@@ -25,7 +25,7 @@ input::-webkit-inner-spin-button {
 .container{
     width: 500px;
     margin: 1rem;
-    padding: 2.5rem 2rem 1.5rem;
+    padding: 2rem 2rem 1.5rem;
     font-size: 20px;
     font-weight: 500;
     border-radius: var(--border-radius);
@@ -201,16 +201,16 @@ input::-webkit-inner-spin-button {
     align-items: center;
     background-color: #0D21A1;
     border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 
 #plusButton{
     position: relative;
     fill: currentColor;
-    width: 1.65rem;
-    height: 1.65rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .col3{
@@ -227,7 +227,7 @@ input::-webkit-inner-spin-button {
 
 .cards{
     margin: 0 auto 1.5rem;
-    padding: 0.5rem;
+    padding: 0;
     display: flex;
     align-items: center;
 }
@@ -251,7 +251,7 @@ input::-webkit-inner-spin-button {
 #cdNumber {
     font-size: 36px;
     font-weight: bold;
-    margin:0 auto 0.75rem;
+    margin:0 auto 1rem;
 }
 #cdExpiryTitle {
     font-size: 15px;
@@ -265,17 +265,18 @@ input::-webkit-inner-spin-button {
 }
 #last{
     width: 100%;
+    height: 2rem;
     display: inline-block;
 }
 #cdName {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 400;
     margin: 0;
 }
 #logo{
     position: relative;
-    left: 5%;
-    width: 100px;
+    bottom: 1.5rem;
+    width: 50px;
     height: auto;
     float:right;
 }
@@ -297,6 +298,7 @@ input::-webkit-inner-spin-button {
         font-size: 16px;
         font-weight: 500;
         background-color: var(--color-primary);
+        z-index: 0;
     }
     
     .form__title-main{
@@ -318,13 +320,14 @@ input::-webkit-inner-spin-button {
     }
 
     .buttonlink{
+        z-index: 1;
         width: 100%;
         height: auto;
         margin: 0;
         position: absolute;
         left: 0;
         bottom: 0;
-        padding: 2rem 0 1.5rem;
+        padding: 1.5rem 0 1rem;
         background-color: var(--color-secondary);
         border-radius: var(--border-radius);
     }
@@ -337,8 +340,10 @@ input::-webkit-inner-spin-button {
         align-items: center;
     }
 
-    .form__link{
-        margin-bottom: 0;
+    .form__text{
+        margin-bottom: 0.5rem;
+        padding-bottom: 0;
+        font-size: 13px;
     }
     
     .row{
@@ -357,25 +362,34 @@ input::-webkit-inner-spin-button {
 
     #card1{
         padding: 1.2rem;
+        border-radius: 13px;
     }
     
     #cdTitle {
         font-size: 16px;
+        margin: 0 auto 0.25rem;
     }
     #cdNumber {
         font-size: 24px;
+        margin: 0 auto 0.5rem;
     }
     #cdExpiryTitle {
         font-size: 10px;
+        margin: 0 auto 0.1rem;
     }
     #cdExpiry {
         font-size: 16px;
+        margin: 0 auto 0.8rem;
     }
     #cdName {
-        font-size: 18px;
+        font-size: 16px;
+    }
+    #last{
+        height: 1.5rem;
     }
     #logo{
-        width: 75px;
+        width: 35px;
+        bottom: 1rem;
     }
     
 }

@@ -79,8 +79,12 @@ function displayCard(){
     let thenumber = document.getElementById("cdNumber");
     let thedate = document.getElementById("cdExpiry");
 
+    cardNUMBER = sessionStorage.getItem("cardno").toString();
+    newNum = cardNUMBER.substring(0,4) + " " + cardNUMBER.substring(4,8) + " " + cardNUMBER.substring(8,12) + " " + cardNUMBER.substring(12,16);
+
+
     thename.textContent = sessionStorage.getItem("name");
-    thenumber.textContent = sessionStorage.getItem("cardno");
+    thenumber.textContent = newNum;
     thedate.textContent = sessionStorage.getItem("expdate");
 
     card.style.display = "block";
@@ -128,12 +132,15 @@ function postData() {
 
 //main program execution
 document.addEventListener("DOMContentLoaded" , e =>{
-    let cardExist = localStorage.getItem("existance");
-    if (cardExist == true){
+    let cardExist = false;
+    while(!cardExist){
+        cardExist = sessionStorage.getItem("existance");
+    }
+    if (cardExist){
         displayCard();
     }
     
-    validationCard(true); //change this
+    validationCard(cardExist); //change this
     document.getElementById("complete").addEventListener("submit", f => {
         f.preventDefault();
         sessionStorage.setItem("contact", document.getElementById("contactNo").value);
