@@ -120,7 +120,7 @@ function postData() {
     
     request.onreadystatechange = function(){ 
         if(request.readyState == 4 && request.status == 200){
-            console.log(JSON.parse(request.responseText));
+            alert(JSON.parse(request.responseText));
         } else if (request.readyState == 4 && request.status != 200){
             alert("Error");
         }
@@ -154,22 +154,17 @@ document.addEventListener("DOMContentLoaded" , e =>{
         "cvc": sessionStorage.getItem("cvc"),
         "points": 0
     };
-    console.log(data1);
+    console.log(JSON.stringify(data1));
     document.getElementById("complete").addEventListener("click", f => {
-        alert("chicken");
         f.preventDefault();
         sessionStorage.setItem("contact", document.getElementById("contactNo").value);
-        console.log("one");
         setTimeout(function(){
-            alert("post");
             postData();
-        },500);
-        console.log("two");
-        setTimeout(function(){
-            alert("next");
-            window.open(`/index.html` , "_self");
+            alert("startpost");
         },1000);
-        console.log("three");
+        setTimeout(function(){
+            window.open(`/index.html` , "_self");
+        },2000);
 
     });
 })
