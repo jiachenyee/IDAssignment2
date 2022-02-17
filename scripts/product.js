@@ -76,6 +76,9 @@ async function load() {
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     var points = Math.round(product["price"]) * itemQty
+    
+    var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
+    
     if (userInfo != null) {
         addToCartButton.innerHTML = `
         <div style="display:flex; width:100%">
@@ -86,8 +89,8 @@ async function load() {
             <h3 id="addToCartPrice">$${(product["price"] * itemQty).toFixed(2)}</h3>
         </div>
         <div id="progressBar" class="progressBar" style="position:relative">
-            <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
-            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
+            <div class="progressBarItem" style="opacity: 0.5; width:${futurePoints}%"></div>
+            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10}%"></div>
         </div>
     `
     } else {
@@ -154,9 +157,11 @@ async function updateProductBuyButton() {
     
     var userInfo = JSON.parse(localStorage.getItem("userInfo"));
     
+    var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
+
     progressBarDiv.innerHTML = `
-        <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
-        <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
+        <div class="progressBarItem" style="opacity: 0.5; width:${futurePoints}%"></div>
+        <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10}%"></div>
     `
 }
 

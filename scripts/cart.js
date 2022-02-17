@@ -37,13 +37,15 @@ async function load() {
 
         var cartContentDiv = document.createElement("a");
         cartContentDiv.className = "product";
-        
+
+        var cost = cartProduct["price"] == 0 ? "Free" : `$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}`
+
         cartContentDiv.innerHTML = `
         <a href="product?sku=${product["sku"]}">
             <img src="${product["productImage"]}">
             <div>
                 <h3>${product["name"]}</h3>
-                <h4>$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}</h4>
+                <h4>${cost}</h4>
             </div>
         </a>
         `
@@ -89,6 +91,9 @@ async function load() {
 
     var points = Math.round(totalPrice)
     if (userInfo != null) {
+
+        var futurePoints = (userInfo["points"] + points) / 10 > 100 ? 100 : (userInfo["points"] + points) / 10;
+        
         addToCartButton.innerHTML = `
         <div style="display:flex; width:100%">
             <div>    
@@ -98,8 +103,8 @@ async function load() {
             <h3 id="addToCartPrice">$${(totalPrice + deliveryPrice + tax).toFixed(2)}</h3>
         </div>
         <div class="progressBar" style="position:relative">
-            <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
-            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
+            <div class="progressBarItem" style="opacity: 0.5; width:${futurePoints}%"></div>
+            <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10}%"></div>
         </div>
     `
     } else {

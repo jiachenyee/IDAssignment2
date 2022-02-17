@@ -120,9 +120,9 @@ function postData() {
     
     request.onreadystatechange = function(){ 
         if(request.readyState == 4 && request.status == 200){
-            alert(JSON.parse(request.responseText));
+            // alert(JSON.parse(request.responseText));
         } else if (request.readyState == 4 && request.status != 200){
-            alert("Error");
+            // alert("Error");
         }
     }
 
@@ -158,12 +158,13 @@ document.addEventListener("DOMContentLoaded" , e =>{
     document.getElementById("complete").addEventListener("click", f => {
         f.preventDefault();
         sessionStorage.setItem("contact", document.getElementById("contactNo").value);
-        setTimeout(function(){
+        setTimeout(function() {
             postData();
-            alert("startpost");
         },1000);
-        setTimeout(function(){
-            window.open(`/index.html` , "_self");
+        setTimeout(function() {
+
+            localStorage.setItem("userInfo", JSON.stringify(data1));
+            window.open(`index.html` , "_self");
         },2000);
 
     });
