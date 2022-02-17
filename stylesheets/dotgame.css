@@ -57,7 +57,7 @@ body{
   text-align: center;
   background-color: #0D21A1;
   padding: 1.5rem;
-  width: auto;
+  width: 40%;
   height: auto;
   border-radius: 10px;
   animation: cardIn 1s forwards;
@@ -76,10 +76,6 @@ body{
   user-select: none;
 }
 
-#date{
-  text-decoration: underline;
-  font-size: 26px;
-}
 
 #overlay #card > button{
   margin: 0.5rem auto 1rem;
@@ -126,16 +122,18 @@ body{
   }
   
   #overlay #card{
+    width: 100%;
+    height: auto;
     margin-bottom: 5%;
     padding: 1rem;
   }
 
   #overlay #card > h3{
-    font-size: 30px;
+    font-size: 35px;
   }
   
   #overlay #card > p{
-    font-size: 13px;
+    font-size: 20px;
     margin-top: 1rem;
     user-select: none;
   }

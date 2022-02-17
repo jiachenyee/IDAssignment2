@@ -7,7 +7,6 @@ const card = document.getElementById("overlay");
 const cardScore = document.getElementById("score");
 
 const spins = document.getElementById("spins");
-const date = document.getElementById("date");
 
 
 
@@ -29,13 +28,6 @@ let score = 0;
 let scoreIncrement = 0; 
 //ball doesnt score more than one point at a time 
 let canScore = true;
-//current date to expiry date
-const dateObj = new Date();
-dateObj.setMonth(dateObj.getMonth()+2);
-let monTH = dateObj.toLocaleString("default", {month : "long"});
-let expDate = monTH + " " + (dateObj.getFullYear());
-console.log(dateObj);
-console.log(expDate);
 
 
 function initialize(){
@@ -275,7 +267,6 @@ function animate(){
         if (collision(player, arrayBlock)){
             spins.textContent = 1 + Math.floor(score/5);
             localStorage.setItem("spins" , spins.textContent);
-            date.textContent = expDate;
             card.style.display = "flex";
             cancelAnimationFrame(animationId);
         }
