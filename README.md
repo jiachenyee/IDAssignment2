@@ -272,10 +272,8 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - An overview of the list of selected items in their cart will be displayed on the left side of the page with their corresponding prices and quantities. 
       - Items can be removed by reducing the quantity of that item to 0. 
-      - Prices in terms of total 
+      - Prices in terms of subtotal, delivery and tax (7% GST) are displayed in the right side of the page with the huge checkout button comprising the point bar and the total price. 
   - {display}
-
-  - In this page, users are able to have an overall view of the items in their cart as well as its quantity. The prices of the items are summed up and diplayed in the payment card alongside the price of the tax (GST) and the final payment price. The points bar is also added into this section, giving the users a better understanding nad view 
 
 
 
@@ -285,7 +283,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Purpose: 
       - hi
   - Description
-      - hi
+      - A mock-up credit card is displayed on the left side of the container, alongside
   - {display}
 
 
@@ -299,29 +297,20 @@ In this final stage, we test each page making sure that all of the links and ele
   - {display}
 
 
-- animation 
+
+- Hyperlinks 
   - Location: 
-      - hi
+      - Sign In and Sign Up Page
   - Purpose: 
       - hi
   - Description
-      - hi
+      - Clicking on the link in the sign in page will bring users to the sign up page and vice versa
   - {display}
 
 
-- hyperlink 
+- Data Validation 
   - Location: 
-      - hi
-  - Purpose: 
-      - hi
-  - Description
-      - hi
-  - {display}
-
-
-- data validation 
-  - Location: 
-      - hi
+      - Sign Up Page, Address Form Page, Card Form Page, Payment Page
   - Purpose: 
       - hi
   - Description
@@ -342,7 +331,7 @@ In this final stage, we test each page making sure that all of the links and ele
 
 - Jumping Game 
   - Location: 
-      - hi
+      - Dot Game Page
   - Purpose: 
       - hi
   - Description
@@ -353,16 +342,21 @@ In this final stage, we test each page making sure that all of the links and ele
 
 - Wheel Game
   - Location: 
-      - hi
+      - Spin The Wheel Game Page
   - Purpose: 
       - hi
   - Description
-      - hi
+      - There is a wheel is divided into 10 portions, each containing different products. 
+      - The total number of spins, which is determined from the previous dot game, is displayed at the top of the page. 
+      - When the user click on the spin button, the wheel would automatically spin at random speeds. 
+      - The item would be determined through by selecting the item based on its position closest to the arrow. 
+      - The item will be added to the cart immediately. 
   - {display}
 
 
 ### Features Left to Implement
-- 
+- Sign Out/Log Out Button
+  - Description: 
 
 ## Technologies Used
 The following are the various languages, frameworks, libraries, and any other tools used to construct this project. 
