@@ -9,7 +9,11 @@ From attracting the user’s attention to enhancing every user’s shopping expe
 ### Phase One - Ideation
 When we first received this assignment, we were given multiple projects to work with. After much consideration, we decided to proceed with an ecoomerce website with an addition of gamification features as we able to execute most of the requirements such as the usage of API(s) and Lottie animation. Before kicking off the projects, we did research on the current large and small e-commerce websites such as Lazada and Shoppee to gather information and inspiration on the designs and other interesting featues which can be used when creating the website. Since online shopping is gaining popularity rapidly worldwide, we are able to get hold of some of the users' experiences when they shop in other websites. We took down what are some of the negative and unsatisfactory reponses as well as the positive ones to be used when designing and constructing the website. 
 
-Deciding on the materials and display products was not an easy task. After hours of researching, the team agreed to use [Scoop Wholefoods Sg](https://sg.scoopwholefoods.com/) as a basis of the website. Knowing that there is also an ecommerce website for Sccop Wholefood, we decided to recreate the website with brand new design alongside interesting features such as spin the wheel game. Using the same products and category, we narrowed down to 6 different category with 10 products each to simpolify the project. 
+Deciding on the materials and display products was not an easy task. After hours of researching, the team agreed to use [Scoop Wholefoods Sg](https://sg.scoopwholefoods.com/) as a basis of the website. Knowing that there is also an ecommerce website for Sccop Wholefood, we decided to recreate the website with brand new design alongside interesting features such as spin the wheel game. Using the same products and category, we narrowed down to 6 different category with 10 products each to simpolify the project based on the lecturer's feedback. 
+
+In this phase, we have identified the following: 
+- end-users: Scoop e-commerce shoppers (members) and general public (non-members)
+- end-goal: to recreate the existing site into a minimalistic website with improved functionality.  
 
 ### Phase Two - Design/Prototype
 #### Front-End
@@ -53,15 +57,13 @@ flowchart TD
     end
 ```
 ### Phase Three - Coding
-After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We made sure to keep each other updated on our progress and helped out when needed while coding in accordance with the wireframes design. We also strictly followed the wireframes design
- While coding according to the wireframes design, we made sure to update one another in our progress and help out when anyone is in need.  
+After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We updated each other on our progress as we coded according to the wireframes design and helped out when problems or queries arise.
+
+.......
 
 ### Phase Four - Test/Launch
-In this final stage
+In this final stage, we test each page making sure that all of the links and elements are working as intended. We also tried to launch the website on different browsers such as google chrome and safari. Many mistakes were made, from wrong colors to post/get request to the database. However, these were resolved through consultation with the lecturer and the internet. The process from sign in to the final checkout was tested mulitple times to ensure a smooth and successful run which will lead to satisfactory users. 
 
-Before we started, we first thought of the needs of every shoppers as well as compare the processes of shopping from the selection to the payment. We then sieve out interesting and useful features from other website and implemented it into our website. Of course, we studied the basis of the orginal website and found out which areas can be improved. 
-
-As this is a consumer-focused website, customers should be able to complete their shopping process within a limited number of clicks and breakpoints. Satisfactory customers is our top priority as they will always return to this site to pruchase more products. 
 
 
 
@@ -69,7 +71,7 @@ As this is a consumer-focused website, customers should be able to complete thei
  
 
 
-
+<!--commented out
 Provide us insights about your design process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
@@ -77,7 +79,7 @@ In particular, as part of this section we recommend that you provide a list of U
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
 These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
+Include the Adobe XD wireframe as a folder. You can include the XD share url. -->
 
 ## Features
 ### Existing Features
@@ -123,7 +125,7 @@ Include the Adobe XD wireframe as a folder. You can include the XD share url.
   - {display}
 
 - View Cart
-  - 
+  - In this page, users are able to have an overall view of the items in their cart as well as its quantity. The prices of the items are summed up and diplayed in the payment card alongside the price of the tax (GST) and the final payment price. The points bar is also added into this section, giving the users a better understanding nad view 
 
 - Confirm Payment
 
@@ -171,6 +173,23 @@ The following are the various languages, frameworks, libraries, and any other to
 
 
 ## Testing
+1. Forms 
+      1. Sign In
+      2. Sign Up 
+      3. Address
+      4. Payment 
+      5. Card
+2. Home Page
+3. Product(selected) Page
+4. Category Page
+5. Cart Page
+6. Checkout/Payment Page 
+7. Success Page
+8. Games 
+      1. Jumping Dot
+      2. Spin the Wheel 
+
+
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
@@ -187,7 +206,6 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Credits
-
 ### Content and Media
 - Product Information - Name, Description, Price, Image are taken from [Scoop Wholefoods SG](https://scoopwholefoodsshop.com/collections/shop-all)
 - Icons - The relevant icons are taken from [Icon]()
