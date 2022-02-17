@@ -37,13 +37,15 @@ async function load() {
 
         var cartContentDiv = document.createElement("a");
         cartContentDiv.className = "product";
-        
+
+        var cost = cartProduct["price"] == 0 ? "Free" : `$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}`
+
         cartContentDiv.innerHTML = `
         <a href="product?sku=${product["sku"]}">
             <img src="${product["productImage"]}">
             <div>
                 <h3>${product["name"]}</h3>
-                <h4>$${(cartProduct["price"] * cartProduct["qty"]).toFixed(2)}</h4>
+                <h4>${cost}</h4>
             </div>
         </a>
         `
