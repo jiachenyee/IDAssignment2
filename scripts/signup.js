@@ -140,14 +140,6 @@ function clearLocalStorage(){
 
 
 
-function clickLink(){
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        window.location.href = "signin.html";
-    });
-}
-
-
 
 function submitSignUpForm(){
     sessionStorage.setItem("username" , document.getElementById("username").value);
