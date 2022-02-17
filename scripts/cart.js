@@ -89,6 +89,9 @@ async function load() {
 
     var points = Math.round(totalPrice)
     if (userInfo != null) {
+
+        var futurePoints = (userInfo["points"] + points) / 10 > 100 ? (userInfo["points"] + points) / 10 : 100;
+
         addToCartButton.innerHTML = `
         <div style="display:flex; width:100%">
             <div>    
@@ -98,7 +101,7 @@ async function load() {
             <h3 id="addToCartPrice">$${(totalPrice + deliveryPrice + tax).toFixed(2)}</h3>
         </div>
         <div class="progressBar" style="position:relative">
-            <div class="progressBarItem" style="opacity: 0.5; width:${(userInfo["points"] + points) / 10}%"></div>
+            <div class="progressBarItem" style="opacity: 0.5; width:${futurePoints}%"></div>
             <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
         </div>
     `
