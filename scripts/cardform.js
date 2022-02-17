@@ -121,8 +121,8 @@ function postData() {
     request.onreadystatechange = function(){ 
         if(request.readyState == 4 && request.status == 200){
             console.log(JSON.parse(request.responseText));
-        } else if (request.readyState === XMLHttpRequest.DONE && request.status !== 200){
-            console.log("Error");
+        } else if (request.readyState == 4 && request.status != 200){
+            alert("Error");
         }
     }
 
@@ -155,21 +155,22 @@ document.addEventListener("DOMContentLoaded" , e =>{
         "points": 0
     };
     console.log(data1);
-    document.getElementById("complete").addEventListener("submit", f => {
+    document.getElementById("complete").addEventListener("click", f => {
+        alert("chicken");
         f.preventDefault();
         sessionStorage.setItem("contact", document.getElementById("contactNo").value);
+        console.log("one");
         setTimeout(function(){
             alert("post");
             postData();
-        },1000);
-
+        },500);
+        console.log("two");
         setTimeout(function(){
             alert("next");
             window.open(`/index.html` , "_self");
-        },2000)
+        },1000);
+        console.log("three");
 
-
-        return false;
     });
 })
 
