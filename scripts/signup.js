@@ -151,6 +151,6 @@ document.addEventListener("DOMContentLoaded" , e =>{
         sessionStorage.setItem("password" , document.getElementById("password").value);
         console.log("done");
         //clearLocalStorage();
-        window.open(`/addressform.html` , "_self");
+        window.open(`addressform.html` , "_self");
     });
 });
