@@ -90,6 +90,6 @@ document.addEventListener("DOMContentLoaded" , e =>{
         sessionStorage.setItem("addr2" , document.getElementById("addrLine2").value);
         sessionStorage.setItem("unitno" , document.getElementById("unitNo").value);
         sessionStorage.setItem("postal" , document.getElementById("postalCode").value);
-        window.location.href = "cardform.html";
+        window.open(`/cardform.html` , "_self");
     });
 });

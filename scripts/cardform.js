@@ -38,7 +38,7 @@ function validationCard(isCard){
             }
 
             //card field
-            if (isCard == true){
+            if (isCard){
                 let name = "cardTF";
                 inputValidator[name] = true;
             }
@@ -132,19 +132,42 @@ function postData() {
 
 //main program execution
 document.addEventListener("DOMContentLoaded" , e =>{
-    let cardExist = false;
-    while(!cardExist){
-        cardExist = sessionStorage.getItem("existance");
-    }
+    var cardExist = sessionStorage.getItem("existance");
+    
     if (cardExist){
         displayCard();
     }
     
     validationCard(cardExist); //change this
+    var data1 = {
+        "username": sessionStorage.getItem("username"),
+        "email": sessionStorage.getItem("email"),
+        "password": sessionStorage.getItem("password"),
+        "address1": sessionStorage.getItem("addr1"),
+        "address2": sessionStorage.getItem("addr2"),
+        "unitNo": sessionStorage.getItem("unitno"),
+        "postalCode": sessionStorage.getItem("postal"),
+        "contact": sessionStorage.getItem("contact"),
+        "cardNo": sessionStorage.getItem("cardno"), 
+        "name": sessionStorage.getItem("name"), 
+        "expiryDate": sessionStorage.getItem("expdate"), 
+        "cvc": sessionStorage.getItem("cvc"),
+        "points": 0
+    };
+    console.log(data1);
     document.getElementById("complete").addEventListener("submit", f => {
         f.preventDefault();
         sessionStorage.setItem("contact", document.getElementById("contactNo").value);
-        postData();
+        setTimeout(function(){
+            alert("post");
+            postData();
+        },1000);
+
+        setTimeout(function(){
+            alert("next");
+            window.open(`/index.html` , "_self");
+        },2000)
+
 
         return false;
     });
