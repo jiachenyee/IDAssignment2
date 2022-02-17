@@ -13,7 +13,7 @@ Deciding on the materials and display products was not an easy task. After hours
 
 ### Phase Two - Design/Prototype
 #### Front-End
-While designing the website, we kept in mind of the useful features which can be implemented as well as user interactivity with the site while ensuring a smooth process throughout. Using Adobe XD as a wireframe tool, we started designing and followed a theme suggested by Jia Chen that suggest a minimalistic and neat look. Having the main design framework in desktop view, the mobile view was also created through minor adjustment from the main framework. To reduce complexity, only four cool colours - **insert here** - were chosen and one consistent font was used throughout. Rounded edges boxes and buttons were used to increase the effectiveness of the website. Relevent graphic design, interface design, user experience design were added accordingly. 
+While designing the website, we kept in mind of the useful features which can be implemented as well as user interactivity with the site while ensuring a smooth process throughout. Using Adobe XD as a wireframe tool, we started designing and followed a theme suggested by Jia Chen that suggest a minimalistic and neat look. Both desktop and mobile view was taken into consideration when designing the framework. To reduce complexity, only four cool colours - **insert here** - were chosen and one consistent font was used throughout. Rounded edges boxes and buttons were used to increase the effectiveness of the website. Relevent graphic design, interface design, user experience design were added accordingly. 
 
 Wireframe document: [shared link](https://xd.adobe.com/view/156c3b6b-6028-4da8-9f91-a24643752036-403f/)
 
@@ -53,9 +53,10 @@ flowchart TD
     end
 ```
 ### Phase Three - Coding
-After getting ocnfirmation from our lecturer on our idea, we then proceed to start coding using the 
+After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We made sure to keep each other updated on our progress and helped out when needed while coding in accordance with the wireframes design. We also strictly followed the wireframes design
+ While coding according to the wireframes design, we made sure to update one another in our progress and help out when anyone is in need.  
 
-### Phase Four - Test'Launch
+### Phase Four - Test/Launch
 In this final stage
 
 Before we started, we first thought of the needs of every shoppers as well as compare the processes of shopping from the selection to the payment. We then sieve out interesting and useful features from other website and implemented it into our website. Of course, we studied the basis of the orginal website and found out which areas can be improved. 
