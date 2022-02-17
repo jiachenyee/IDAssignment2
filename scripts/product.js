@@ -161,7 +161,7 @@ async function updateProductBuyButton() {
 
     progressBarDiv.innerHTML = `
         <div class="progressBarItem" style="opacity: 0.5; width:${futurePoints}%"></div>
-        <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10}%"></div>
+        <div class="progressBarItem" style="position:absolute; margin-top:-12px; width:${userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10}%"></div>
     `
 }
 

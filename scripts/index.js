@@ -51,7 +51,7 @@ function showRewards() {
         <p style="text-align: right; color:#ffffff;">${userInfo["points"]}/1000</p>
 
         <div class="progressBar">
-            <div class="progressBarItem" style="width:${userInfo["points"] / 10}%"></div>
+            <div class="progressBarItem" style="width:${userInfo["points"] / 10 > 100 ? 100 : userInfo["points"] / 10}%"></div>
         </div>
         `;
     }
