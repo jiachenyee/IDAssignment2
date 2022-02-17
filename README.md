@@ -7,9 +7,16 @@ Finding current style of ecommerce website as well as the checkout process borin
 From attracting the user’s attention to enhancing every user’s shopping experience, all features and design are researched, refined and well-thought of from all aspects. An upgrade of the UI and UX will definitely bring in more users as well as more returning users while standing out from the crowd. The process has been streamlined to ensure a smoother flow from signing up to checking out.  This modern and minimalistic website is created with the goal of a seamless purchase and transaction process. 
 ## Design Process
 ### Phase One - Ideation
-When we first received this assignment, we were given multiple projects to work with. After much consideration, we decided to proceed with an ecoomerce website with an addition of gamification features as we able to execute most of the requirements such as the usage of API(s) and Lottie animation. Before kicking off the projects, we did research on the current large and small e-commerce websites such as Lazada and Shoppee to gather information and inspiration on the designs and other interesting featues which can be used when creating the website. Since online shopping is gaining popularity rapidly worldwide, we are able to get hold of some of the users' experiences when they shop in other websites. We took down what are some of the negative and unsatisfactory reponses as well as the positive ones to be used when designing and constructing the website. 
+When we first received this assignment, we were given multiple projects to work with. After much consideration, we decided to proceed with an ecoomerce website with an addition of gamification features as we able to execute most of the requirements such as the usage of API(s) and Lottie animation. 
 
-Deciding on the materials and display products was not an easy task. After hours of researching, the team agreed to use [Scoop Wholefoods Sg](https://sg.scoopwholefoods.com/) as a basis of the website. Knowing that there is also an ecommerce website for Sccop Wholefood, we decided to recreate the website with brand new design alongside interesting features such as spin the wheel game. Using the same products and category, we narrowed down to 6 different category with 10 products each to simpolify the project based on the lecturer's feedback. 
+As we looked into other e-commerce websites, large and small, such as Lazada and Shoppe, we felt that these sites were plastered with popups and intrusive ads with a clunky user interfaces and we felt that we improve upon this experience by designing a new e-commerce platform with the user at the forefront. This meant rethinking how we could potentially upsell users with products through recommendations and rewards instead. As we looked through these sites, we noted down what we liked, as well as did not like in each website and these notes helped to guide the design of our final site.
+
+![image](https://user-images.githubusercontent.com/36725840/154510953-1a53f758-1335-4fb8-91dd-f38ef01f6557.png)
+![image](https://user-images.githubusercontent.com/36725840/154511390-4892d185-db6f-40b7-a354-735b9a249f39.png)
+
+One of the things features we loved when looking at other e-commerce websites was the use of product images to feature the product prominently, though we found the ads and promotions getting in the way of the site itself, often times burying important sections like Categories beneath dozens of ads. We felt that, as a user, the goal is to get it done as quickly as possible and these overly large product ads were getting in the way of the goal.
+
+Deciding on the products was not an easy task. After hours of researching, we agreed to use [Scoop Wholefoods SG](https://sg.scoopwholefoods.com/) as a basis of the website. Knowing that there is also an ecommerce website for Sccop Wholefood, we decided to recreate the website with a brand new design alongside interesting features we thought the website could benefit from, such as a more comprehensive rewards system, including a spin the wheel game. Using the same products and category, we narrowed down to 6 different category with 10 products each to simpolify the project based on the lecturer's feedback. 
 
 In this phase, we have identified the following: 
 - end-users: Scoop e-commerce shoppers (members) and general public (non-members)
@@ -17,14 +24,31 @@ In this phase, we have identified the following:
 
 ### Phase Two - Design/Prototype
 #### Front-End
-While designing the website, we kept in mind of the useful features which can be implemented as well as user interactivity with the site while ensuring a smooth process throughout. Using Adobe XD as a wireframe tool, we started designing and followed a theme suggested by Jia Chen that suggest a minimalistic and neat look. Both desktop and mobile view was taken into consideration when designing the framework. To reduce complexity, only four cool colours - **insert here** - were chosen and one consistent font was used throughout. Rounded edges boxes and buttons were used to increase the effectiveness of the website. Relevent graphic design, interface design, user experience design were added accordingly. 
+While designing the website, we kept in mind of the useful features which can be implemented as well as user interactivity with the site while ensuring a smooth process throughout. Using Adobe XD as a wireframe tool, we started designing the mobile view of the app. 
 
+![image](https://user-images.githubusercontent.com/36725840/154512897-b04a043a-1999-43bf-8bd6-adb6f05b0193.png)
+
+The reason we designed the mobile view first was to ensure the design would ultimately scale nicely for users on smaller devices and by structuring the design similar to what we had seen in other mobile apps, we created a simple-to-use mobile optimised design that would work perfectly on any device.
+
+![image](https://user-images.githubusercontent.com/36725840/154513291-3871a1ea-3a2d-49a8-8d9e-34410fad1862.png)
+
+That said, several screens had to be edited to suit the varying screen sizes, notably the moble product page was heavily inspired by other e-commerce apps, however this design didn't make much sense on larger devices such as desktops and the design had to be rethought out for such cases.
+
+![image](https://user-images.githubusercontent.com/36725840/154514443-76b9c4e8-b0da-45b7-83cd-49bbfb7c6933.png)
+
+In order to maintain consistency throughout the design, we stuck to 5 colours.
+- a dark blue for text
+- 2 background colours
+  - a light blue and white to provide some amount of contrast.
+  - In general, the white was used to highlight any information that was in the foreground while the light blue was used to highlight elements in the background
+- 2 accent colours
+  - The blue served as our primary accent or tint colour throughout the entire project. Maintaining a consistent accent colour helped to ensure that the site looked similar as the user navigated between pages.
+  - The yellow served as a secondary accent colour used to highlight any information such as progress bars.
+
+![image](https://user-images.githubusercontent.com/36725840/154515253-58371f58-7ce6-4b94-b03c-4d69d7bcdd98.png)
 Wireframe document: [shared link](https://xd.adobe.com/view/156c3b6b-6028-4da8-9f91-a24643752036-403f/)
 
-#### Back-End
-As one of the requirements, web APIs needs to be implemented. Since [RestDB]() was taught during lesson, we decided to utilize it in the project as our database platform. Familiarity with the application allows us to easily work with our current design and gather the necessary data to the stored in it. Planning and creation of the database and other information was done alongside the wireframe design. 
-
-Design Flowchart:
+A core consideration was how users would interact with the site itself, this led us to coming up with diagrams to map our user flows and how they would perform certain actions from authentication to purchasing a product and redeeming prizes.
 ```mermaid
 flowchart TD
     subgraph Store
@@ -56,6 +80,42 @@ flowchart TD
         J[Dot Game] --> K[Spin the wheel]
     end
 ```
+
+Interactivity is a fundemental part of any website, and we aimed to incorporate this within our site too. 
+
+![Scoops Wholefoods - Google Chrome  2022-02-17 at 11 35 23 PM](https://user-images.githubusercontent.com/36725840/154515635-8b343cd6-bfed-4754-8db2-06f9d2d545c0.gif)
+![Scoops Wholefoods - Google Chrome  2022-02-17 at 11 38 33 PM](https://user-images.githubusercontent.com/36725840/154516152-9919e28a-3928-45db-adea-fd59916e3c71.gif)
+![Scoops Wholefoods - Google Chrome  2022-02-17 at 11 42 15 PM](https://user-images.githubusercontent.com/36725840/154516854-43a7c61e-ba62-4aa4-82eb-d0659a95eae6.gif)
+
+One of the challenges we faced was "How do we make a button appear clickable?". With dozens of different types of buttons within the project, it was important that the user knew which areas were clickable and which areas were not. This led us to add many small effects such as adjusting shadows, inverting or changing colours when the user hovered over interactable interface elements to make it clear to the user that they were clickable.
+
+One of the things we've learnt was the importance of empty states. These are screens to show when= there is no data present. As it can be frustrating at times when no data shows up, be it from a bad search query or simply because the store does not offer the product, we added custom empty states with animations powered by Lottie.
+
+![Scoops Wholefoods - Google Chrome  2022-02-18 at 12 00 08 AM](https://user-images.githubusercontent.com/36725840/154520341-2de0d4b6-4461-4145-9e8d-3b9f40af181e.gif)
+![Scoops Wholefoods - Google Chrome  2022-02-18 at 12 01 02 AM](https://user-images.githubusercontent.com/36725840/154520554-d4a2e5db-925c-488c-9bd5-7c6b8aab6284.gif)
+
+These little features allowed us to experiment with Lottie animations and customise animations using Adobe After Effects to create the exact animation we wanted that is consistent with the design theme within the site.
+
+![Scoops Wholefoods - Google Chrome  2022-02-18 at 12 04 05 AM](https://user-images.githubusercontent.com/36725840/154521224-e2c2b6de-b128-4e0a-8757-a68dfef7597f.gif)
+
+Throughout this, we also found out that animations can serve an important role in brightening up the site, giving it a more light-hearted feel. Above is an example from the confirmation screen with confetti to show that they can start playing games to win prizes.
+
+#### Back-End
+In order to allow products and categories to be easily updated, these information are stored within a [JSON file](https://github.com/jiachenyee/IDAssignment2/blob/main/resources/categories.json) and information from the file is loaded up based on the URL queries with products being identified by their SKUs (`/product?SKU=MyProductSKU`) and categories being identified by their name (`/category?name=MyCategoryName`). This allowed us to ensure the data could be easily modified if the store ever needed to add more products.
+
+We added a sign in/up flow to keep track of customers and their points. We ultimately decided on [RestDB]() as our preferred database option thanks to the familiarity after tinkering around with it in class. This allowed us to integrate a database into our website and get the necessary data. When designing the original wireframes, we also thought about the data we were storing in the RestDB database and this helped us especially when coming to implementation.
+
+An example of our purchases in RestDB.
+![image](https://user-images.githubusercontent.com/36725840/154518851-5222d889-35a2-44f4-acf0-95df778f4bd3.png)
+
+Another consideration was what data to persist, and where to persist said data. We settled on storing the following information
+- RestDB
+  - **Members**: Store information about each member
+  - **Purchases**: Store information about each purchase made
+- Local Storage
+  - **Member**: Store a copy of the user's information to ensure users do not need to sign in again everytime to use the service.
+  - **Cart**: We felt that the cart did not need to be persisted in RestDB and could just be stored in local storage.
+
 ### Phase Three - Coding
 After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We updated each other on our progress as we coded according to the wireframes design and helped out when problems or queries arise.
 
@@ -209,13 +269,14 @@ If this section grows too long, you may want to split it off into a separate fil
 ### Content and Media
 - Product Information - Name, Description, Price, Image are taken from [Scoop Wholefoods SG](https://scoopwholefoodsshop.com/collections/shop-all)
 - Icons - The relevant icons are taken from [Icon]()
-- Fonts - IBM Plex Sans, font used throughout the website, is taken from [Google Font]()
+- Fonts - IBM Plex Sans, font used throughout the website, is taken from [Google Fonts]()
+- Animation - The animated truck was taken from [Lottie]() 
 - Animation - The animated truck was taken from [Lottie]() 
 
 ### Acknowledgements
 - [MEL]() - Reference on lesson materials and links.
 - [W3 Schools]() - Reference on html, css and other content.
-- [Youtube]() - Reference was taken for certain codes such as games.  
+- [YouTube]() - Reference was taken for certain codes such as games.  
 - [Stack Overflow]() - Reference on codes for specific content such as data validations for forms.
 
 
