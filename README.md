@@ -286,25 +286,26 @@ In this final stage, we test each page making sure that all of the links and ele
   - {display}
 
 
-- Huge add-to-art/checkout/payment button **NOT DONE**
+- Huge add-to-art/checkout/payment button
   - Location {Bottom Left}
       - Product Page, Cart Page, Payment Page
   - Purpose
-      - To allow users to 
+      - To allow users to proceed with the next course of action with the details of the points and price in mind. 
+  - Description
+      - The blue container containing the current point bar, the extended point bar based on the price and quanity, as well as the price of the items, acts as a big button where user can add to cart (Product Page), checkout (Cart Page) or make payment (Payment Page). 
+      - The details are automatically updated when users make changes in their order. 
+  - {DISPlay}
 
 
 - Selected Product **NOT DONE**
   - Location: 
       - Product Page
   - Purpose: 
-      - This feature provides users with more information on the product they have selected, allowing them to make a more informed choice before purchasing.
+      - To provide more information on the selected, allowing them to make a more informed choice before purchasing.
   - Description
-      - Equipped with the product image (left container), product name (top left of right container) and product description (middle of right container), users can better understand where the product is from, what is it made up of and is there any allergy. 
-      - A quantity box (top right of right container) is added to allow users to control the number of selected items they wish to purchase. 
-      - The point bar and the price (bottom of right container) of the items will be displayed accordingly if the quanity or the item changes. 
-      - The blue container acts as both a holder for the point bar and price as well as a button for users to add the product to cart. 
-  - {display}
-  - Store items are presented to users in the form of cards with the item name, price and image. Due to time constraint, only 10 images from each of the 6 categories are displayed and users are able to click on any of the items which brings them to a product description and add to cart page. 
+      - Equipped with the product image (left container), product name (right container) and product description (right container), users can better understand what is the product is amde up of, what are the benefits of this products and other information throught the product description
+      - A quantity box (right container) is added to allow users to adjust the number of selected items they wish to purchase. 
+      - The huge add to cart button comprising of the points bar and price is displayed on the right container.
   - {display}
 
 
@@ -355,6 +356,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - A mock-up credit card is displayed with the users payment details, which are collected when they sign up for membership. 
       - If they prefer to use another credit/debit card or other payment methods such as Grab/Apple Pay, they can proceed to fill in the details of the payment form by clicking on the "Use another payment method" button.
+      - The final total price will be calculated based on the different prices for tax, delivery and subtotal. It will be displayed in the huge payment button alongside the point bar.  
   - {display}
 
 
@@ -362,9 +364,10 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: 
       - Success Page
   - Purpose: 
-      - hi
+      - To inform the users on the status of their payment while providing with the details of their delivery. 
   - Description
-      - hi
+      - Upon successful payment, the user will be celebrated with a Lottie confetti animation in the background. In the main container, the user is presented with the details of their payment status and a range of tentative arrival dates of the delivery, accompained by a Lottie truck animation.
+      - If the points exceed or reached the 1000 limit, they are given the button to play the games and earn rewards. 
   - {display}
 
 
@@ -373,30 +376,36 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: 
       - Sign In and Sign Up Page
   - Purpose: 
-      - hi
+      - To allow users to switch between the sign in and sign up forms. 
   - Description
-      - Clicking on the link in the sign in page will bring users to the sign up page and vice versa
+      - If the users are on the sign in page and realised that they do not have an account, they can simply click on the link, "Don't have an account yet? Sign Up!" and they will be redirected to the sign up page instead of going back to the home page and selecting the sign up button. 
+      - However, when users are in the sign up page and wish to sign in to their existing account, simply click on the link, "Already have an account? Sign In!" and a redirection to the sign in page will occur. The users need not return to the home page and click the sign in button, saving time during the process. 
   - {display}
 
 
 - Data Validation 
   - Location: 
-      - Sign Up Page, Address Form Page, Card Form Page, Payment Page
+      - Sign Up Page, Address Form Page, Card Form Page, Payment Page 
   - Purpose: 
-      - hi
+      - To ensure the accuracy and quality of the data and to reduce the server side workload. 
   - Description
-      - hi
+      - During the sign up process, the website requires crucial information from the user. 
+      - For all complusory fields, proper validations such as format check and length check is conducted. 
+      - Format check: the user's input for certain fields should include specific characters ('@' and '.' for emails, '/' for card expiry date, more) and the user's input for the password field should match the input for confirm passowrd field.
+      - Length check: the user's input should contain certain number of characters (>8 chr for username field, =16 digits for card number, more).
+      - Should the input not match the validation requirements, an error message will appear, informing users about the corresponding requirements (e.g. Passowrds do not match). 
+      - The textfield is autovalidated as the user types. 
   - {display}
 
 
 
-- Add card
+- Mock-up credit card
   - Location: 
-      - hi
+      - Card Form, Payment Page
   - Purpose: 
-      - hi
+      - To allow better visualize of their card credentials and to create a real feel of their card. 
   - Description
-      - hi
+      - The details of the card such as the owner's name, expiry date as well as the card number are collected upon submission of the payment form when they sign up or makes payment. 
   - {display}
 
 
@@ -404,9 +413,16 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: 
       - Dot Game Page
   - Purpose: 
-      - hi
+      - To determine the number of spins for the wheel game while having fun. 
   - Description
-      - hi
+      - This is a gamification feature. 
+      - Similar to the Chrome Dinosaur Game, the player is represented by a dot instead of a dinosaur and the goal is to dodge as many obstacles as they can. 
+      - Pressing "Space" bar will allow the player to jump over the obstacle and for every successful jump, the score displayed at the top right of the page will increase by 1. 
+      - For every 10 point score, the speed of the obstacles will increase, thus increasing the difficulty of the game. 
+      - When the player touches the block obstacle, the game will end and the corresponding number of spins will be displayed to the users. 
+      - If the user score less than 5, there is a default spin of one. 
+      - If the user score more than 5, the number of spins is calculated as such: 1 (default) + score/5 (additional spins). For example, with the score of 20, the user will earn 5 spins for the wheel game. 
+      - The player is only given one try in this game and the user will be redirected to the wheel game upon the click of the 'Continue" button.
   - {display}
 
 
@@ -415,13 +431,16 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: 
       - Spin The Wheel Game Page
   - Purpose: 
-      - hi
+      - To earn and collect free products by spinning the wheel. 
   - Description
-      - There is a wheel is divided into 10 portions, each containing different products. 
-      - The total number of spins, which is determined from the previous dot game, is displayed at the top of the page. 
-      - When the user click on the spin button, the wheel would automatically spin at random speeds. 
-      - The item would be determined through by selecting the item based on its position closest to the arrow. 
-      - The item will be added to the cart immediately. 
+      - This is a gamification feature. 
+      - The wheel is divided into 10 equal portions, each containing a different product. 
+      - The spins available, which is collected from the previous dot game, will be displayed at the top of the page. 
+      - Upon clicking the "SPIN" button, the wheel will start to spin at random timings and the product won is determined by the location of that product with reference to the position of the arrow image. 
+      - An pop-up card will appear, showing the name of the product won. 
+      - The item is immediately stored in their cart as a single free item. 
+      - The users can continue to spin and win products with the remaining spins. 
+      - When the spins left is 0, clicking on the "Continue" button in the pop-up card will bring the users back to the cart page. 
   - {display}
 
 
