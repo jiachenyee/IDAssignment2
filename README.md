@@ -372,9 +372,11 @@ In this final stage, we test each page making sure that all of the links and ele
 
 ### Features Left to Implement
 - Sign Out/Log Out Button
-  - Purpose: To allow users to log out. 
+  - Purpose: To allow users to log out when they want to switch account. 
 - Order tracking
-  - Purpose: To allow users to track their order and possibly re-order from last order. 
+  - Purpose: To allow users to track their deluvery order progress and possibly re-order from last order. 
+- Sold Out/New Logo 
+  - Purpose: To give users an indication of which are the newly released products and which products are sold out due to limited stock or not in stock. 
 
 ## Technologies Used
 The following are the various languages, frameworks, libraries, and any other tools used to construct this project. 
