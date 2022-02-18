@@ -439,9 +439,8 @@ If this section grows too long, you may want to split it off into a separate fil
 ## Credits
 ### Content and Media
 - Product Information - Name, Description, Price, Image are taken from [Scoop Wholefoods SG](https://scoopwholefoodsshop.com/collections/shop-all)
-- Icons - The relevant icons are taken from [Icon]()
+- Icons - The relevant icons are taken from [Google's Material Design icons](https://fonts.google.com/icons)
 - Fonts - IBM Plex Sans, font used throughout the website, is taken from [Google Fonts]()
-- Animation - The animated truck was taken from [Lottie]() 
 - Animation - The animated truck was taken from [Lottie]() 
 
 ### Acknowledgements
@@ -454,7 +453,7 @@ If this section grows too long, you may want to split it off into a separate fil
 ### Authors
 - Lead Authors
     - Yee Jia Chen (Student)
-    - Yong Zong Han Ryan (student) 
+    - Yong Zong Han Ryan (Student) 
 
 - Co-Author
-    - Suresh Kumar Moorkath (lecturer)
+    - Suresh Kumar Moorkath (Lecturer)
