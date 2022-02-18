@@ -145,7 +145,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description: 
       - Type in any keyword - "Choco", "Baking", "Tea" - and hit the "Enter" button. 
       - If there is/are result(s), it will be displayed as rectangular card format with the product image, name and description. 
-      - If there is no result, a simple animation consisting of a magnifying glass and a question mark will be displayed alongside a message, "There's nothing to see here". 
+      - If there is no result, a simple Lottie animation consisting of a magnifying glass and a question mark will be displayed alongside a message, "There's nothing to see here" (as shown under design process)
 ![img 3](https://user-images.githubusercontent.com/92764860/154637895-213c31c9-8fb0-46b6-8889-73ef19d1a9df.png)
 
 
@@ -215,15 +215,15 @@ In this final stage, we test each page making sure that all of the links and ele
 ![img 10](https://user-images.githubusercontent.com/92764860/154638386-aad13d10-dc89-4b5c-848a-e698de29847b.png)
 
 
-- Selected Product **NOT DONE**
+- Selected Product 
   - Location: 
       - Product Page
   - Purpose: 
-      - To provide more information on the selected, allowing them to make a more informed choice before purchasing.
+      - To provide more information on the selected product, allowing them to make a more informed choice before purchasing.
   - Description
-      - Equipped with the product image (left container), product name (right container) and product description (right container), users can better understand what is the product is amde up of, what are the benefits of this products and other information throught the product description
+      - Equipped with the product image (left container), product name (right container) and product description (right container), users can better understand what is the product is amde up of, what are the benefits of this products and other information through the product description
       - A quantity box (right container) is added to allow users to adjust the number of selected items they wish to purchase. 
-      - The huge add to cart button comprising of the points bar and price is displayed on the right container.
+      - The huge add to cart button comprising of the points bar and price is displayed in the right container. 
   - {display}
 ![img 9](https://user-images.githubusercontent.com/92764860/154638465-738fef20-186d-4afe-97c7-19f8a574127d.png)
 
@@ -262,6 +262,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Purpose: 
       - To provide an overview of all the current items and all the prices, allowing users to remove or reduce any items based on their need and budget.  
   - Description
+      - If there are no items in the user cart, a Lottie animation of a empty cart will be displayed (as shown above in the design process).
       - The list of items in their cart will be displayed accordingly to their product name on the left side of the page with their corresponding prices and quantities. 
       - Items can be removed by reducing the quantity of that item to 0. 
       - Prices in terms of subtotal, delivery and tax (7% GST) are displayed on the right side of the page with the huge checkout button comprising the point bar and total price. 
