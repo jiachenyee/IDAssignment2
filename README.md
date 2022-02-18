@@ -196,7 +196,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: {TOP}
       - Home Page
   - Purpose: 
-      - This feature provides a personalized feel by including the details of the users while helping to improve their experience when visiting the website. 
+      - To create a personalized feel for members. 
   - Description: 
       - For members, the header will contain "Hello" + their username which is taken when they sign up for Scoop membership. 
       - For non-members, the header will contain "Hello" instead. 
@@ -208,7 +208,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: {TOP}
       - Home Page, Product Page, Category Page, Cart Page, Checkout/Payment Page
   - Purpose: 
-      - This feature allows for easier navigation throughout the website to look for desired products, shortening the process of searching. 
+      - To allow for easier navigation throughout the website to look for desired products, shortening the process of searching individual category. 
   - Description: 
       - Type in any keyword - "Choco", "Baking", "Tea" - and hit the "Enter" button. 
       - If there is/are result(s), it will be displayed as rectangular card format with the product image, name and description. 
@@ -221,10 +221,10 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: {TOP}
       - Home Page, Category Page, Product Page
   - Purpose: 
-      - This feature allows quick access to the user's cart for an overview of their current items or for checking out to make payment. 
+      - To allow quick access to the member's cart for an overview of their current items or for checking out to make payment.  
   - Description
       - Click the button to proceed to the Cart Page.
-      - This button is only applicable to members only, for non-members, the button will be disabled or removed **CHOOSE ONE** due to the limited information of the users when they checkout. 
+      - This button is only applicable to members only, for non-members, the button will be disabled or removed **CHOOSE ONE** due to the limited information of the users.
   - {display}
 
 
@@ -233,15 +233,15 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: {Bottom of blue containers} 
       - Home Page, Product Page, Cart Page, Payment Page, Success Page
   - Purpose: 
-      - This feature enables users to earn points as they shop and purchase products which eventually leads to amazing rewards such as free products or discount vouchers (discounts cannot be found in this website). 
-      - Members can better visualize their current progress and learn how many products need to be purchase before earning rewards. 
-      - Gamifying this feature will entice users to visit the website more often and shop for more products, increasing the sale for the store while improving the user experience.  
+      - To earn points as members shop and purchase products, leading to amazing rewards such as free products or discount vouchers (discounts cannot be found in this website). 
+      - To visualize their current progress and estimate how many products need to be purchase before earning rewards. 
+      - To entice users to visit the website more often and shop for more products, increasing the sale for the store while improving the user experience.  
   - Description
       - This is only applicable for members only. 
       - When members first enter the website after logging in or signing up, they are greeted with their point bar with the yellow strip indicating their current points out of 1000. 
       - In the selected Product Page, members can increase the quantity of the products and the additional points will be displayed in the extended translucent yellow strip accordingly. 
-      - In the cart page, additional points will also be displayed when members add in more items and increase their quantity. 
-      - The points are calculated by rounding down the total price of the items excluding tax and delivery. For example, if 5 of Almonds Dark Chocolate of price $23.60 each is added to cart, the additional points displayed will be 118 points. 
+      - In the cart page, additional points will also be displayed accordingly when members add in more items and increase their quantity. 
+      - The points are calculated by rounding down the total price of the items excluding tax and delivery. For example, if only 5 of Almonds Dark Chocolate of price $23.60 each is added to cart, the additional points displayed will be 118 points. 
       - Upon making the final payment, the translucent bar will be converted to a solid bar and changes to the current points will be edited. 
       - If the points accumulated exceed or reaches the 1000 limit, the bar resets to 0 and the members will be entitled to play the dot game and the wheel game to earn more rewards. 
       - For the points that exceed the limit, the extra points will be brought forward and added to the new bar. 
@@ -253,9 +253,10 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: {Blue Container}
       - Home Page
   - Purpose: 
-      - This feature will allow users to access the sign in and sign up page easily. 
+      - To access the sign in and sign up page easily. 
   - Description
-      - For members, simply click on the sign in button to login to their account and begin shopping. 
+      - This is appplicable in guest mode only. 
+      - For current members, simply click on the sign in button to login to their account and begin shopping. 
       - For non-members, clicking on the sign up button will bring them to a sign up form where they can sign up for membership and shop without any restrictions. 
   - {display}
 
@@ -265,28 +266,28 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: {Bottom}
       - Home Page
   - Purpose: 
-      - This feature introduces new and recommended products to users, encouraging them to add to cart at a glance. 
+      - To introduce new and recommended products to users, encouraging them to add to cart at a glance. 
   - Description
-      - For members, the section will be labelled as "For You Page" and it will be filled with products which are new or previously purchased. 
+      - For members, the section will be labelled as "For You Page" and it will be filled with new incoming products together with previously purchased prodcuts.  
       - For non-members, the section will be labelled as "Popular Page" and it will be filled with new but randomized products.
-      - A total of 10 different products given to the users. 
+      - A total of 10 different products will be displayed to the users. 
   - {display}
 
 
 
-- Sold Out/New Logos **UNSURE**
+- Sold Out/New Logos 
   - Location: {Top right corner of product image}
       - Home Page, Category Page, Product Page
   - Purpose: 
-      - This feature allows for easier viewing of the new products as well as those which are out of stock.
+      - To inform users about current products which are newly released as well as those which are out-of-stock. 
   - Description
       - For products which are just released into the store, they are labelled with the "New" logo. 
-      - For products which are unavailable due to limited or no stock, they are labelled with the "Sold Out" Logo. 
+      - For products which are unavailable due to limited or not in stock, they are labelled with the "Sold Out" Logo. 
   - {display}
 
 
 
-- Selected Product
+- Selected Product **NOT DONE**
   - Location: 
       - Product Page
   - Purpose: 
@@ -302,13 +303,15 @@ In this final stage, we test each page making sure that all of the links and ele
 
 
 
-- Filters **NOT DONE**
+- Filters 
   - Location: {Top}
       - Product Page
   - Purpose: 
-      - This feature allows users to 
+      - To provide more information about the selected products, allowing them to make a more informed decision before purchasing. 
   - Description
-      - hi
+      - Under the product name, filters such as Vegan, Halal and Allergens are added for users so that they are aware of the dietary preferences present in this selected product. 
+      - These filters also include the cateogory type for easier reference. 
+      - They vayr
   - {display}
   - For each product in the Products Page, there are filters added at the bottom of the product name to provide more information such as Vegan and Halal for better understanding of the product. For the collated products in each category are also provided with the relevent filters containing the product category name for easier reference. 
   - {display}
