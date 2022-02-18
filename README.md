@@ -367,6 +367,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - The item is immediately stored in their cart as a single free item. 
       - The users can continue to spin and win products with the remaining spins. 
       - When the spins left is 0, clicking on the "Continue" button in the pop-up card will bring the users back to the cart page. 
+![img 20](https://user-images.githubusercontent.com/92764860/154677973-e1d2650f-4fb5-4bc5-8e45-232d559348dc.png)
 
 
 
