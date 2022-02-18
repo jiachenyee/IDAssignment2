@@ -286,6 +286,12 @@ In this final stage, we test each page making sure that all of the links and ele
   - {display}
 
 
+- Huge add-to-art/checkout/payment button **NOT DONE**
+  - Location {Bottom Left}
+      - Product Page, Cart Page, Payment Page
+  - Purpose
+      - To allow users to 
+
 
 - Selected Product **NOT DONE**
   - Location: 
@@ -309,22 +315,19 @@ In this final stage, we test each page making sure that all of the links and ele
   - Purpose: 
       - To provide more information about the selected products, allowing them to make a more informed decision before purchasing. 
   - Description
-      - Under the product name, filters such as Vegan, Halal and Allergens are added for users so that they are aware of the dietary preferences present in this selected product. 
-      - These filters also include the cateogory type for easier reference. 
-      - They vayr
-  - {display}
-  - For each product in the Products Page, there are filters added at the bottom of the product name to provide more information such as Vegan and Halal for better understanding of the product. For the collated products in each category are also provided with the relevent filters containing the product category name for easier reference. 
+      - Under the product name, filters such as Vegan, Halal and Allergens are added for users so that they are aware of the dietary preferences and other important details present in this selected product. 
+      - These filters also include the cateogory type for easier reference and they vary among the different products. 
   - {display}
 
 
 
-- Products Dipslay 
+- Products Display
   - Location: 
       - Category Page
   - Purpose: 
-      - This feature givs users a variety of items to choose from based on their preferred category. 
+      - To give users a variety of items to choose from based on their preferred category. 
   - Description
-      - Upon selecting the product category in the Home Page, users will be redirected to a new page where all the products of that category will be displayed in format of cards. 
+      - Upon selecting the product category in the Home Page, users will be redirected to a new page where all the products of that category will be displayed in card-format. 
       - Due to limitations, only 10 products of the 6 different category will be shown. 
       - Clicking on any products will bring the user to the selected Product Page.
   - {display}
@@ -335,11 +338,11 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: 
       - Cart Page
   - Purpose: 
-      - This feature provides an overview of the current items and the prices, allowing users to remove or reduce any items based on their need and budget.  
+      - To provide an overview of all the current items and all the prices, allowing users to remove or reduce any items based on their need and budget.  
   - Description
-      - An overview of the list of selected items in their cart will be displayed on the left side of the page with their corresponding prices and quantities. 
+      - The list of items in their cart will be displayed accordingly to their product name on the left side of the page with their corresponding prices and quantities. 
       - Items can be removed by reducing the quantity of that item to 0. 
-      - Prices in terms of subtotal, delivery and tax (7% GST) are displayed in the right side of the page with the huge checkout button comprising the point bar and the total price. 
+      - Prices in terms of subtotal, delivery and tax (7% GST) are displayed on the right side of the page with the huge checkout button comprising the point bar and total price. 
   - {display}
 
 
@@ -348,9 +351,10 @@ In this final stage, we test each page making sure that all of the links and ele
   - Location: 
       - Payment/Checkout Page
   - Purpose: 
-      - hi
+      - To allow members to make their final payment using their preferred payment method. 
   - Description
-      - A mock-up credit card is displayed on the left side of the container, alongside
+      - A mock-up credit card is displayed with the users payment details, which are collected when they sign up for membership. 
+      - If they prefer to use another credit/debit card or other payment methods such as Grab/Apple Pay, they can proceed to fill in the details of the payment form by clicking on the "Use another payment method" button.
   - {display}
 
 
