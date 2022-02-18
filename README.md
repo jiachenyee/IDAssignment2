@@ -401,37 +401,57 @@ The following are the various languages, frameworks, libraries, and any other to
 
 
 ## Testing
-1. Forms 
-      1. Sign In
-      2. Sign Up 
-      3. Address
-      4. Payment 
-      5. Card
-2. Home Page
-3. Product(selected) Page
-4. Category Page
-5. Cart Page
-6. Checkout/Payment Page 
-7. Success Page
-8. Games 
-      1. Jumping Dot
-      2. Spin the Wheel 
+We tested this app on Google Chrome (Windows), Google Chrome (Mac), Firefox (Mac), Safari (iOS), Safari (Mac)
 
+### Sign Up Flow
+1. Start at home page
+1. Sign Up 
+1. Address
+1. Payment 
+1. Add a Card
 
+### Sign In Flow
+1. Start at home page
+1. Sign In
+1. Enter sample credentials
+    - Username: `test`
+    - Password: `test`
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+### Purchase Product
+1. Start at home page (as a signed in user)
+1. In the **For You** section, select any product
+1. The product page should feature the correct product information and image
+1. Add to cart
+1. Checkout
+1. Get a delivery date and time
+1. Make sure purchase is reflected on RestDB
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+#### Categories
+1. Start at home page (as a signed in user)
+1. Click on any category
+1. Click on any product
+1. Add product to cart
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+#### Search 
+1. Start at home page (as a signed in user)
+1. Click on the text field next to the magnifying glass icon
+1. Type in "potatoes" or "aaaaaaaa" or any product that would not exist
+1. An empty state should show up with animations
+1. Type in a product or part of a product like "pasta" or "strawberry" and search results should show up
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+#### Games
+1. Start at home page (with account that has >= 900 points)
+1. Select a product
+1. Add the product to cart multiple times until the points is >= 1000
+1. In the cart screen
+1. Select Checkout
+1. Confirm the purchase
+1. You should see confetti in the background of the success screen and a button to play game
+1. Click on the button to play the game
+1. Play the dotgame where the goal is to press the space bar or tap on screen to avoid hitting the obstacles 
+1. Based on your score in the dotgame, you will have that number of spins when playing the "spin the wheel" 
+1. After using all spins, the prizes will appear in the cart
+1. Ensure that the quantity is not editable while the price states "Free"
 
 ## Credits
 ### Content and Media
