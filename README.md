@@ -136,6 +136,8 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description: 
       - For members, the header will contain "Hello" + their username which is taken when they sign up for Scoop membership. 
       - For non-members, the header will contain "Hello" instead. 
+ ![img 1](https://user-images.githubusercontent.com/92764860/154637676-6abab5e2-68b0-4083-9024-62ac0759ad79.png)
+
 
 - Search Bar
   - Location: {TOP}
@@ -146,7 +148,8 @@ In this final stage, we test each page making sure that all of the links and ele
       - Type in any keyword - "Choco", "Baking", "Tea" - and hit the "Enter" button. 
       - If there is/are result(s), it will be displayed as rectangular card format with the product image, name and description. 
       - If there is no result, a simple animation consisting of a magnifying glass and a question mark will be displayed alongside a message, "There's nothing to see here". 
-  - {display}
+![img 3](https://user-images.githubusercontent.com/92764860/154637895-213c31c9-8fb0-46b6-8889-73ef19d1a9df.png)
+
 
 - Cart Button
   - Location: {TOP}
@@ -156,7 +159,8 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - Click the button to proceed to the Cart Page.
       - This button is only applicable to members only, for non-members, the button will be disabled or removed **CHOOSE ONE** due to the limited information of the users.
-  - {display}
+![img 4](https://user-images.githubusercontent.com/92764860/154637938-a8b60fd7-f5cb-4b38-ba9b-8e30452235f4.png)
+
 
 - Points Bar
   - Location: {Bottom of blue containers} 
@@ -174,7 +178,9 @@ In this final stage, we test each page making sure that all of the links and ele
       - Upon making the final payment, the translucent bar will be converted to a solid bar and changes to the current points will be edited. 
       - If the points accumulated exceed or reaches the 1000 limit, the bar resets to 0 and the members will be entitled to play the dot game and the wheel game to earn more rewards. 
       - For the points that exceed the limit, the extra points will be brought forward and added to the new bar. 
-  - {display}
+![img 7](https://user-images.githubusercontent.com/92764860/154638434-8f24ea94-7085-44c3-82b6-63bf75608cd9.png)
+
+
 
 - Quick Sign In and Sign Up 
   - Location: {Blue Container}
@@ -185,7 +191,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - This is appplicable in guest mode only. 
       - For current members, simply click on the sign in button to login to their account and begin shopping. 
       - For non-members, clicking on the sign up button will bring them to a sign up form where they can sign up for membership and shop without any restrictions. 
-  - {display}
+![img 13](https://user-images.githubusercontent.com/92764860/154638276-13b04845-f5b8-4e9f-993c-b72c46bd0040.png)
 
 
 - For You/Popular Section
@@ -197,19 +203,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - For members, the section will be labelled as "For You Page" and it will be filled with new incoming products together with previously purchased prodcuts.  
       - For non-members, the section will be labelled as "Popular Page" and it will be filled with new but randomized products.
       - A total of 10 different products will be displayed to the users. 
-  - {display}
-
-
-
-- Sold Out/New Logos
-  - Location: {Top right corner of product image}
-      - Home Page, Category Page, Product Page
-  - Purpose: 
-      - To inform users about current products which are newly released as well as those which are out-of-stock. 
-  - Description
-      - For products which are just released into the store, they are labelled with the "New" logo. 
-      - For products which are unavailable due to limited or not in stock, they are labelled with the "Sold Out" Logo. 
-  - {display}
+![img 8](https://user-images.githubusercontent.com/92764860/154638296-86a11304-0bb2-413d-b713-68c6473e6a4a.png)
 
 
 - Huge add-to-art/checkout/payment button
@@ -220,7 +214,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - The blue container containing the current point bar, the extended point bar based on the price and quanity, as well as the price of the items, acts as a big button where user can add to cart (Product Page), checkout (Cart Page) or make payment (Payment Page). 
       - The details are automatically updated when users make changes in their order. 
-  - {DISPlay}
+![img 10](https://user-images.githubusercontent.com/92764860/154638386-aad13d10-dc89-4b5c-848a-e698de29847b.png)
 
 
 - Selected Product **NOT DONE**
@@ -233,6 +227,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - A quantity box (right container) is added to allow users to adjust the number of selected items they wish to purchase. 
       - The huge add to cart button comprising of the points bar and price is displayed on the right container.
   - {display}
+![img 9](https://user-images.githubusercontent.com/92764860/154638465-738fef20-186d-4afe-97c7-19f8a574127d.png)
 
 
 
@@ -245,6 +240,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - Under the product name, filters such as Vegan, Halal and Allergens are added for users so that they are aware of the dietary preferences and other important details present in this selected product. 
       - These filters also include the category type for easier reference and they vary among the different products. 
   - {display}
+![img 11](https://user-images.githubusercontent.com/92764860/154638515-1b2fce28-4c2c-4a86-ae0e-cd790db8fb53.png)
 
 
 
@@ -258,6 +254,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - Due to limitations, only 10 products of the 6 different category will be shown. 
       - Clicking on any products will bring the user to the selected Product Page.
   - {display}
+![img 8](https://user-images.githubusercontent.com/92764860/154638522-ff6763b9-cedb-40b9-9d1b-ea981b35e180.png)
 
 
 
@@ -270,7 +267,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - The list of items in their cart will be displayed accordingly to their product name on the left side of the page with their corresponding prices and quantities. 
       - Items can be removed by reducing the quantity of that item to 0. 
       - Prices in terms of subtotal, delivery and tax (7% GST) are displayed on the right side of the page with the huge checkout button comprising the point bar and total price. 
-  - {display}
+![img 5](https://user-images.githubusercontent.com/92764860/154638541-b2899d80-186a-4002-9570-005851c659b6.png)
 
 
 
@@ -282,8 +279,8 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - A mock-up credit card is displayed with the users payment details, which are collected when they sign up for membership. 
       - If they prefer to use another credit/debit card or other payment methods such as Grab/Apple Pay, they can proceed to fill in the details of the payment form by clicking on the "Use another payment method" button.
-      - The final total price will be calculated based on the different prices for tax, delivery and subtotal. It will be displayed in the huge payment button alongside the point bar.  
-  - {display}
+      - The final total price will be calculated based on the different prices for tax, delivery and subtotal. It will be displayed in the huge payment button alongside the point bar. 
+![img 6](https://user-images.githubusercontent.com/92764860/154638557-15620d67-f04d-4328-8621-6358103e094e.png)
 
 
 
@@ -295,7 +292,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - Upon successful payment, the user will be celebrated with a Lottie confetti animation in the background. In the main container, the user is presented with the details of their payment status and a range of tentative arrival dates of the delivery, accompained by a Lottie truck animation.
       - If the points exceed or reached the 1000 limit, they are given the button to play the games and earn rewards. 
-  - {display}
+![Scoops Wholefoods - Google Chrome  2022-02-18 at 12 04 05 AM](https://user-images.githubusercontent.com/36725840/154521224-e2c2b6de-b128-4e0a-8757-a68dfef7597f.gif)
 
 
 
@@ -307,7 +304,7 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description
       - If the users are on the sign in page and realised that they do not have an account, they can simply click on the link, "Don't have an account yet? Sign Up!" and they will be redirected to the sign up page instead of going back to the home page and selecting the sign up button. 
       - However, when users are in the sign up page and wish to sign in to their existing account, simply click on the link, "Already have an account? Sign In!" and a redirection to the sign in page will occur. The users need not return to the home page and click the sign in button, saving time during the process. 
-  - {display}
+![Animation 4](https://user-images.githubusercontent.com/92764860/154638601-4d3cf507-2fdd-4172-93f8-bb434e7a2d87.gif)
 
 
 
@@ -323,8 +320,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - Length check: the user's input should contain certain number of characters (>8 chr for username field, =16 digits for card number, more).
       - Should the input not match the validation requirements, an error message will appear, informing users about the corresponding requirements (e.g. Passowrds do not match). 
       - The textfield is autovalidated as the user types. 
-  - {display}
-
+![img 14](https://user-images.githubusercontent.com/92764860/154638637-4ab34e91-a380-42da-8989-3741dc6856df.png)
 
 
 
@@ -335,7 +331,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - To allow better visualize of their card credentials and to create a real feel of their card. 
   - Description
       - The details of the card such as the owner's name, expiry date as well as the card number are collected upon submission of the payment form when they sign up or makes payment. 
-  - {display}
+![img 15](https://user-images.githubusercontent.com/92764860/154638679-f5487a4e-ad8e-45d6-a9e3-fb9227dc7967.png)
 
 
 
@@ -353,7 +349,8 @@ In this final stage, we test each page making sure that all of the links and ele
       - If the user score less than 5, there is a default spin of one. 
       - If the user score more than 5, the number of spins is calculated as such: 1 (default) + score/5 (additional spins). For example, with the score of 20, the user will earn 5 spins for the wheel game. 
       - The player is only given one try in this game and the user will be redirected to the wheel game upon the click of the 'Continue" button.
-  - {display}
+![Animation 2](https://user-images.githubusercontent.com/92764860/154638705-e9445c63-3592-46a9-bd8c-4e083883353c.gif)
+
 
 
 
@@ -371,7 +368,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - The item is immediately stored in their cart as a single free item. 
       - The users can continue to spin and win products with the remaining spins. 
       - When the spins left is 0, clicking on the "Continue" button in the pop-up card will bring the users back to the cart page. 
-  - {display}
+
 
 
 ### Features Left to Implement
@@ -456,3 +453,9 @@ If this section grows too long, you may want to split it off into a separate fil
 
 - Co-Author
     - Suresh Kumar Moorkath (Lecturer)
+
+
+
+## Links 
+-  [Video](https://drive.google.com/file/d/1AX8_CtPkEZGU5DxjukaOe60THxIeB6jR/view?usp=sharing)
+-  [GitHub Pages](https://jiachenyee.github.io/IDAssignment2/)
