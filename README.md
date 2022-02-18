@@ -105,7 +105,7 @@ Throughout this, we also found out that animations can serve an important role i
 #### Back-End
 In order to allow products and categories to be easily updated, these information are stored within a [JSON file](https://github.com/jiachenyee/IDAssignment2/blob/main/resources/categories.json) and information from the file is loaded up based on the URL queries with products being identified by their SKUs (`/product?SKU=MyProductSKU`) and categories being identified by their name (`/category?name=MyCategoryName`). This allowed us to ensure the data could be easily modified if the store ever needed to add more products.
 
-We added a sign in/up flow to keep track of customers and their points. We ultimately decided on [RestDB]() as our preferred database option thanks to the familiarity after tinkering around with it in class. This allowed us to integrate a database into our website and get the necessary data. When designing the original wireframes, we also thought about the data we were storing in the RestDB database and this helped us especially when coming to implementation.
+We added a sign in/up flow to keep track of customers and their points. We ultimately decided on [RestDB](https://restdb.io/) as our preferred database option thanks to the familiarity after tinkering around with it in class. This allowed us to integrate a database into our website and get the necessary data. When designing the original wireframes, we also thought about the data we were storing in the RestDB database and this helped us especially when coming to implementation.
 
 An example of our purchases in RestDB.
 ![image](https://user-images.githubusercontent.com/36725840/154518851-5222d889-35a2-44f4-acf0-95df778f4bd3.png)
@@ -119,7 +119,7 @@ Another consideration was what data to persist, and where to persist said data. 
   - **Cart**: We felt that the cart did not need to be persisted in RestDB and could just be stored in local storage.
 
 ### Phase Three - Coding
-After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We updated each other on our progress as we coded according to the wireframes design and helped out when problems or queries arise.
+After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](https://code.visualstudio.com/). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We updated each other on our progress as we coded according to the wireframes design and helped out when problems or queries arise.
 
 ### Phase Four - Test/Launch
 In this final stage, we test each page making sure that all of the links and elements are working as intended. We also tried to launch the website on different browsers such as google chrome and safari. Many mistakes were made, from wrong colors to post/get request to the database. However, these were resolved through consultation with the lecturer and the internet. The process from sign in to the final checkout was tested mulitple times to ensure a smooth and successful run which will lead to satisfactory users. 
@@ -156,7 +156,7 @@ In this final stage, we test each page making sure that all of the links and ele
       - To allow quick access to the member's cart for an overview of their current items or for checking out to make payment.  
   - Description
       - Click the button to proceed to the Cart Page.
-      - This button is only applicable to members only, for non-members, the button will be disabled or removed **CHOOSE ONE** due to the limited information of the users.
+      - This button is only applicable to members only, for non-members, the button will be removed due to the limited information of the users.
 ![img 4](https://user-images.githubusercontent.com/92764860/154637938-a8b60fd7-f5cb-4b38-ba9b-8e30452235f4.png)
 
 
@@ -468,6 +468,7 @@ We tested this app on Google Chrome (Windows), Google Chrome (Mac), Firefox (Mac
 - [W3 Schools](https://www.w3schools.com/) - Reference on html, css and other content.
 - [YouTube](https://youtube.com) - Reference was taken for certain codes such as games.  
 - [Stack Overflow](https://stackoverflow.com/) - Reference on codes for specific content such as data validations for forms.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Reference used to write and improve codes. 
 
 
 ### Authors
