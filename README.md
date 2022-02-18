@@ -121,8 +121,6 @@ Another consideration was what data to persist, and where to persist said data. 
 ### Phase Three - Coding
 After getting confirmation from our lecturer on our idea, we then proceed to start coding using the IDE, [Visual Studio Code](). Work is divided and delegated between the members based on the different sections of the website. Coding time is also carefully planned out in so as to prevent any conflict of the same code being edited at the same time. Knowing that more people view ecommerce websites on desktops, we decided to put more emphasis on the desktop version while setting the mobile version secondary in importance. We updated each other on our progress as we coded according to the wireframes design and helped out when problems or queries arise.
 
-.......
-
 ### Phase Four - Test/Launch
 In this final stage, we test each page making sure that all of the links and elements are working as intended. We also tried to launch the website on different browsers such as google chrome and safari. Many mistakes were made, from wrong colors to post/get request to the database. However, these were resolved through consultation with the lecturer and the internet. The process from sign in to the final checkout was tested mulitple times to ensure a smooth and successful run which will lead to satisfactory users. 
 
@@ -373,8 +371,9 @@ In this final stage, we test each page making sure that all of the links and ele
 
 ### Features Left to Implement
 - Sign Out/Log Out Button
-  - Description: 
+  - Purpose: To allow users to log out. 
 - Order tracking
+  - Purpose: To allow users to track their order and possibly re-order from last order. 
 
 ## Technologies Used
 The following are the various languages, frameworks, libraries, and any other tools used to construct this project. 
@@ -388,7 +387,9 @@ The following are the various languages, frameworks, libraries, and any other to
 - [JSON](https://www.json.org/)
   - The project uses **JSON** to transmit data in web applications. 
 - [JQuery](https://jquery.com)
-  - The project uses **JQuery** to simplify DOM manipulation.????????????????
+  - The project uses **JQuery** to simplify DOM manipulation.
+- [AJAX]
+  - The project uses **AJAX** to post and get data from the API. 
 - [Adobe XD](https://www.adobe.com/sg/products/xd.html)
   - The project uses **XD** as a design platform to create the prototypes/wireframes.
 - [GitHub](https://github.com/)
@@ -436,14 +437,14 @@ If this section grows too long, you may want to split it off into a separate fil
 ### Content and Media
 - Product Information - Name, Description, Price, Image are taken from [Scoop Wholefoods SG](https://scoopwholefoodsshop.com/collections/shop-all)
 - Icons - The relevant icons are taken from [Google's Material Design icons](https://fonts.google.com/icons)
-- Fonts - IBM Plex Sans, font used throughout the website, is taken from [Google Fonts]()
-- Animation - The animated truck was taken from [Lottie]() 
+- Fonts - IBM Plex Sans, font used throughout the website, is taken from [Google Fonts](https://fonts.google.com/)
+- Animation - The animated truck was taken from [Lottie](https://lottiefiles.com/) 
 
 ### Acknowledgements
-- [MEL]() - Reference on lesson materials and links.
-- [W3 Schools]() - Reference on html, css and other content.
-- [YouTube]() - Reference was taken for certain codes such as games.  
-- [Stack Overflow]() - Reference on codes for specific content such as data validations for forms.
+- [MEL](https://mel.np.edu.sg/) - Reference on lesson materials and links.
+- [W3 Schools](https://www.w3schools.com/) - Reference on html, css and other content.
+- [YouTube](https://youtube.com) - Reference was taken for certain codes such as games.  
+- [Stack Overflow](https://stackoverflow.com/) - Reference on codes for specific content such as data validations for forms.
 
 
 ### Authors
