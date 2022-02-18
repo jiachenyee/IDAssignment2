@@ -136,7 +136,6 @@ In this final stage, we test each page making sure that all of the links and ele
   - Description: 
       - For members, the header will contain "Hello" + their username which is taken when they sign up for Scoop membership. 
       - For non-members, the header will contain "Hello" instead. 
-![Greeting Image]("C:\Users\ryany\Documents\Year 1\pic doc\img 1.png")
 
 - Search Bar
   - Location: {TOP}
